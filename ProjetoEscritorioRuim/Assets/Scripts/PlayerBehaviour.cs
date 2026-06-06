@@ -31,6 +31,11 @@ public class PlayerBehaviour: MonoBehaviour
         inputSystem.Enable();
     }
 
+    private void OnDisable()
+    {
+        inputSystem.Disable();
+    }
+
 
     void Update()
     {
