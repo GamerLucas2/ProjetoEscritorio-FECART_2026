@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class UIPlaceHolder : MonoBehaviour
 {
-    #region Declaração de variaveis
+    #region Declaraï¿½ï¿½o de variaveis
     [SerializeField] GameObject titleScreen;
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject levelSelection;
@@ -25,9 +25,9 @@ public class UIPlaceHolder : MonoBehaviour
         levelSelection.SetActive(true);
         mainMenu.SetActive(false);
     }
-    public void LevelButtonPressed(public int scene)
+    public void LevelSelectionButtonPressed(string sceneName)
     {
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(sceneName);
     }
     public void QuitGame()
     {
