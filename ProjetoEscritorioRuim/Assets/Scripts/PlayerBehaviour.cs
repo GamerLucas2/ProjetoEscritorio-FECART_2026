@@ -18,12 +18,6 @@ public class PlayerBehaviour: MonoBehaviour
     
     #endregion
     
-    private GameObject mainCamera;
-    [SerializeField] private float rotationSpeed = 20f;
-    private float rotationVelocity;
-    
-    private float theshold;
-    // private Vector2 mousePosition;
 
     #region Main Methods
     
@@ -32,8 +26,6 @@ public class PlayerBehaviour: MonoBehaviour
         inputSystem = new InputSystem_Actions();
         rigidBody = GetComponent<Rigidbody>();
         move = inputSystem.Player.Move;
-        
-        mainCamera = GameObject.Find("Main Camera");
     }
 
     private void OnEnable()
@@ -56,11 +48,6 @@ public class PlayerBehaviour: MonoBehaviour
     {
         // RotateCamera();
     }
-
-    private void FixedUpdate()
-    {
-        MovePlayer();
-    }
     
     #endregion
 
@@ -78,20 +65,4 @@ public class PlayerBehaviour: MonoBehaviour
     }
     
     #endregion
-
-
-    /*private void RotateCamera()
-    {
-        // Get mouse pos
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
-        
-        if (mousePosition != Vector2.zero)
-        {
-            rotationVelocity = mousePosition.x * rotationSpeed * 1f;
-        
-            transform.Rotate(Vector3.up, rotationVelocity);
-            mainCamera.transform.Rotate(Vector3.right, rotationVelocity);
-        }
-        
-    }*/
 }
