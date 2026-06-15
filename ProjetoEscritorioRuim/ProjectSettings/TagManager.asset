@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TaskStart
   - TaskEnd
+  - TaskComplete
   layers:
   - Default
   - TransparentFX

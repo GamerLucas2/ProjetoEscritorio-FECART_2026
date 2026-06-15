@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -6,29 +7,36 @@ using UnityEngine.InputSystem;
 
 public class TaskSystem : MonoBehaviour
 {
-    InputSystem_Actions inputSystemActions;
-    InputAction interaction;
+    //InputSystem_Actions inputSystemActions;
+    //InputAction interaction;
+    public float completedTasks=0f;
     private bool holding = false;
-    
-    private void Awake()
+    [SerializeField] private string tasksLeft;
+    [SerializeField] private TextMeshProUGUI taskNumber;
+/*private void Awake()
+{
+    inputSystemActions = new InputSystem_Actions();
+    interaction = inputSystemActions.Player.Interact;
+    interaction.Enable();
+}*/
+private void Update()
+{
+    taskNumber.text= "Tasks Done: "+completedTasks + tasksLeft;
+}
+private void OnTriggerEnter(Collider taskCollider)
+{
+    if (taskCollider.CompareTag("TaskStart") && !holding)
     {
-        inputSystemActions = new InputSystem_Actions();
-        interaction = inputSystemActions.Player.Interact;
-        interaction.Enable();
+        print("TaskStart");
+        holding = true;
+        Destroy(taskCollider.gameObject);
     }
-    private void OnTriggerEnter(Collider collider)
-    //Algo não tá funcionando não sei o porquê-Felipe
+    else if (taskCollider.CompareTag("TaskEnd") && holding)
     {
-        bool interactionPressed = interaction.WasPressedThisFrame();
-        if (collider.CompareTag("TaskStart") && interactionPressed)
-        {
-            print("Task Started");
-            holding = true;
-        }
-        else if (collider.CompareTag("TaskEnd") && interactionPressed && holding)
-        {
-            print("Task Ended");
-            holding = false;
-        }
+        print("TaskEnd");
+        holding = false;
+        taskCollider.gameObject.tag = "TaskComplete";
+        completedTasks++;
     }
+}
 }
