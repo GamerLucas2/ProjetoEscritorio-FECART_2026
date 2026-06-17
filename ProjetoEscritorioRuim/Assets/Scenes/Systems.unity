@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 555117672}
   m_Layer: 6
   m_Name: Place
-  m_TagString: Place
+  m_TagString: PutDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -471,7 +471,8 @@ Transform:
   m_LocalPosition: {x: -7.49, y: -0.48, z: -0.32}
   m_LocalScale: {x: 3.5106, y: 1, z: 4.1267}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 627062402}
   m_Father: {fileID: 117843299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &555117672
@@ -552,6 +553,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555117670}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &627062401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627062402}
+  m_Layer: 0
+  m_Name: Display
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &627062402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627062401}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.349, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 555117671}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &653464190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,8 +1133,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   maxDistance: 10
+  currentItem: {fileID: 0}
   itemIndicator: {fileID: 653464190}
-  interactObject: {fileID: 0}
 --- !u!1 &1347412296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,8 +1733,8 @@ GameObject:
   - component: {fileID: 1997095261}
   - component: {fileID: 1997095260}
   m_Layer: 6
-  m_Name: Test
-  m_TagString: Untagged
+  m_Name: NPC
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

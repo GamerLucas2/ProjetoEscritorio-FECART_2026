@@ -11,11 +11,11 @@ public class PlayerInteract : MonoBehaviour
 
     [SerializeField] LayerMask interactMask;
     [SerializeField] float maxDistance;
+    RaycastHit hit;
     
-    bool isInteracting = false;
+    bool hasItem = false;
+    [SerializeField] private GameObject currentItem;
     [SerializeField] private GameObject itemIndicator;
-    [SerializeField] private GameObject interactObject;
-    bool objectIsPresent = false;
     
     
     void Awake()
@@ -41,57 +41,61 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        if (interact.WasPressedThisFrame() && !isInteracting)
-        {
-            isInteracting = true;
+        if (interact.WasPressedThisFrame())
             InteractWithItem();
-            if (interactObject.CompareTag("Item"))
-            {
-                itemIndicator.SetActive(true);
-                interactObject.transform.position = new Vector3(0, 100000, 0);
-            }
-        }
-        else if (interact.WasPressedThisFrame() && isInteracting)
-        {
-            PlaceObjBack();
-            if (objectIsPresent)
-            {
-                isInteracting = false;
-                itemIndicator.SetActive(false);
-                
-            }
-        }
     }
 
     private void InteractWithItem()
     {
-        RaycastHit hit;
-
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxDistance, interactMask))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
             Debug.Log("Hit:  " + hit.transform.gameObject.name);
-
-            interactObject = hit.transform.gameObject;
+            
+            CheckObjectType();
         }
     }
 
-    void PlaceObjBack()
+    private void CheckObjectType()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxDistance, interactMask))
-            if (hit.transform.CompareTag("Place"))
-            {
-                interactObject.transform.position = hit.point;
-                interactObject = null;
-                objectIsPresent = true;
-            }
-            else
-                objectIsPresent = false;
+        if(hit.transform.CompareTag("Item"))
+        {
+            Debug.Log("Interacted with Item");
+            PickUpItem();
+        }
+        else if (hit.transform.CompareTag("NPC"))
+        {
+            Debug.Log("Interacted with NPC");
+        }
+        else if (hit.transform.CompareTag("PutDown"))
+        {
+            Debug.Log("Interacted with PutDown");
+            PutItemDown(currentItem);
+        }
+        else
+        {
+            Debug.Log("Interacted with None");
+        }
+    }
+
+    private void PickUpItem()
+    {
+        hasItem = true;
+        currentItem = hit.transform.gameObject;
+        itemIndicator.SetActive(true);
+        
+        currentItem.transform.position = new Vector3(0, 1000, 0);
+    }
+
+    private void PutItemDown(GameObject item)
+    {
+        if (hasItem)
+        {
+            hasItem = false;
+            itemIndicator.SetActive(false);
+            currentItem = null;
+            
+            item.transform.position = hit.transform.Find("Display").transform.position;
+        }
     }
 }
