@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class UIPlaceHolder : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     #region Declara��o de variaveis
     [SerializeField] GameObject titleScreen;
