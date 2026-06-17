@@ -4,10 +4,23 @@ using UnityEngine.SceneManagement;
 
 public class LevelDebug : MonoBehaviour
 {
-    
     void Update()
     {
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.shiftKey.isPressed && Keyboard.current.rKey.wasPressedThisFrame)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            RestartLevel();
+        
+        if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.shiftKey.isPressed &&  Keyboard.current.rKey.wasPressedThisFrame)
+            RestarGame();
+    }
+    
+    
+    void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    void RestarGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }
