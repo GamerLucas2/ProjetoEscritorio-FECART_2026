@@ -7,9 +7,8 @@ TagManager:
   - Item
   - NPC
   - PutDown
-  - TaskStart
-  - TaskEnd
-  - TaskComplete
+  - Used
+  - Task 1
   layers:
   - Default
   - TransparentFX
@@ -18,8 +17,8 @@ TagManager:
   - Water
   - UI
   - Interactive
-  - 
-  - 
+  - StartTask
+  - EndTask
   - 
   - 
   - 

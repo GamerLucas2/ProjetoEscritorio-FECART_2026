@@ -3,28 +3,50 @@ using UnityEngine;
 
 public class TaskSystem : MonoBehaviour
 {
-    public float completedTasks=0f;
-    private bool holding = false;
+    public static TaskSystem Instance { get; private set; }
+    
+    public float completedTasks = 0f;
+    private bool taskActive = false;
     [SerializeField] private string tasksLeft;
-    [SerializeField] private TextMeshProUGUI taskNumber;
+    [SerializeField] private TextMeshProUGUI taskNumberText;
+    
+    [SerializeField] private GameObject endTaskObject;
+
+
+    private void Awake()
+    {
+        Instance = this;
+        endTaskObject.SetActive(false);
+    }
     
     private void Update()
     {
-        taskNumber.text= "Tasks Done: "+completedTasks + tasksLeft;
+        taskNumberText.text= "Tasks Done: "+completedTasks + tasksLeft;
     }
-    private void OnTriggerEnter(Collider taskCollider)
+
+
+    public void FindTaskStart(string taskName)
     {
-        if (taskCollider.CompareTag("TaskStart") && !holding)
+        if (taskName == "Task 1")
         {
-            print("TaskStart");
-            holding = true;
-            Destroy(taskCollider.gameObject);
+            endTaskObject.SetActive(true);
+            print("Started task 1");
+            taskActive = true;
+            
+            
         }
-        else if (taskCollider.CompareTag("TaskEnd") && holding)
+        else if (taskName == "Task 2")
         {
-            print("TaskEnd");
-            holding = false;
-            taskCollider.gameObject.tag = "TaskComplete";
+            
+        }
+    }
+
+    public void FindTaskEnd(string taskName)
+    {
+        if (taskName == "Task 1")
+        {
+            print("Completed task 1");
+            taskActive = false;
             completedTasks++;
         }
     }

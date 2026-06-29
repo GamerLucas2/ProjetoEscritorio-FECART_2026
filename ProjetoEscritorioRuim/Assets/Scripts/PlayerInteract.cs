@@ -8,6 +8,7 @@ public class PlayerInteract : MonoBehaviour
 {
     private InputSystem_Actions inputSystem;
     InputAction interact;
+    
 
     [SerializeField] LayerMask interactMask;
     [SerializeField] float maxDistance;
@@ -44,6 +45,8 @@ public class PlayerInteract : MonoBehaviour
         if (interact.WasPressedThisFrame())
             InteractWithItem();
     }
+
+    #region MyMethods
 
     private void InteractWithItem()
     {
@@ -98,4 +101,6 @@ public class PlayerInteract : MonoBehaviour
             item.transform.position = hit.transform.Find("Display").transform.position;
         }
     }
+    
+    #endregion
 }

@@ -616,7 +616,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3137892683210369664, guid: 4743978dfec99384a97238b372f7d73d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: -0.147
       objectReference: {fileID: 0}
     - target: {fileID: 6114130383999046643, guid: 4743978dfec99384a97238b372f7d73d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -732,6 +732,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b127a15b5182ff48b441213bc0b8963, type: 3}
+--- !u!1 &1753411417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753411419}
+  - component: {fileID: 1753411418}
+  m_Layer: 0
+  m_Name: GameManager(Temp)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1753411418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753411417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36496dd05e65714985676073ff5672b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaskSystem
+  completedTasks: 0
+  tasksLeft: 
+  taskNumberText: {fileID: 501962064}
+  endTaskObject: {fileID: 2051135892}
+--- !u!4 &1753411419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753411417}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11084, y: -0, z: -0.80384}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858302757
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,9 +792,9 @@ GameObject:
   - component: {fileID: 1858302760}
   - component: {fileID: 1858302759}
   - component: {fileID: 1858302758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TaskStart
-  m_TagString: TaskStart
+  m_TagString: Task 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -856,9 +904,9 @@ GameObject:
   - component: {fileID: 2051135895}
   - component: {fileID: 2051135894}
   - component: {fileID: 2051135893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TaskEnd
-  m_TagString: TaskEnd
+  m_TagString: Task 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,3 +1119,4 @@ SceneRoots:
   - {fileID: 2051135896}
   - {fileID: 2064649344}
   - {fileID: 1069688973}
+  - {fileID: 1753411419}
