@@ -1,4 +1,5 @@
 using System;
+using System.IO.Pipes;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -69,6 +70,9 @@ public class PlayerInteract : MonoBehaviour
         else if (hit.transform.CompareTag("NPC"))
         {
             Debug.Log("Interacted with NPC");
+            
+            // Searches for the NPC, for dialogue and tasks
+            GameManager.Instance.FindNPC(hit.transform);
         }
         else if (hit.transform.CompareTag("PutDown"))
         {

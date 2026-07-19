@@ -5,48 +5,38 @@ public class TaskSystem : MonoBehaviour
 {
     public static TaskSystem Instance { get; private set; }
     
-    public float completedTasks = 0f;
+    public int completedTasks = 0;
     private bool taskActive = false;
-    [SerializeField] private string tasksLeft;
+    [SerializeField] private int tasksLeft;
     [SerializeField] private TextMeshProUGUI taskNumberText;
     
-    [SerializeField] private GameObject endTaskObject;
+    // [SerializeField] private GameObject endTaskObject;
 
 
     private void Awake()
     {
         Instance = this;
-        endTaskObject.SetActive(false);
+        // endTaskObject.SetActive(false);
     }
     
     private void Update()
     {
-        taskNumberText.text= "Tasks Done: "+completedTasks + tasksLeft;
+        taskNumberText.text = string.Format("Tasks: {0}/{1}", completedTasks.ToString(), tasksLeft.ToString());
     }
 
 
-    public void FindTaskStart(string taskName)
+    
+    public void FindTaskEnd(int taskID)
     {
-        if (taskName == "Task 1")
-        {
-            endTaskObject.SetActive(true);
-            print("Started task 1");
-            taskActive = true;
-            
-            
-        }
-        else if (taskName == "Task 2")
-        {
-            
-        }
-    }
-
-    public void FindTaskEnd(string taskName)
-    {
-        if (taskName == "Task 1")
+        if (taskID == 1)
         {
             print("Completed task 1");
-            taskActive = false;
+            completedTasks++;
+        }
+        
+        if (taskID == 2)
+        {
+            print("Completed task 2");
             completedTasks++;
         }
     }

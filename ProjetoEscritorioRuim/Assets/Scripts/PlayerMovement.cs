@@ -70,7 +70,7 @@ public class PlayerMovement: MonoBehaviour
         inputSystem.Disable();
     }
     
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 7)
         {
@@ -82,7 +82,7 @@ public class PlayerMovement: MonoBehaviour
             TaskSystem.Instance.FindTaskEnd(other.tag);
             other.gameObject.tag = "Used";
         }
-    }
+    }*/
     
     #endregion
 
