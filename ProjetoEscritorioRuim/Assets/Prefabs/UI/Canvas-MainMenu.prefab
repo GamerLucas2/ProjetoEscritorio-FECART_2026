@@ -121,8 +121,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659733228581972396}
-        m_TargetAssemblyTypeName: UIPlaceHolder, Assembly-CSharp
+      - m_Target: {fileID: 3306268503580903871}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LevelSelectionButtonPressed
         m_Mode: 5
         m_Arguments:
@@ -393,8 +393,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659733228581972396}
-        m_TargetAssemblyTypeName: UIPlaceHolder, Assembly-CSharp
+      - m_Target: {fileID: 3306268503580903871}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: PlayButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -526,8 +526,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659733228581972396}
-        m_TargetAssemblyTypeName: UIPlaceHolder, Assembly-CSharp
+      - m_Target: {fileID: 3306268503580903871}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LevelSelect
         m_Mode: 1
         m_Arguments:
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 4010127206895530705}
   - component: {fileID: 7627106175628922841}
   - component: {fileID: 1657471169459886260}
-  - component: {fileID: 1659733228581972396}
+  - component: {fileID: 3306268503580903871}
   m_Layer: 5
   m_Name: Canvas-MainMenu
   m_TagString: Untagged
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1659733228581972396
+--- !u!114 &3306268503580903871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90405864de6ebec41849a06eded7ef87, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIPlaceHolder
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   titleScreen: {fileID: 8372228126742923541}
   mainMenu: {fileID: 8342658220707880810}
   levelSelection: {fileID: 9038417205039243959}
@@ -1194,8 +1194,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659733228581972396}
-        m_TargetAssemblyTypeName: UIPlaceHolder, Assembly-CSharp
+      - m_Target: {fileID: 3306268503580903871}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LevelSelectionButtonPressed
         m_Mode: 5
         m_Arguments:
@@ -1756,8 +1756,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659733228581972396}
-        m_TargetAssemblyTypeName: UIPlaceHolder, Assembly-CSharp
+      - m_Target: {fileID: 3306268503580903871}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LevelSelectionButtonPressed
         m_Mode: 5
         m_Arguments:
@@ -1765,7 +1765,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level-1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8830834804793678730
@@ -1889,8 +1889,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659733228581972396}
-        m_TargetAssemblyTypeName: UIPlaceHolder, Assembly-CSharp
+      - m_Target: {fileID: 3306268503580903871}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
