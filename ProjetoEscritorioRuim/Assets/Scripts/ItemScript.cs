@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public class NPCscript : MonoBehaviour
+public class ItemScript : MonoBehaviour
 {
-    public int TaskID = 0;
-    public bool hasTask;
- 
-    
+    public string TaskID;
+    public bool hasBeenUsed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

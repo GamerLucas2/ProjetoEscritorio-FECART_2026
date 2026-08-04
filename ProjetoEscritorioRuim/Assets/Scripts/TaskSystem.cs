@@ -25,8 +25,14 @@ public class TaskSystem : MonoBehaviour
     }
 
 
+    public void CompleteTask() // Adds 1 to the task counter when the task is complete
+    {
+        
+        completedTasks++;
+    }
+
     
-    public void FindTaskEnd(int taskID)
+    /*public void FindTaskEnd(int taskID)
     {
         if (taskID == 1)
         {
@@ -39,5 +45,5 @@ public class TaskSystem : MonoBehaviour
             print("Completed task 2");
             completedTasks++;
         }
-    }
+    }*/
 }

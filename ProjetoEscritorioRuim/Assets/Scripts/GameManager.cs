@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -27,11 +29,27 @@ public class GameManager : MonoBehaviour
     {
         if (NPC.TryGetComponent(out NPCscript NPCScript))
         {
-            if (NPCScript.hasTask && !NPCScript.taskCompleted)
+            /*if (NPCScript.hasTask)
             {
                 taskNumber = NPCScript.TaskID;
-                NPCScript.taskCompleted = true;
                 TaskSystem.Instance.FindTaskEnd(taskNumber);
+            }*/
+        }
+        
+        
+    }
+
+    public void VerifyTaskID(GameObject currentItem, GameObject itemPlaceObject) // This verifies if the item and place position have the same TaskID
+    {
+        if (currentItem.TryGetComponent(out ItemScript ItemScript) &&
+            itemPlaceObject.TryGetComponent(out PlaceScript PlaceScript))
+        {
+            print("Got script");
+            if (ItemScript.TaskID == PlaceScript.TaskID && !ItemScript.hasBeenUsed)
+            {
+                TaskSystem.Instance.CompleteTask();
+                print("Task Complete");
+                ItemScript.hasBeenUsed = true;
             }
         }
     }

@@ -100,11 +100,11 @@ public class PlayerInteract : MonoBehaviour
         {
             hasItem = false;
             itemIndicator.SetActive(false);
-            currentItem = null;
-            
+            GameManager.Instance.VerifyTaskID(item, hit.transform.gameObject);
             item.transform.position = hit.transform.Find("Display").transform.position;
+            
+            currentItem = null;
         }
     }
-    
     #endregion
 }
