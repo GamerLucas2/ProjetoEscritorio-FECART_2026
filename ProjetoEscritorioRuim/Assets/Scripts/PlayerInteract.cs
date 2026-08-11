@@ -43,7 +43,7 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
-        if (interact.WasPressedThisFrame())
+        if (interact.WasPressedThisFrame() && !GameManager.Instance.levelCleared)
             InteractWithItem();
     }
 
@@ -62,11 +62,15 @@ public class PlayerInteract : MonoBehaviour
 
     private void CheckObjectType()
     {
-        if(hit.transform.CompareTag("Item"))
+        if (hit.transform.CompareTag("Item"))
         {
             Debug.Log("Interacted with Item");
-            PickUpItem();
-        }
+            
+            if (TaskSystem.Instance.tasksActive) // Only pick up items if the level has been started
+                PickUpItem();
+            else
+                print("Start the level to interact with object");
+    }
         else if (hit.transform.CompareTag("NPC"))
         {
             Debug.Log("Interacted with NPC");

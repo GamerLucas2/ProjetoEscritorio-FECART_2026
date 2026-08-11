@@ -6,8 +6,8 @@ public class TaskSystem : MonoBehaviour
     public static TaskSystem Instance { get; private set; }
     
     public int completedTasks = 0;
-    private bool taskActive = false;
-    [SerializeField] private int tasksLeft;
+    public bool tasksActive = false;
+    [SerializeField] public int tasksLeft;
     [SerializeField] private TextMeshProUGUI taskNumberText;
     
     // [SerializeField] private GameObject endTaskObject;
@@ -27,7 +27,6 @@ public class TaskSystem : MonoBehaviour
 
     public void CompleteTask() // Adds 1 to the task counter when the task is complete
     {
-        
         completedTasks++;
     }
 
