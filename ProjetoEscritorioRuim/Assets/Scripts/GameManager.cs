@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
@@ -63,6 +64,7 @@ public class GameManager : MonoBehaviour
             if (ItemScript.TaskID == PlaceScript.TaskID && !ItemScript.hasBeenUsed) // If they do, then complete the task
             {
                 TaskSystem.Instance.CompleteTask();
+                UI_Manager.Instance.CheckTaskInList(Convert.ToInt32(ItemScript.TaskID));
                 print("Task Complete");
                 ItemScript.hasBeenUsed = true;
             }
