@@ -613,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6747703463506289563, guid: 9abdbaebfe7beda42a1d7ef6750d16dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: SampleScene
+      value: Level-1
       objectReference: {fileID: 0}
     - target: {fileID: 8342658220707880810, guid: 9abdbaebfe7beda42a1d7ef6750d16dd, type: 3}
       propertyPath: m_IsActive
