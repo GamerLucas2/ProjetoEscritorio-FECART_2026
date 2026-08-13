@@ -65,7 +65,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void QuitLevel()
     {
-        SceneManager.LoadScene("PLACEHOLDER");
+        SceneManager.LoadScene(0);
         //Probably Main Menu
     }
     #endregion
