@@ -8,8 +8,10 @@ public class UI_Manager : MonoBehaviour
 
     [SerializeField] private GameObject gameHUD;
     [SerializeField] private GameObject endScreen;
-    
-    [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[2];
+    [SerializeField] private GameObject taskList;
+
+    private static int length;
+    [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[length];
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -22,12 +24,14 @@ public class UI_Manager : MonoBehaviour
     {
         gameHUD.SetActive(true);
         endScreen.SetActive(false);
+        taskList.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (TaskSystem.Instance.tasksActive)
+            taskList.SetActive(true);
     }
 
     public void EndLevelScreen()
@@ -37,6 +41,6 @@ public class UI_Manager : MonoBehaviour
 
     public void CheckTaskInList(int taskNumber)
     {
-        taskNameText[taskNumber].text = "Complete";
+        taskNameText[taskNumber].text = taskNameText[taskNumber].text + " - Complete";
     }
 }

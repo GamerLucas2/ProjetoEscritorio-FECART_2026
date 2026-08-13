@@ -22,5 +22,7 @@ public class LevelDebug : MonoBehaviour
     void RestarGame()
     {
         SceneManager.LoadScene(0);
+        Cursor.lockState = CursorLockMode.None;   
+        Cursor.visible = true;
     }
 }

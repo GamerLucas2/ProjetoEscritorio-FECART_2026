@@ -11,9 +11,12 @@ public class Timer : MonoBehaviour
     
     void Update()
     {
-        ContUpTime();
-        ContDownTime();
-        DisplayTime(timeRemaning);
+        if (TaskSystem.Instance.tasksActive && !GameManager.Instance.levelCleared)
+        {
+            ContUpTime();
+            ContDownTime();
+            DisplayTime(timeRemaning);
+        }
     }
 
     private void DisplayTime(float displayTime)
