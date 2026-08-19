@@ -14,11 +14,11 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] LayerMask interactMask;
     [SerializeField] float maxDistance;
     RaycastHit hit;
-    
-    bool hasItem = false;
-    [SerializeField] private GameObject currentItem;
-    [SerializeField] private GameObject itemIndicator;
-    
+
+    private bool hasItem;
+    private bool canPickUp = true;
+    [SerializeField] private GameObject[] storedItems =  new GameObject[2];
+    [SerializeField] private GameObject[] itemIndicator  = new GameObject[2];
     
     void Awake()
     {
@@ -28,7 +28,8 @@ public class PlayerInteract : MonoBehaviour
 
     private void Start()
     {
-        itemIndicator.SetActive(false);
+        itemIndicator[0].SetActive(false);
+        itemIndicator[1].SetActive(false);
         Ray cameraRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
     }
 
@@ -45,6 +46,19 @@ public class PlayerInteract : MonoBehaviour
     {
         if (interact.WasPressedThisFrame() && !GameManager.Instance.levelCleared)
             InteractWithItem();
+    }
+
+    private void FixedUpdate()
+    {
+        if (storedItems[0] == null &&  storedItems[1] == null)
+            hasItem = false;
+
+        if (storedItems[1] == null)
+        {
+            canPickUp = true;
+        }
+        else 
+            canPickUp = false;
     }
 
     #region MyMethods
@@ -65,12 +79,14 @@ public class PlayerInteract : MonoBehaviour
         if (hit.transform.CompareTag("Item"))
         {
             Debug.Log("Interacted with Item");
-            
-            if (TaskSystem.Instance.tasksActive) // Only pick up items if the level has been started
-                PickUpItem();
-            else
+
+            if (TaskSystem.Instance.tasksActive && canPickUp) // Only pick up items if the level has been started and if can pick up
+                    PickUpItem();
+            else if (!TaskSystem.Instance.tasksActive)
                 print("Start the level to interact with object");
-    }
+            else if (!canPickUp)
+                print("Pockets Full");
+        }
         else if (hit.transform.CompareTag("NPC"))
         {
             Debug.Log("Interacted with NPC");
@@ -81,7 +97,7 @@ public class PlayerInteract : MonoBehaviour
         else if (hit.transform.CompareTag("PutDown"))
         {
             Debug.Log("Interacted with PutDown");
-            PutItemDown(currentItem);
+            PutItemDown();
         }
         else
         {
@@ -92,22 +108,30 @@ public class PlayerInteract : MonoBehaviour
     private void PickUpItem()
     {
         hasItem = true;
-        currentItem = hit.transform.gameObject;
-        itemIndicator.SetActive(true);
+        int i = 0;
         
-        currentItem.transform.position = new Vector3(0, 1000, 0);
+        if (storedItems[0] != null) // Makes so the items are sent to slot 1 if slot 0 is full
+            i = 1;
+        
+        storedItems[i] = hit.transform.gameObject;
+        itemIndicator[i].SetActive(true);
+            
+        storedItems[i].transform.position = new Vector3(0, 1000, 0);
+        
     }
 
-    private void PutItemDown(GameObject item)
+    private void PutItemDown()
     {
+        int i = 0;
         if (hasItem)
         {
-            hasItem = false;
-            itemIndicator.SetActive(false);
-            GameManager.Instance.VerifyTaskID(item, hit.transform.gameObject);
-            item.transform.position = hit.transform.Find("Display").transform.position;
+            if (storedItems[1] != null) // Makes it so item slot 1 is used first if item slot 1 is full
+                i = 1;
             
-            currentItem = null;
+            itemIndicator[i].SetActive(false);
+            GameManager.Instance.VerifyTaskID(storedItems[i], hit.transform.gameObject);
+            storedItems[i].transform.position = hit.transform.Find("Display").transform.position;
+            storedItems[i] = null;
         }
     }
     #endregion
