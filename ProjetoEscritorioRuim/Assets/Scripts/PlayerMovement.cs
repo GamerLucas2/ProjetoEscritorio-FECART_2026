@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +20,7 @@ public class PlayerMovement: MonoBehaviour
     
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float slowDown;
     [SerializeField] private float damping;
     #endregion
 
@@ -75,20 +77,29 @@ public class PlayerMovement: MonoBehaviour
     #endregion
 
     #region Movement Methods
-    
     private void GetInput()
     {
         horizontalInput = move.ReadValue<Vector2>().x;
         verticalInput = move.ReadValue<Vector2>().y;
     }
-    
+    private void OnTriggerEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            slowDown = 0.5f;
+        }
+        else
+        {
+            slowDown = 1f;
+        }
+    }
     void MovePlayer()
     {
         // movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         
         // Move player
-        rigidBody.AddForce(moveDirection.normalized  * moveSpeed * 10, ForceMode.Force);
+        rigidBody.AddForce(moveDirection.normalized  * moveSpeed * 10 *slowDown, ForceMode.Force);
     }
 
     private void ApplyDamping()
@@ -107,6 +118,5 @@ public class PlayerMovement: MonoBehaviour
             rigidBody.linearVelocity = new  Vector3(limitedVelocity.x, rigidBody.linearVelocity.y, limitedVelocity.z);
         }
     }
-    
     #endregion
 }
