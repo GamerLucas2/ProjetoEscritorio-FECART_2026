@@ -3,7 +3,6 @@ using UnityEngine;
 public class NPCscript : MonoBehaviour
 {
     public bool taskNPC;
- 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

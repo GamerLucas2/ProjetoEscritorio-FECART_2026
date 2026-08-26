@@ -1486,6 +1486,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
       propertyPath: taskStartNPC
       value: 1
       objectReference: {fileID: 0}
@@ -2076,6 +2080,10 @@ PrefabInstance:
     - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
       propertyPath: hasTask
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
+      propertyPath: dialogue
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
