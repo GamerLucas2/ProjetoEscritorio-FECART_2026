@@ -51,9 +51,9 @@ public class GameManager : MonoBehaviour
                 UI_Manager.Instance.EndLevelScreen();
                 levelCleared = true;
             }
+            
+            UI_Manager.Instance.ShowDialogue("AAAAA", "Sei la");
         }
-        
-        
     }
 
     public void VerifyTaskID(GameObject currentItem, GameObject itemPlaceObject) // This verifies if the item and place position have the same TaskID
