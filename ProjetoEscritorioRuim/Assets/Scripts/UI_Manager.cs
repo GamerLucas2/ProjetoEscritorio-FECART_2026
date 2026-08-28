@@ -51,17 +51,19 @@ public class UI_Manager : MonoBehaviour
     }
 
 
-    public void ShowDialogue(string dialogue, string name)
+    public void ShowDialogue(string[] dialogue, string name)
     {
         dialoguePanel.SetActive(true);
-        nameText.text = name + "...";
-        dialogueText.text = dialogue;
+        nameText.text = name;
+        dialogueText.text = dialogue[0];
+        GameManager.Instance.inConversation =  true;
     }
-
+    
     public void EndDialogue()
     {
         nameText.text = null;
         dialogueText.text = null;
         dialoguePanel.SetActive(false);
+        GameManager.Instance.inConversation = false;
     }
 }

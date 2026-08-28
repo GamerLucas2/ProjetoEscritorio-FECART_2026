@@ -1,12 +1,7 @@
 using UnityEngine;
 
-public class NPCscript : MonoBehaviour
+public class DialogueController : MonoBehaviour
 {
-    public bool taskNPC;
-    public bool hasDialogue;
-
-    public DialogueAsset dialogueAsset;
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,4 +13,6 @@ public class NPCscript : MonoBehaviour
     {
         
     }
+    
+    
 }

@@ -1503,9 +1503,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
+      propertyPath: hasDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
       propertyPath: taskStartNPC
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
+      propertyPath: dialogueAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 265daf2e955986940b299f3b50da73ac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2034,6 +2042,14 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
+      propertyPath: hasDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089001398736342826, guid: 2bbf1a50a66894440877db62eae5377c, type: 3}
+      propertyPath: dialogueAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 265daf2e955986940b299f3b50da73ac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
     
     private bool levelCompletable = false;
     public bool levelCleared = false;
+    public bool inConversation;
 
     public int taskNumber;
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
@@ -38,21 +40,24 @@ public class GameManager : MonoBehaviour
     // Also use this for finding the correct dialogue later
     public void FindNPC(Transform NPC)
     {
-        if (NPC.TryGetComponent(out NPCscript NPCScript))
+        if (NPC.TryGetComponent(out NPCscript npc))
         {
-            if (NPCScript.taskNPC && !TaskSystem.Instance.tasksActive)
+            if (npc.taskNPC && !TaskSystem.Instance.tasksActive)
             {
                 TaskSystem.Instance.tasksActive = true;
                 print ("Tasks Activated");
             }
-            else if (NPCScript.taskNPC && levelCompletable)
+            else if (npc.taskNPC && levelCompletable)
             {
                 print("Level Completed");
                 UI_Manager.Instance.EndLevelScreen();
                 levelCleared = true;
             }
-            
-            UI_Manager.Instance.ShowDialogue("AAAAA", "Sei la");
+
+            if (npc.hasDialogue)
+            {
+                UI_Manager.Instance.ShowDialogue(npc.dialogueAsset.dialogue, npc.name);
+            }
         }
     }
 

@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65a7e64a4fe560f4a870da789541e1d6, type: 3}
-  m_Name: New Dialogue Asset
+  m_Name: TestDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - Hello
-  - Nao sei o que escrever
+  - Trabaia

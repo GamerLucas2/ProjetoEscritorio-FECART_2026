@@ -17,6 +17,8 @@ public class PlayerInteract : MonoBehaviour
 
     private bool hasItem;
     private bool canPickUp = true;
+    
+    
     [SerializeField] private GameObject[] storedItems =  new GameObject[2];
     [SerializeField] private GameObject[] itemIndicator  = new GameObject[2];
     
@@ -44,8 +46,8 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
-        if (interact.WasPressedThisFrame() && !GameManager.Instance.levelCleared)
-            InteractWithItem();
+        if (interact.WasPressedThisFrame())
+            Interact();
     }
 
     private void FixedUpdate()
@@ -53,7 +55,7 @@ public class PlayerInteract : MonoBehaviour
         if (storedItems[0] == null &&  storedItems[1] == null)
             hasItem = false;
 
-        if (storedItems[1] == null)
+        if (storedItems[1] == null && TaskSystem.Instance.tasksActive)
         {
             canPickUp = true;
         }
@@ -61,9 +63,17 @@ public class PlayerInteract : MonoBehaviour
             canPickUp = false;
     }
 
-    #region MyMethods
+    #region Interaction Methods
 
-    private void InteractWithItem()
+    private void Interact()
+    {
+        if (GameManager.Instance.inConversation)
+            UI_Manager.Instance.EndDialogue();
+        else if (!GameManager.Instance.levelCleared && !PauseMenu.gameIsPaused)
+            ItemInteraction();
+    }
+    
+    private void ItemInteraction()
     {
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxDistance, interactMask))
         {
@@ -80,12 +90,7 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Interacted with Item");
 
-            if (TaskSystem.Instance.tasksActive && canPickUp) // Only pick up items if the level has been started and if can pick up
-                    PickUpItem();
-            else if (!TaskSystem.Instance.tasksActive)
-                print("Start the level to interact with object");
-            else if (!canPickUp)
-                print("Pockets Full");
+            CheckIfCanPickUp();
         }
         else if (hit.transform.CompareTag("NPC"))
         {
@@ -103,6 +108,16 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Interacted with None");
         }
+    }
+
+    private void CheckIfCanPickUp()
+    {
+        if (canPickUp) // Only pick up items if the level has been started and if can pick up
+            PickUpItem();
+        else if (!TaskSystem.Instance.tasksActive)
+            print("Start the level to interact with object");
+        else if (!canPickUp)
+            print("Pockets Full");
     }
 
     private void PickUpItem()
