@@ -17,11 +17,10 @@ public class PlayerMovement: MonoBehaviour
     
     // Movement \\
     [SerializeField] private float currentSpeed;
-    
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float slowDown;
     [SerializeField] private float damping;
+    private float slowDown = 1f;
     #endregion
 
     #region References
@@ -82,13 +81,17 @@ public class PlayerMovement: MonoBehaviour
         horizontalInput = move.ReadValue<Vector2>().x;
         verticalInput = move.ReadValue<Vector2>().y;
     }
-    private void OnTriggerEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             slowDown = 0.5f;
+            rigidBody.linearVelocity *= 0.5f;
         }
-        else
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             slowDown = 1f;
         }
@@ -97,9 +100,8 @@ public class PlayerMovement: MonoBehaviour
     {
         // movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        
         // Move player
-        rigidBody.AddForce(moveDirection.normalized  * moveSpeed * 10 *slowDown, ForceMode.Force);
+        rigidBody.AddForce(moveDirection.normalized * moveSpeed * 10 * slowDown, ForceMode.Force);
     }
 
     private void ApplyDamping()

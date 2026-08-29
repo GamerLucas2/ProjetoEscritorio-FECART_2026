@@ -9,6 +9,7 @@ TagManager:
   - PutDown
   - Used
   - Task 1
+  - Obstacle
   layers:
   - Default
   - TransparentFX
