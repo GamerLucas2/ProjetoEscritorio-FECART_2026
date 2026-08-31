@@ -9,7 +9,7 @@ public class PlayerInteract : MonoBehaviour
 {
     private InputSystem_Actions inputSystem;
     InputAction interact;
-    
+    InputAction swapItem;
 
     [SerializeField] LayerMask interactMask;
     [SerializeField] float maxDistance;
@@ -21,11 +21,14 @@ public class PlayerInteract : MonoBehaviour
     
     [SerializeField] private GameObject[] storedItems =  new GameObject[2];
     [SerializeField] private GameObject[] itemIndicator  = new GameObject[2];
+
+    private int currentItem;
     
     void Awake()
     {
         inputSystem = new InputSystem_Actions();
         interact = inputSystem.Player.Interact;
+        swapItem = inputSystem.Player.SwapItem;
     }
 
     private void Start()
@@ -48,13 +51,18 @@ public class PlayerInteract : MonoBehaviour
     {
         if (interact.WasPressedThisFrame())
             Interact();
+        
+        /*if (swapItem.WasPressedThisFrame() && !canPickUp)
+            SwapHeldItem();*/
     }
 
     private void FixedUpdate()
     {
+        // Checks if the player has an item
         if (storedItems[0] == null &&  storedItems[1] == null)
             hasItem = false;
 
+        // Checks if the player can pick up another item
         if (storedItems[1] == null && TaskSystem.Instance.tasksActive)
         {
             canPickUp = true;
@@ -65,7 +73,7 @@ public class PlayerInteract : MonoBehaviour
 
     #region Interaction Methods
 
-    private void Interact()
+    private void Interact() // Checks if the player is talking to an NPC or not
     {
         if (GameManager.Instance.inConversation)
             UI_Manager.Instance.EndDialogue();
@@ -148,6 +156,14 @@ public class PlayerInteract : MonoBehaviour
             storedItems[i].transform.position = hit.transform.Find("Display").transform.position;
             storedItems[i] = null;
         }
+    }
+
+    private void SwapHeldItem()
+    {
+        if (currentItem == 0)
+            currentItem = 1;
+        else if (currentItem == 1)
+            currentItem = 0;
     }
     #endregion
 }

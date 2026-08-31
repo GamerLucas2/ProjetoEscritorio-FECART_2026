@@ -9,7 +9,7 @@ public class LevelDebug : MonoBehaviour
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.shiftKey.isPressed && Keyboard.current.rKey.wasPressedThisFrame)
             RestartLevel();
         
-        if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed &&  Keyboard.current.rKey.wasPressedThisFrame)
+        if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.rKey.wasPressedThisFrame)
             RestarGame();
     }
     

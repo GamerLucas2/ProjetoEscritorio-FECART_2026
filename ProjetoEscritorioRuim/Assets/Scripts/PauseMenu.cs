@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     InputAction pauseGame;
     #region Pause Variables
     public static bool gameIsPaused = false;
+    public bool canPause;
+    
     [SerializeField]GameObject pauseMenuUI;
     #endregion
     #region Event Functions
@@ -32,7 +34,12 @@ public class PauseMenu : MonoBehaviour
     }
     void Update()
     {
-        if (pauseGame.WasPressedThisFrame())
+        if(GameManager.Instance.inConversation || GameManager.Instance.levelCleared)
+            canPause = false;
+        else
+            canPause = true;
+        
+        if (pauseGame.WasPressedThisFrame() && canPause)
         {
             if (gameIsPaused)
                 Resume();

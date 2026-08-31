@@ -51,12 +51,20 @@ public class UI_Manager : MonoBehaviour
     }
 
 
-    public void ShowDialogue(string[] dialogue, string name)
+    public void ShowDialogue(string[] dialogue, string name, bool activatesTasks)
     {
-        dialoguePanel.SetActive(true);
-        nameText.text = name;
-        dialogueText.text = dialogue[0];
-        GameManager.Instance.inConversation =  true;
+        if (GameManager.Instance.levelCompletable && activatesTasks)
+        {
+            
+        }
+        else
+        {
+            dialoguePanel.SetActive(true);
+            Time.timeScale = 0f;
+            nameText.text = name;
+            dialogueText.text = dialogue[0];
+            GameManager.Instance.inConversation =  true;
+        }
     }
     
     public void EndDialogue()
@@ -65,5 +73,6 @@ public class UI_Manager : MonoBehaviour
         dialogueText.text = null;
         dialoguePanel.SetActive(false);
         GameManager.Instance.inConversation = false;
+        Time.timeScale = 1f;
     }
 }

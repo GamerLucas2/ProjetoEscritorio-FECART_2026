@@ -57,8 +57,7 @@ public class PlayerMovement: MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!GameManager.Instance.levelCleared && !GameManager.Instance.inConversation)
-            MovePlayer();
+        MovePlayer();
     }
     
     // Disable/Enable

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     
     public bool talkingToNPC = false;
     
-    private bool levelCompletable = false;
+    public bool levelCompletable = false;
     public bool levelCleared = false;
     public bool inConversation;
 
@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour
         
         levelCompletable = false;
         levelCleared = false;
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -52,11 +57,12 @@ public class GameManager : MonoBehaviour
                 print("Level Completed");
                 UI_Manager.Instance.EndLevelScreen();
                 levelCleared = true;
+                Time.timeScale = 0f;
             }
 
             if (npc.hasDialogue)
             {
-                UI_Manager.Instance.ShowDialogue(npc.dialogueAsset.dialogue, npc.name);
+                UI_Manager.Instance.ShowDialogue(npc.dialogueAsset.dialogue, npc.name, npc.taskNPC);
             }
         }
     }
