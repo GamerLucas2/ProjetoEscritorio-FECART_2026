@@ -1,5 +1,6 @@
 using System;
 using System.IO.Pipes;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,7 +23,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private GameObject[] storedItems =  new GameObject[2];
     [SerializeField] private GameObject[] itemIndicator  = new GameObject[2];
 
-    private int currentItem;
+    [SerializeField] private int currentItem = 0;
     
     void Awake()
     {
@@ -52,8 +53,8 @@ public class PlayerInteract : MonoBehaviour
         if (interact.WasPressedThisFrame())
             Interact();
         
-        /*if (swapItem.WasPressedThisFrame() && !canPickUp)
-            SwapHeldItem();*/
+        if (swapItem.WasPressedThisFrame())
+            SwapHeldItem();
     }
 
     private void FixedUpdate()
@@ -63,12 +64,12 @@ public class PlayerInteract : MonoBehaviour
             hasItem = false;
 
         // Checks if the player can pick up another item
-        if (storedItems[1] == null && TaskSystem.Instance.tasksActive)
+        if (storedItems[currentItem] != null || !TaskSystem.Instance.tasksActive)
         {
-            canPickUp = true;
-        }
-        else 
             canPickUp = false;
+        }
+        else
+            canPickUp = true;
     }
 
     #region Interaction Methods
@@ -124,33 +125,29 @@ public class PlayerInteract : MonoBehaviour
             PickUpItem();
         else if (!TaskSystem.Instance.tasksActive)
             print("Start the level to interact with object");
-        else if (!canPickUp)
-            print("Pockets Full");
+        else if (storedItems[currentItem] != null)
+            print("Slot Full");
     }
 
     private void PickUpItem()
     {
         hasItem = true;
-        int i = 0;
+        int i = currentItem;
         
-        if (storedItems[0] != null) // Makes so the items are sent to slot 1 if slot 0 is full
-            i = 1;
+        /*if (storedItems[0] != null) // Makes so the items are sent to slot 1 if slot 0 is full
+            i = 1;*/
         
         storedItems[i] = hit.transform.gameObject;
         itemIndicator[i].SetActive(true);
-            
         storedItems[i].transform.position = new Vector3(0, 1000, 0);
         
     }
 
     private void PutItemDown()
     {
-        int i = 0;
-        if (hasItem)
+        int i = currentItem;
+        if (storedItems[i] != null)
         {
-            if (storedItems[1] != null) // Makes it so item slot 1 is used first if item slot 1 is full
-                i = 1;
-            
             itemIndicator[i].SetActive(false);
             GameManager.Instance.VerifyTaskID(storedItems[i], hit.transform.gameObject);
             storedItems[i].transform.position = hit.transform.Find("Display").transform.position;
@@ -160,10 +157,10 @@ public class PlayerInteract : MonoBehaviour
 
     private void SwapHeldItem()
     {
-        if (currentItem == 0)
-            currentItem = 1;
-        else if (currentItem == 1)
+        if (currentItem == 1)
             currentItem = 0;
+        else if (currentItem == 0)
+            currentItem = 1;
     }
     #endregion
 }

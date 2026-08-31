@@ -1,15 +1,21 @@
 using System;
 using UnityEngine;
 using TMPro;
+// using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour
 {
     public static UI_Manager Instance { get; private set; }
 
-    [SerializeField] private GameObject gameHUD;
     [SerializeField] private GameObject endScreen;
-    [SerializeField] private GameObject taskList;
 
+    [Header("HUD")]
+    [SerializeField] private GameObject gameHUD;
+    [SerializeField] private GameObject taskList;
+    [SerializeField] private Image[] hotbarSlots;
+    
+    [Header("Dialogue Box")]
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private GameObject dialoguePanel;
@@ -55,7 +61,7 @@ public class UI_Manager : MonoBehaviour
     {
         if (GameManager.Instance.levelCompletable && activatesTasks)
         {
-            
+            // Do nothing
         }
         else
         {
@@ -74,5 +80,10 @@ public class UI_Manager : MonoBehaviour
         dialoguePanel.SetActive(false);
         GameManager.Instance.inConversation = false;
         Time.timeScale = 1f;
+    }
+
+    public void ChangeItemIndicatorState(int i, Color color)
+    {
+        hotbarSlots[i].color = color;
     }
 }
