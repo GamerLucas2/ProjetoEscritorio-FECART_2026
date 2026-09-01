@@ -1,59 +1,49 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ComputerTask : MonoBehaviour
 {
     public bool computertaskComplete = false;
-    private bool onComputer;
+    private bool inRange;
     InputSystem_Actions inputSystemActions;
     InputAction interact;
-    [SerializeField] private Transform playerPos;
     [SerializeField] private string taskID;
     [SerializeField] private GameObject computerUI;
     [SerializeField] private GameObject task1Panel, task2Panel;
     [SerializeField] private bool isTask1, isTask2;
+    [SerializeField] private TMP_InputField WriteSpace;
+    [SerializeField] private Collider computerCollider;
     private void Awake()
     {
-        inputSystemActions = GetComponent<InputSystem_Actions>();
+        inputSystemActions = new InputSystem_Actions();
         interact = inputSystemActions.Player.Interact;
         computerUI.SetActive(false);
-        onComputer = false;
     }
     private void Update()
     {
-        if (onComputer)
+        if (inRange && interact.WasPressedThisFrame())
         {
-            ComputerInitialized();
+            TaskWasinteracted(true);
         }
     }
-    /*private bool PlayerInRange()
-    {
-        if ()
-        {
-
-        }
-        else
-        {
-
-        }
-    }*/
     private void TaskWasinteracted(bool playerInteract)
     {
         if (playerInteract)
         {
-            onComputer = true;
             ComputerInitialized();
         }
     }
     private void QuitComputer()
     {
-        onComputer = false;
         computerUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
     void ComputerInitialized()
     {
+        Debug.Log("Task Started");
         computerUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -73,6 +63,12 @@ public class ComputerTask : MonoBehaviour
     void InitiateTask2()
     {
         task2Panel.SetActive(true);
+        string playerTxt = WriteSpace.text;
+        if (playerTxt == "Complete")
+        {
+            QuitComputer();
+            computertaskComplete = true;
+        }
     }
     public void CompleteComputer()
     {
