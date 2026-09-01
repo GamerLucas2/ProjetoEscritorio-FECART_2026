@@ -3,19 +3,15 @@ using UnityEngine.InputSystem;
 
 public class ComputerTask : MonoBehaviour
 {
-    public static ComputerTask instance { get; private set; }
-
     public bool computertaskComplete = false;
     private bool onComputer;
-
     InputSystem_Actions inputSystemActions;
     InputAction interact;
-    float range;
+    [SerializeField] private Transform playerPos;
     [SerializeField] private string taskID;
-    [SerializeField] private GameObject completeTaskButton;
     [SerializeField] private GameObject computerUI;
-    [SerializeField] private GameObject buttonTaskPanel;
-    [SerializeField] private bool isDrag, isButton;
+    [SerializeField] private GameObject task1Panel, task2Panel;
+    [SerializeField] private bool isTask1, isTask2;
     private void Awake()
     {
         inputSystemActions = GetComponent<InputSystem_Actions>();
@@ -25,28 +21,33 @@ public class ComputerTask : MonoBehaviour
     }
     private void Update()
     {
-        if(interact.WasPressedThisFrame())
+        if (onComputer)
         {
-            if (onComputer == true)
-            {
-                ComputerInitialized();
-            }
-            else if (onComputer == false)
-            {
-                QuitComputer();
-            }
+            ComputerInitialized();
         }
     }
+    /*private bool PlayerInRange()
+    {
+        if ()
+        {
+
+        }
+        else
+        {
+
+        }
+    }*/
     private void TaskWasinteracted(bool playerInteract)
     {
         if (playerInteract)
         {
             onComputer = true;
+            ComputerInitialized();
         }
-
     }
     private void QuitComputer()
     {
+        onComputer = false;
         computerUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -56,14 +57,22 @@ public class ComputerTask : MonoBehaviour
         computerUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        if (isButton == true)
+        if (isTask1)
         {
-            ButtonTask();
+            InitiateTask1();
+        }
+        else if (isTask2)
+        {
+            InitiateTask2();
         }
     }
-    void ButtonTask()
+    void InitiateTask1()
     {
-        buttonTaskPanel.SetActive(true);
+        task1Panel.SetActive(true);
+    }
+    void InitiateTask2()
+    {
+        task2Panel.SetActive(true);
     }
     public void CompleteComputer()
     {
