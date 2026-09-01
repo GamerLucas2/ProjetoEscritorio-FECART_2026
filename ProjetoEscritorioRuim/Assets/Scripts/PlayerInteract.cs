@@ -107,6 +107,9 @@ public class PlayerInteract : MonoBehaviour
             
             // Searches for the NPC, for dialogue and tasks
             GameManager.Instance.FindNPC(hit.transform);
+
+            if (hit.transform.TryGetComponent(out PlaceScript placescript))
+                PutItemDown();
         }
         else if (hit.transform.CompareTag("PutDown"))
         {

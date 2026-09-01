@@ -20,7 +20,10 @@ public class GameManager : MonoBehaviour
     
     void Awake()
     {
-        Instance = this;
+        if (Instance != null)
+            Destroy(gameObject);
+        else
+            Instance = this;
         
         levelCompletable = false;
         levelCleared = false;
@@ -45,8 +48,14 @@ public class GameManager : MonoBehaviour
     // Also use this for finding the correct dialogue later
     public void FindNPC(Transform NPC)
     {
+        if(NPC.TryGetComponent(out PlaceScript placeScript ))
+        {
+            
+        }
+        
         if (NPC.TryGetComponent(out NPCscript npc))
         {
+            
             if (npc.taskNPC && !TaskSystem.Instance.tasksActive)
             {
                 TaskSystem.Instance.tasksActive = true;
@@ -55,15 +64,14 @@ public class GameManager : MonoBehaviour
             else if (npc.taskNPC && levelCompletable)
             {
                 print("Level Completed");
-                UI_Manager.Instance.EndLevelScreen();
                 levelCleared = true;
                 Time.timeScale = 0f;
             }
-
             if (npc.hasDialogue)
             {
                 UI_Manager.Instance.ShowDialogue(npc.dialogueAsset.dialogue, npc.name, npc.taskNPC);
             }
+
         }
     }
 

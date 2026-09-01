@@ -27,7 +27,10 @@ public class UI_Manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        Instance = this;
+        if (Instance != null)
+            Destroy(gameObject);
+        else
+            Instance = this;
         // taskNameText = GameObject.FindGameObjectsWithTag("taskName");
     }
 
@@ -61,7 +64,11 @@ public class UI_Manager : MonoBehaviour
     {
         if (GameManager.Instance.levelCompletable && activatesTasks)
         {
-            // Do nothing
+            dialoguePanel.SetActive(true);
+            Time.timeScale = 0f;
+            nameText.text = name;
+            dialogueText.text = dialogue[1];
+            GameManager.Instance.inConversation =  true;
         }
         else
         {
@@ -79,7 +86,11 @@ public class UI_Manager : MonoBehaviour
         dialogueText.text = null;
         dialoguePanel.SetActive(false);
         GameManager.Instance.inConversation = false;
-        Time.timeScale = 1f;
+        
+        if (GameManager.Instance.levelCleared)
+            EndLevelScreen();
+        else
+            Time.timeScale = 1f;
     }
 
     public void ChangeItemIndicatorState(int i, Color color)
