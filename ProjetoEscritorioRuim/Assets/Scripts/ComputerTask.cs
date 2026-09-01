@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class ComputerTask : MonoBehaviour
 {
     public bool computertaskComplete = false;
-    private bool inRange;
+    public bool inRange;
     InputSystem_Actions inputSystemActions;
     InputAction interact;
     [SerializeField] private string taskID;
@@ -14,39 +14,27 @@ public class ComputerTask : MonoBehaviour
     [SerializeField] private GameObject task1Panel, task2Panel;
     [SerializeField] private bool isTask1, isTask2;
     [SerializeField] private TMP_InputField WriteSpace;
-    [SerializeField] private Collider computerCollider;
+    [SerializeField] private string task2Awnser;
     private void Awake()
     {
         inputSystemActions = new InputSystem_Actions();
         interact = inputSystemActions.Player.Interact;
         computerUI.SetActive(false);
     }
-    private void Update()
-    {
-        if (inRange && interact.WasPressedThisFrame())
-        {
-            TaskWasinteracted(true);
-        }
-    }
-    private void TaskWasinteracted(bool playerInteract)
+    public void TaskWasinteracted(bool playerInteract)
     {
         if (playerInteract)
         {
             ComputerInitialized();
         }
     }
-    private void QuitComputer()
-    {
-        computerUI.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
     void ComputerInitialized()
     {
-        Debug.Log("Task Started");
-        computerUI.SetActive(true);
+        Time.timeScale = 0f;
+        Debug.Log("Computer Task Started");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        computerUI.SetActive(true);
         if (isTask1)
         {
             InitiateTask1();
@@ -56,6 +44,13 @@ public class ComputerTask : MonoBehaviour
             InitiateTask2();
         }
     }
+    private void QuitComputer()
+    {
+        Time.timeScale = 1f;
+        computerUI.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
     void InitiateTask1()
     {
         task1Panel.SetActive(true);
@@ -64,8 +59,9 @@ public class ComputerTask : MonoBehaviour
     {
         task2Panel.SetActive(true);
         string playerTxt = WriteSpace.text;
-        if (playerTxt == "Complete")
+        if (playerTxt == task2Awnser)
         {
+            Debug.Log("Task Completed");
             QuitComputer();
             computertaskComplete = true;
         }
@@ -73,6 +69,7 @@ public class ComputerTask : MonoBehaviour
     public void CompleteComputer()
     {
         {
+            Debug.Log("Task Completed");
             QuitComputer();
             computertaskComplete = true;
         }

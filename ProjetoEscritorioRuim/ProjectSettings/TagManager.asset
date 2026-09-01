@@ -10,6 +10,7 @@ TagManager:
   - Used
   - Task 1
   - Obstacle
+  - Computer
   layers:
   - Default
   - TransparentFX

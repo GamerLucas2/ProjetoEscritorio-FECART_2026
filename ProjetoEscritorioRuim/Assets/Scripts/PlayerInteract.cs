@@ -9,8 +9,8 @@ public class PlayerInteract : MonoBehaviour
 {
     private InputSystem_Actions inputSystem;
     InputAction interact;
-    
 
+    public ComputerTask computerTask;
     [SerializeField] LayerMask interactMask;
     [SerializeField] float maxDistance;
     RaycastHit hit;
@@ -46,7 +46,6 @@ public class PlayerInteract : MonoBehaviour
         if (interact.WasPressedThisFrame() && !GameManager.Instance.levelCleared)
             InteractWithItem();
     }
-
     #region MyMethods
 
     private void InteractWithItem()
@@ -55,7 +54,6 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
             Debug.Log("Hit:  " + hit.transform.gameObject.name);
-            
             CheckObjectType();
         }
     }
@@ -65,16 +63,16 @@ public class PlayerInteract : MonoBehaviour
         if (hit.transform.CompareTag("Item"))
         {
             Debug.Log("Interacted with Item");
-            
+
             if (TaskSystem.Instance.tasksActive) // Only pick up items if the level has been started
                 PickUpItem();
             else
                 print("Start the level to interact with object");
-    }
+        }
         else if (hit.transform.CompareTag("NPC"))
         {
             Debug.Log("Interacted with NPC");
-            
+
             // Searches for the NPC, for dialogue and tasks
             GameManager.Instance.FindNPC(hit.transform);
         }
@@ -82,6 +80,11 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Interacted with PutDown");
             PutItemDown(currentItem);
+        }
+        else if (hit.transform.CompareTag("Computer"))
+        {
+            Debug.Log("Interacted with Computer");
+            computerTask.TaskWasinteracted(true);
         }
         else
         {
