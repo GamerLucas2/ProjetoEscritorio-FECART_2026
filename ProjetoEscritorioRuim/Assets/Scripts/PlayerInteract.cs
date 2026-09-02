@@ -143,7 +143,9 @@ public class PlayerInteract : MonoBehaviour
         storedItems[i] = hit.transform.gameObject;
         itemIndicator[i].SetActive(true);
         storedItems[i].transform.position = new Vector3(0, 1000, 0);
+        storedItems[i].transform.parent = transform;
         
+        UI_Manager.Instance.ChangeItemIndicatorState(i, Color.blue);
     }
 
     private void PutItemDown()
@@ -153,13 +155,19 @@ public class PlayerInteract : MonoBehaviour
         {
             hit.transform.TryGetComponent(out PlaceScript placeScript);
             
-            if (placeScript.hasTask)
-                GameManager.Instance.VerifyTaskID(storedItems[i], hit.transform.gameObject);
-            // if (!placeScript.hasItemOnTop)
+            if (!placeScript.hasItemOnTop)
+            {
                 itemIndicator[i].SetActive(false);
                 storedItems[i].transform.position = hit.transform.Find("Display").transform.position;
-                // placeScript.hasItemOnTop = true;
+                storedItems[i].transform.parent = hit.transform;
+                
+                if (placeScript.hasTask)
+                    GameManager.Instance.VerifyTaskID(storedItems[i], hit.transform.gameObject);
+            
                 storedItems[i] = null;
+            }
+            else 
+                print("Spot occupied");
         } 
     }
 
@@ -167,9 +175,17 @@ public class PlayerInteract : MonoBehaviour
     private void SwapHeldItem()
     {
         if (currentItem == 1)
+        {
             currentItem = 0;
+            UI_Manager.Instance.ChangeItemIndicatorState(0, Color.blue);
+            UI_Manager.Instance.ChangeItemIndicatorState(1, Color.white);
+        }
         else if (currentItem == 0)
+        {
             currentItem = 1;
+            UI_Manager.Instance.ChangeItemIndicatorState(1, Color.blue);
+            UI_Manager.Instance.ChangeItemIndicatorState(0, Color.white);
+        }
     }
     
     #endregion
