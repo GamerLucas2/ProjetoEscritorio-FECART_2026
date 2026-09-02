@@ -151,12 +151,18 @@ public class PlayerInteract : MonoBehaviour
         int i = currentItem;
         if (storedItems[i] != null)
         {
-            itemIndicator[i].SetActive(false);
-            GameManager.Instance.VerifyTaskID(storedItems[i], hit.transform.gameObject);
-            storedItems[i].transform.position = hit.transform.Find("Display").transform.position;
-            storedItems[i] = null;
-        }
+            hit.transform.TryGetComponent(out PlaceScript placeScript);
+            
+            if (placeScript.hasTask)
+                GameManager.Instance.VerifyTaskID(storedItems[i], hit.transform.gameObject);
+            // if (!placeScript.hasItemOnTop)
+                itemIndicator[i].SetActive(false);
+                storedItems[i].transform.position = hit.transform.Find("Display").transform.position;
+                // placeScript.hasItemOnTop = true;
+                storedItems[i] = null;
+        } 
     }
+
 
     private void SwapHeldItem()
     {
@@ -165,5 +171,6 @@ public class PlayerInteract : MonoBehaviour
         else if (currentItem == 0)
             currentItem = 1;
     }
+    
     #endregion
 }

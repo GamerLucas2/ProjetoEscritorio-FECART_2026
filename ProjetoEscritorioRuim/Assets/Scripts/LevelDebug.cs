@@ -11,6 +11,8 @@ public class LevelDebug : MonoBehaviour
         
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.rKey.wasPressedThisFrame)
             RestarGame();
+        if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.hKey.wasPressedThisFrame)
+            ScoreManager.Instance.ResetHighScore();
     }
     
     

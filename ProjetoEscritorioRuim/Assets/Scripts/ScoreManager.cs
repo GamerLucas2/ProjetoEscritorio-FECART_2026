@@ -19,14 +19,12 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        bestTime = PlayerPrefs.GetFloat("highScore");
-        // PlayerPrefs.SetFloat("highScore", 99999);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        bestTime = PlayerPrefs.GetFloat("highScore");
     }
     
     public void SaveLevelTime(float endTime)
@@ -38,5 +36,10 @@ public class ScoreManager : MonoBehaviour
         
         PlayerPrefs.SetFloat("highScore", bestTime);
         print("Saved Time");
+    }
+
+    public void ResetHighScore()
+    {
+        PlayerPrefs.SetFloat("highScore", 100000);
     }
 }
