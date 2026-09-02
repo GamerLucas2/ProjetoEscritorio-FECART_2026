@@ -104,10 +104,10 @@ public class PlayerInteract : MonoBehaviour
         else if (hit.transform.CompareTag("NPC"))
         {
             Debug.Log("Interacted with NPC");
-            
             // Searches for the NPC, for dialogue and tasks
             GameManager.Instance.FindNPC(hit.transform);
-
+            
+            // Checks if the NPC is supposed to be given an item
             if (hit.transform.TryGetComponent(out PlaceScript placescript))
                 PutItemDown();
         }

@@ -4,11 +4,16 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TMPro.TextMeshProUGUI timerText;
-    
-    [Header("Timer")]
+
+    [Header("Timer")] 
     [SerializeField] float timeRemaning = 90f;
     [SerializeField] private float elapsedTime = 0f;
-    
+
+
+    void Start()
+    {
+        
+    }
     void Update()
     {
         if (TaskSystem.Instance.tasksActive && !GameManager.Instance.levelCleared)
@@ -17,6 +22,9 @@ public class Timer : MonoBehaviour
             ContDownTime();
             DisplayTime(timeRemaning);
         }
+        
+        if (GameManager.Instance.levelCleared)
+            SetFinalTime();
     }
 
     private void DisplayTime(float displayTime)
@@ -43,5 +51,13 @@ public class Timer : MonoBehaviour
     private void ContUpTime()
     {
         elapsedTime += Time.deltaTime;
+    }
+    
+    private void SetFinalTime()
+    {
+        float finalTime = elapsedTime;
+        print(finalTime);
+        
+        ScoreManager.Instance.SaveLevelTime(finalTime);
     }
 }

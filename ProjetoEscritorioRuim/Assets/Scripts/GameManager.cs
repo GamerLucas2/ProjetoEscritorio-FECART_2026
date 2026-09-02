@@ -2,18 +2,19 @@ using System;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     
-    public bool talkingToNPC = false;
     
     public bool levelCompletable = false;
     public bool levelCleared = false;
     public bool inConversation;
 
     public int taskNumber;
+    
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -77,15 +78,15 @@ public class GameManager : MonoBehaviour
 
     public void VerifyTaskID(GameObject currentItem, GameObject itemPlaceObject) // This verifies if the item and place position have the same TaskID
     {
-        if (currentItem.TryGetComponent(out ItemScript ItemScript) && itemPlaceObject.TryGetComponent(out PlaceScript PlaceScript))
+        if (currentItem.TryGetComponent(out ItemScript itemScript) && itemPlaceObject.TryGetComponent(out PlaceScript placeScript))
         {
             print("Got script");
-            if (ItemScript.TaskID == PlaceScript.TaskID && !ItemScript.hasBeenUsed) // If they do, then complete the task
+            if (itemScript.TaskID == placeScript.TaskID && !itemScript.hasBeenUsed) // If they do, then complete the task
             {
                 TaskSystem.Instance.CompleteTask();
-                UI_Manager.Instance.CheckTaskInList(Convert.ToInt32(ItemScript.TaskID));
+                UI_Manager.Instance.CheckTaskInList(Convert.ToInt32(itemScript.TaskID));
                 print("Task Complete");
-                ItemScript.hasBeenUsed = true;
+                itemScript.hasBeenUsed = true;
             }
         }
     }

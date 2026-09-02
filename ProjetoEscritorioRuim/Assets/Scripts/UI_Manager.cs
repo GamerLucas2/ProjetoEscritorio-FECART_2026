@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 // using UnityEngine.UIElements;
 using UnityEngine.UI;
 
@@ -8,21 +9,25 @@ public class UI_Manager : MonoBehaviour
 {
     public static UI_Manager Instance { get; private set; }
 
-    [SerializeField] private GameObject endScreen;
 
-    [Header("HUD")]
+    [Header("-HUD-")]
     [SerializeField] private GameObject gameHUD;
     [SerializeField] private GameObject taskList;
     [SerializeField] private Image[] hotbarSlots;
+    [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[length];
     
-    [Header("Dialogue Box")]
+    [Header("-Dialogue Box-")]
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private GameObject dialoguePanel;
     
+    [Header("-EndScreen-")]
+    [SerializeField] private GameObject endScreen;
+    [SerializeField] private TextMeshProUGUI finalTimeText;
+    [SerializeField] private TextMeshProUGUI bestTimeText;
+    
 
     private static int length;
-    [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[length];
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -52,6 +57,8 @@ public class UI_Manager : MonoBehaviour
     public void EndLevelScreen()
     {
         endScreen.SetActive(true);
+        finalTimeText.text = "Clear Time: " + ScoreManager.Instance.time.ToString("F2");
+        bestTimeText.text = "Best Time: " + ScoreManager.Instance.bestTime.ToString("F2");
     }
 
     public void CheckTaskInList(int taskNumber)
