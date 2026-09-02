@@ -25,6 +25,7 @@ public class TaskSystem : MonoBehaviour
     }
     public void CompleteTask() // Adds 1 to the task counter when the task is complete
     {
+        Debug.Log("foi");
         completedTasks++;
     }
 

@@ -127,6 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0dec29438d0444d9e77d2bf584db4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCscript
-  TaskID: 0
-  hasTask: 0
-  taskCompleted: 0
+  taskNPC: 0

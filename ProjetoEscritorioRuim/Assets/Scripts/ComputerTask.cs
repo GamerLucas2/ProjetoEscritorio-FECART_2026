@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -23,7 +24,7 @@ public class ComputerTask : MonoBehaviour
     }
     public void TaskWasinteracted(bool playerInteract)
     {
-        if (playerInteract)
+        if (playerInteract && TaskSystem.Instance.tasksActive == true)
         {
             ComputerInitialized();
         }
@@ -61,17 +62,21 @@ public class ComputerTask : MonoBehaviour
         string playerTxt = WriteSpace.text;
         if (playerTxt == task2Awnser)
         {
-            Debug.Log("Task Completed");
-            QuitComputer();
+            CompleteComputer();
             computertaskComplete = true;
         }
     }
     public void CompleteComputer()
     {
-        {
-            Debug.Log("Task Completed");
-            QuitComputer();
-            computertaskComplete = true;
-        }
+        CompleteTaskOnTheThing();
+        computertaskComplete = true;
+        QuitComputer();
+    }
+
+    public void CompleteTaskOnTheThing()
+    {
+        Debug.Log("Task Completed");
+        TaskSystem.Instance.CompleteTask();
+        UI_Manager.Instance.CheckTaskInList(Convert.ToInt32(taskID));
     }
 }
