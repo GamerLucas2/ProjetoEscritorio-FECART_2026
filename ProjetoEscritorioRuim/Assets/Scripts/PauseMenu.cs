@@ -31,6 +31,13 @@ public class PauseMenu : MonoBehaviour
         pauseGame.Enable();
         Time.timeScale = 1.0f;
     }
+
+    private void Start()
+    {
+        canPause = true;
+        gameIsPaused = false;
+    }
+
     void Update()
     {
         if(GameManager.Instance.inConversation || GameManager.Instance.levelCleared)

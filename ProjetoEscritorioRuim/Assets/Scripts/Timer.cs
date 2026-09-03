@@ -52,6 +52,7 @@ public class Timer : MonoBehaviour
             timeRemaning = 0;
             gameHud.SetActive(false);
             gameOverPanel.SetActive(true);
+            PauseMenu.gameIsPaused = true;
         }
     }
     public void Restart()

@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TaskSystem
   completedTasks: 0
   tasksActive: 0
-  tasksLeft: 4
+  tasksLeft: 5
   taskNumberText: {fileID: 0}
 --- !u!114 &1621989267815955951
 MonoBehaviour:
