@@ -24,10 +24,9 @@ public class TaskSystem : MonoBehaviour
         // taskNumberText.text = string.Format("Tasks: {0}/{1}", completedTasks.ToString(), tasksLeft.ToString());
         UI_Manager.Instance.UpdateTaskCounter(taskNumberText, completedTasks.ToString(), tasksLeft.ToString());
     }
-
-
     public void CompleteTask() // Adds 1 to the task counter when the task is complete
     {
+        Debug.Log("foi");
         completedTasks++;
     }
 }
