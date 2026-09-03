@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,11 +9,13 @@ public class Timer : MonoBehaviour
     [Header("Timer")] 
     [SerializeField] float timeRemaning = 90f;
     [SerializeField] private float elapsedTime = 0f;
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject gameHud;
+    PauseMenu pauseMenu;
 
-
-    void Start()
+    private void Awake()
     {
-        
+        gameOverPanel.SetActive(false);
     }
     void Update()
     {
@@ -43,9 +46,21 @@ public class Timer : MonoBehaviour
             timeRemaning -= Time.deltaTime;
         else
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
             timeRemaning = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            gameHud.SetActive(false);
+            gameOverPanel.SetActive(true);
         }
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void ContUpTime()

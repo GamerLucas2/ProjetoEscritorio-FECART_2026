@@ -11,7 +11,6 @@ public class PauseMenu : MonoBehaviour
     #region Pause Variables
     public static bool gameIsPaused = false;
     public bool canPause;
-    
     [SerializeField]GameObject pauseMenuUI;
     #endregion
     #region Event Functions
@@ -51,11 +50,14 @@ public class PauseMenu : MonoBehaviour
     #region Pause Menu Methods
     void Pause()//Pauses the game through the time scale and opens the Menu UI
     {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        gameIsPaused = true;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        if (canPause)
+        {
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            gameIsPaused = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     public void Resume()//Continues the level you're on

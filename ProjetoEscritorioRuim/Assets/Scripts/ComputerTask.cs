@@ -31,8 +31,8 @@ public class ComputerTask : MonoBehaviour
     }
     void ComputerInitialized()
     {
-        Time.timeScale = 0f;
         Debug.Log("Computer Task Started");
+        Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         computerUI.SetActive(true);

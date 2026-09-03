@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PlayerInteract : MonoBehaviour
 {
     private InputSystem_Actions inputSystem;
+    public ComputerTask computerTask;
     InputAction interact;
     InputAction swapItem;
 
@@ -106,7 +107,7 @@ public class PlayerInteract : MonoBehaviour
             Debug.Log("Interacted with NPC");
             // Searches for the NPC, for dialogue and tasks
             GameManager.Instance.FindNPC(hit.transform);
-            
+
             // Checks if the NPC is supposed to be given an item
             if (hit.transform.TryGetComponent(out PlaceScript placescript))
                 PutItemDown();
@@ -115,6 +116,11 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Interacted with PutDown");
             PutItemDown();
+        }
+        else if (hit.transform.CompareTag("Computer"))
+        {
+            Debug.Log("Interacted with Computer");
+            computerTask.TaskWasinteracted(true);
         }
         else
         {
