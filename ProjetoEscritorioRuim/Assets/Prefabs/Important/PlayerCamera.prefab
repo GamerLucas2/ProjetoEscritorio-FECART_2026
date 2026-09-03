@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327289275348391426}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -171,5 +171,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   maxDistance: 10
-  currentItem: {fileID: 0}
-  itemIndicator: {fileID: 0}
+  storedItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  itemIndicator:
+  - {fileID: 0}
+  - {fileID: 0}
+  currentItem: 0

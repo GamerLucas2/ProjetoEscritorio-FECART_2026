@@ -104,4 +104,9 @@ public class UI_Manager : MonoBehaviour
     {
         hotbarSlots[i].color = color;
     }
+
+    public void UpdateTaskCounter(TextMeshProUGUI taskCounter, string tasksCompleted, string tasksToComplete)
+    {
+        taskCounter.text = string.Format("Tasks: {0}/{1}", tasksCompleted, tasksToComplete);
+    }
 }

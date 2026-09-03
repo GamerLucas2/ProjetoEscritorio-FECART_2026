@@ -21,7 +21,8 @@ public class TaskSystem : MonoBehaviour
     
     private void Update()
     {
-        taskNumberText.text = string.Format("Tasks: {0}/{1}", completedTasks.ToString(), tasksLeft.ToString());
+        // taskNumberText.text = string.Format("Tasks: {0}/{1}", completedTasks.ToString(), tasksLeft.ToString());
+        UI_Manager.Instance.UpdateTaskCounter(taskNumberText, completedTasks.ToString(), tasksLeft.ToString());
     }
 
 
@@ -29,20 +30,4 @@ public class TaskSystem : MonoBehaviour
     {
         completedTasks++;
     }
-
-    
-    /*public void FindTaskEnd(int taskID)
-    {
-        if (taskID == 1)
-        {
-            print("Completed task 1");
-            completedTasks++;
-        }
-        
-        if (taskID == 2)
-        {
-            print("Completed task 2");
-            completedTasks++;
-        }
-    }*/
 }
