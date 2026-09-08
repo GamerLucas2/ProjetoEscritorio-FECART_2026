@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -11,16 +12,22 @@ public class MainMenu : MonoBehaviour
     
     [SerializeField] GameObject[] windows;
     
-    //! FAZER: Fazer com que o jogo reconheça todos os panels de janela como janelas e coloquem um index neles automaticamente
+    [SerializeField] GameObject currentWindowParent;
+    [SerializeField] GameObject windowParent;
     
     #endregion
     private void Awake()
     {
         titleScreen.SetActive(true);
         mainMenu.SetActive(false);
-        // levelSelection.SetActive(false);
         taskbar.SetActive(false);
     }
+
+    private void Start()
+    {
+        
+    }
+
     public void PlayButtonPressed()
     {
         titleScreen.SetActive(false);
@@ -50,12 +57,16 @@ public class MainMenu : MonoBehaviour
     
     public void OpenWindow(int i)
     {
+        Transform Parent = currentWindowParent.transform;
         print("Opening Window " + i);
         windows[i].SetActive(true);
+        windows[i].transform.parent = Parent;
     }
     public void CloseWindow(int i)
     {
+        Transform Parent = windowParent.transform;
         print("Closing Window " + i);
         windows[i].SetActive(false);
+        windows[i].transform.parent = Parent;
     }
 }
