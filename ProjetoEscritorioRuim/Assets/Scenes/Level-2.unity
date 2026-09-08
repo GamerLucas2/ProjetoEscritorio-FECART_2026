@@ -5463,6 +5463,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.19
       objectReference: {fileID: 0}
+    - target: {fileID: 4041797959652814204, guid: 4743978dfec99384a97238b372f7d73d, type: 3}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6114130383999046643, guid: 4743978dfec99384a97238b372f7d73d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1
