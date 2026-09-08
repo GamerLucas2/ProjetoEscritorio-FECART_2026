@@ -7,23 +7,37 @@ public class MainMenu : MonoBehaviour
     #region Declara��o de variaveis
     [SerializeField] GameObject titleScreen;
     [SerializeField] GameObject mainMenu;
-    [SerializeField] GameObject levelSelection;
+    [SerializeField] GameObject taskbar;
+    
+    [SerializeField] GameObject[] windows;
+    
+    //! FAZER: Fazer com que o jogo reconheça todos os panels de janela como janelas e coloquem um index neles automaticamente
+    
     #endregion
     private void Awake()
     {
         titleScreen.SetActive(true);
         mainMenu.SetActive(false);
-        levelSelection.SetActive(false);
+        // levelSelection.SetActive(false);
+        taskbar.SetActive(false);
     }
     public void PlayButtonPressed()
     {
         titleScreen.SetActive(false);
         mainMenu.SetActive(true);
+        taskbar.SetActive(true);
     }
-    public void LevelSelect()
+
+    public void CheckIfWindowOpen(int index)
     {
-        levelSelection.SetActive(true);
-        mainMenu.SetActive(false);
+        if (windows[index].activeSelf)
+        {
+            CloseWindow(index);
+        }
+        else if (!windows[index].activeSelf)
+        {
+            OpenWindow(index);
+        }
     }
     public void LevelSelectionButtonPressed(string sceneName)
     {
@@ -32,5 +46,16 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    
+    public void OpenWindow(int i)
+    {
+        print("Opening Window " + i);
+        windows[i].SetActive(true);
+    }
+    public void CloseWindow(int i)
+    {
+        print("Closing Window " + i);
+        windows[i].SetActive(false);
     }
 }
