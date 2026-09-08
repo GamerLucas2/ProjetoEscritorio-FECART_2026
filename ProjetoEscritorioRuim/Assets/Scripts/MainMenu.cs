@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     #region Declara��o de variaveis
+    
+    [Header("-Main Menu-")]
     [SerializeField] GameObject titleScreen;
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject taskbar;
     
+    [Header("-Windows-")]
     [SerializeField] GameObject[] windows;
-    
-    [SerializeField] GameObject currentWindowParent;
     [SerializeField] GameObject windowParent;
+    private bool isWindowOpen;
     
+    [Header("-Times-")]
+    [SerializeField] TextMeshProUGUI[] bestTimeText;
     #endregion
     private void Awake()
     {
@@ -25,7 +29,12 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.SetFloat("Time-Level-1", 99999);
+        PlayerPrefs.SetFloat("Time-Level-2", 99999);
+        PlayerPrefs.SetFloat("Time-Level-2", 99999);
         
+        TimesText();
+
     }
 
     public void PlayButtonPressed()
@@ -43,8 +52,10 @@ public class MainMenu : MonoBehaviour
         }
         else if (!windows[index].activeSelf)
         {
+            CloseAllWindows();
             OpenWindow(index);
         }
+        
     }
     public void LevelSelectionButtonPressed(string sceneName)
     {
@@ -57,16 +68,29 @@ public class MainMenu : MonoBehaviour
     
     public void OpenWindow(int i)
     {
-        Transform Parent = currentWindowParent.transform;
         print("Opening Window " + i);
         windows[i].SetActive(true);
-        windows[i].transform.parent = Parent;
     }
     public void CloseWindow(int i)
     {
-        Transform Parent = windowParent.transform;
         print("Closing Window " + i);
         windows[i].SetActive(false);
-        windows[i].transform.parent = Parent;
+    }
+
+    private void CloseAllWindows()
+    {
+        foreach (GameObject window in windows)
+            window.SetActive(false);
+    }
+
+    private void TimesText()
+    {
+        float bestTime = 0;
+
+        for (int i = 0; i < 3; i++)
+            bestTime += PlayerPrefs.GetFloat("Time-Level-" + i + 1);
+        
+        for(int i = 0; i < 3; i++)
+            bestTimeText[i].text = PlayerPrefs.GetFloat("Time-Level-" + i + 1).ToString();
     }
 }
