@@ -1560,6 +1560,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 949163130}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 1925208589}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: taskNameText.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -7658,6 +7662,11 @@ GameObject:
 --- !u!1 &1916297616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6341058850184318103, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 1916297609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1925208589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4693141700464050200, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
   m_PrefabInstance: {fileID: 1916297609}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1925689490

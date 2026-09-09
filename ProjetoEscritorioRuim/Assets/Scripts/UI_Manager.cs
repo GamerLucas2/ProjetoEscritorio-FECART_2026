@@ -22,6 +22,7 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     
     [Header("-EndScreen-")]
+    [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject endScreen;
     [SerializeField] private TextMeshProUGUI finalTimeText;
     [SerializeField] private TextMeshProUGUI bestTimeText;
@@ -59,6 +60,16 @@ public class UI_Manager : MonoBehaviour
         endScreen.SetActive(true);
         finalTimeText.text = "Clear Time: " + ScoreManager.Instance.time.ToString("F2");
         bestTimeText.text = "Best Time: " + ScoreManager.Instance.bestTime.ToString("F2");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void GameOverScreen()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        gameHUD.SetActive(false);
+        gameOverScreen.SetActive(true);
     }
 
     public void CheckTaskInList(int taskNumber)

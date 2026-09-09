@@ -1213,6 +1213,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &1171499183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4693141700464050200, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 734047865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1180962754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,6 +2481,10 @@ PrefabInstance:
       propertyPath: finalTimeText
       value: 
       objectReference: {fileID: 1628711339}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 1171499183}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: 'hotbarSlots.Array.data[0]'
       value: 
