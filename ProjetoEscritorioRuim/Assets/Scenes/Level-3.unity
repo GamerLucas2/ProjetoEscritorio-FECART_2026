@@ -2287,7 +2287,9 @@ PrefabInstance:
       value: DivisoriaTeste2 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8700617353114198275, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
+    - {fileID: 65702495048144492, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
@@ -3244,7 +3246,9 @@ PrefabInstance:
       value: DivisoriaTeste2 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8700617353114198275, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
+    - {fileID: 65702495048144492, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
@@ -4352,7 +4356,9 @@ PrefabInstance:
       value: DivisoriaTeste2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8700617353114198275, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
+    - {fileID: 65702495048144492, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 016a5b3e51b10b349a387fb5aacf8cf9, type: 3}
