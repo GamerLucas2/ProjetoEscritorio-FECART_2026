@@ -4324,7 +4324,7 @@ GameObject:
   - component: {fileID: 1124263190}
   - component: {fileID: 1124263189}
   - component: {fileID: 1124263188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Computer
   m_TagString: Computer
   m_Icon: {fileID: 0}
@@ -4693,7 +4693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6728490881123069334, guid: 72a35a4b63c052d4eb3c0dab4d692d5b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.92
+      value: 11.97
       objectReference: {fileID: 0}
     - target: {fileID: 6728490881123069334, guid: 72a35a4b63c052d4eb3c0dab4d692d5b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7660,6 +7660,10 @@ PrefabInstance:
     - target: {fileID: 3130758009500226904, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -194.66882
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261107691029566736, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: timeRemaning
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3262693826620001388, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_AnchoredPosition.x

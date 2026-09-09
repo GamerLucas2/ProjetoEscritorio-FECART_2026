@@ -63,7 +63,7 @@ public class UI_Manager : MonoBehaviour
 
     public void CheckTaskInList(int taskNumber)
     {
-        taskNameText[taskNumber].text = taskNameText[taskNumber].text + " - Complete";
+        taskNameText[taskNumber].text = "Completo";
     }
 
 
