@@ -29,12 +29,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.SetFloat("Time-Level-1", 99999);
-        PlayerPrefs.SetFloat("Time-Level-2", 99999);
-        PlayerPrefs.SetFloat("Time-Level-2", 99999);
-        
         TimesText();
-
     }
 
     public void PlayButtonPressed()
@@ -85,12 +80,12 @@ public class MainMenu : MonoBehaviour
 
     private void TimesText()
     {
-        float bestTime = 0;
+        bestTimeText[0].text = "Level 1 Time: " + PlayerPrefs.GetFloat("Time-Level-1").ToString("F2");
+        bestTimeText[1].text = "Level 2 Time: " + PlayerPrefs.GetFloat("Time-Level-2").ToString("F2");
+        bestTimeText[2].text = "Level 3 Time: " + PlayerPrefs.GetFloat("Time-Level-3").ToString("F2");
 
-        for (int i = 0; i < 3; i++)
-            bestTime += PlayerPrefs.GetFloat("Time-Level-" + i + 1);
+        float bestTime = PlayerPrefs.GetFloat("Time-Level-1") + PlayerPrefs.GetFloat("Time-Level-2") + PlayerPrefs.GetFloat("Time-Level-3");
         
-        for(int i = 0; i < 3; i++)
-            bestTimeText[i].text = PlayerPrefs.GetFloat("Time-Level-" + i + 1).ToString();
+        bestTimeText[3].text = "Total Time: " + bestTime.ToString("F2");
     }
 }
