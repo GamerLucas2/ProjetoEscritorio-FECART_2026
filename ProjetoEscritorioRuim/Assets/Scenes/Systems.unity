@@ -619,6 +619,11 @@ MonoBehaviour:
   TaskID: 3
   hasTask: 1
   hasItemOnTop: 0
+--- !u!1 &430807461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 259329145347782064, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+  m_PrefabInstance: {fileID: 3005175964159032591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &468430308 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3396193432301408956, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
@@ -1186,6 +1191,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6438406745674402611, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
   m_PrefabInstance: {fileID: 3005175964159032591}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &945999571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430807461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bd5cd052de44246af18a137494171b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueController
+  dialogueText: {fileID: 1942454561}
+  nameText: {fileID: 468430308}
+  dialogueBox: {fileID: 1043772005}
 --- !u!1 &1043772005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6023402294374627470, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
@@ -2394,9 +2414,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0dec29438d0444d9e77d2bf584db4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCscript
+  firstInteraction: 1
+  repeatStartPosition: 0
   taskNPC: 0
   hasDialogue: 1
-  dialogueAsset: {fileID: 11400000, guid: 265daf2e955986940b299f3b50da73ac, type: 2}
+  npcName: Test
+  dialogueIndex: 0
+  dialogueAsset:
+  - {fileID: 11400000, guid: 265daf2e955986940b299f3b50da73ac, type: 2}
+  - {fileID: 11400000, guid: 829453bca987bf74281884ed1e9e7673, type: 2}
 --- !u!1001 &3005175964159032591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2516,7 +2542,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 259329145347782064, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 945999571}
   m_SourcePrefab: {fileID: 100100000, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
 --- !u!4 &3877136937957906917
 Transform:
@@ -2542,6 +2571,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 117843299}
     m_Modifications:
+    - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: npcName
+      value: Leo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: firstInteraction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: repeatStartPosition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: dialogueAsset.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: 'dialogueAsset.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 265daf2e955986940b299f3b50da73ac, type: 2}
+    - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: 'dialogueAsset.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 829453bca987bf74281884ed1e9e7673, type: 2}
+    - target: {fileID: 2353949900983458202, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: m_Size.x
+      value: 2.4221344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353949900983458202, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: m_Size.y
+      value: 3.4257812
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353949900983458202, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d7f051fa28eb8ab45980b75f0b60b55a, type: 3}
+    - target: {fileID: 2353949900983458202, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3877136938206746477, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.44
@@ -2611,6 +2680,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: npcName
+      value: Bianca
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: taskNPC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: repeatStartPosition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: dialogueAsset.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: 'dialogueAsset.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 265daf2e955986940b299f3b50da73ac, type: 2}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: 'dialogueAsset.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 829453bca987bf74281884ed1e9e7673, type: 2}
     - target: {fileID: 8049784318580890451, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.26999998

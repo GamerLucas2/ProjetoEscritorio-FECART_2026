@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public bool inConversation;
 
     public int taskNumber;
+
+    // public delegate void OnTimerEnded();
+    // public static OnTimerEnded onTimerEnded;
     
     
     
@@ -22,7 +25,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         if (Instance != null)
-            Destroy(gameObject);
+            Destroy(this);
         else
             Instance = this;
         
@@ -67,10 +70,13 @@ public class GameManager : MonoBehaviour
                 print("Level Completed");
                 levelCleared = true;
                 Time.timeScale = 0f;
+                DialogueController.OnDialogueEnded += UI_Manager.Instance.EndLevelScreen;
             }
             if (npc.hasDialogue)
             {
-                UI_Manager.Instance.ShowDialogue(npc.dialogueAsset.dialogue, npc.name, npc.taskNPC);
+                // UI_Manager.Instance.ShowDialogue(npc.dialogueAsset.dialogue, npc.name, npc.taskNPC);
+                int index = npc.dialogueIndex;
+                DialogueController.Instance.StartDialogue(npc.dialogueAsset[index].dialogue, npc.StartPosition, npc.npcName);
             }
 
         }

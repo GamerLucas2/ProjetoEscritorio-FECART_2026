@@ -34,7 +34,7 @@ public class UI_Manager : MonoBehaviour
     void Awake()
     {
         if (Instance != null)
-            Destroy(gameObject);
+            Destroy(this);
         else
             Instance = this;
         // taskNameText = GameObject.FindGameObjectsWithTag("taskName");
@@ -57,6 +57,7 @@ public class UI_Manager : MonoBehaviour
 
     public void EndLevelScreen()
     {
+        Time.timeScale = 0f;
         endScreen.SetActive(true);
         finalTimeText.text = "Clear Time: " + ScoreManager.Instance.time.ToString("F2");
         bestTimeText.text = "Best Time: " + ScoreManager.Instance.bestTime.ToString("F2");
@@ -78,38 +79,38 @@ public class UI_Manager : MonoBehaviour
     }
 
 
-    public void ShowDialogue(string[] dialogue, string name, bool activatesTasks)
-    {
-        if (GameManager.Instance.levelCompletable && activatesTasks)
-        {
-            dialoguePanel.SetActive(true);
-            Time.timeScale = 0f;
-            nameText.text = name;
-            dialogueText.text = dialogue[1];
-            GameManager.Instance.inConversation =  true;
-        }
-        else
-        {
-            dialoguePanel.SetActive(true);
-            Time.timeScale = 0f;
-            nameText.text = name;
-            dialogueText.text = dialogue[0];
-            GameManager.Instance.inConversation =  true;
-        }
-    }
+    // public void ShowDialogue(string[] dialogue, string name, bool activatesTasks)
+    // {
+    //     if (GameManager.Instance.levelCompletable && activatesTasks)
+    //     {
+    //         dialoguePanel.SetActive(true);
+    //         Time.timeScale = 0f;
+    //         nameText.text = name;
+    //         dialogueText.text = dialogue[1];
+    //         GameManager.Instance.inConversation =  true;
+    //     }
+    //     else
+    //     {
+    //         dialoguePanel.SetActive(true);
+    //         Time.timeScale = 0f;
+    //         nameText.text = name;
+    //         dialogueText.text = dialogue[0];
+    //         GameManager.Instance.inConversation =  true;
+    //     }
+    // }
     
-    public void EndDialogue()
-    {
-        nameText.text = null;
-        dialogueText.text = null;
-        dialoguePanel.SetActive(false);
-        GameManager.Instance.inConversation = false;
-        
-        if (GameManager.Instance.levelCleared)
-            EndLevelScreen();
-        else
-            Time.timeScale = 1f;
-    }
+    // public void EndDialogue()
+    // {
+    //     nameText.text = null;
+    //     dialogueText.text = null;
+    //     dialoguePanel.SetActive(false);
+    //     GameManager.Instance.inConversation = false;
+    //     
+    //     if (GameManager.Instance.levelCleared)
+    //         EndLevelScreen();
+    //     else
+    //         Time.timeScale = 1f;
+    // }
 
     public void ChangeItemIndicatorState(int i, Color color)
     {
@@ -119,5 +120,10 @@ public class UI_Manager : MonoBehaviour
     public void UpdateTaskCounter(TextMeshProUGUI taskCounter, string tasksCompleted, string tasksToComplete)
     {
         taskCounter.text = string.Format("Tasks: {0}/{1}", tasksCompleted, tasksToComplete);
+    }
+
+    private void OnDisable()
+    {
+        DialogueController.OnDialogueEnded -= EndLevelScreen;
     }
 }

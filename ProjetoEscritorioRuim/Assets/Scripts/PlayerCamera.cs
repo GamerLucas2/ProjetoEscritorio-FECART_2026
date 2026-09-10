@@ -69,4 +69,6 @@ public class PlayerCamera : MonoBehaviour
     {
         transform.position = cameraPosition.position;
     }
+    
+    
 }
