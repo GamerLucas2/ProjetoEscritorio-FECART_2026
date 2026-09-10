@@ -316,6 +316,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 619173488}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 1981375334}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: taskNameText.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -7183,6 +7187,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1981375334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4693141700464050200, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 619173486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2000426197
 GameObject:
   m_ObjectHideFlags: 0
@@ -7421,9 +7430,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 1555341748}
   - {fileID: 1526344995}
+  - {fileID: 29431805}
+  - {fileID: 1609389703}
   - {fileID: 1069688973}
   - {fileID: 1639386693}
-  - {fileID: 1609389703}
   - {fileID: 588309320}
   - {fileID: 619173486}
   - {fileID: 13877893}
@@ -7431,6 +7441,5 @@ SceneRoots:
   - {fileID: 189891337}
   - {fileID: 1014197398}
   - {fileID: 1600138255}
-  - {fileID: 29431805}
   - {fileID: 1260177125}
   - {fileID: 868434842}

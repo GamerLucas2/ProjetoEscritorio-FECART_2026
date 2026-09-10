@@ -1,18 +1,62 @@
 using UnityEngine;
+using System;
+using System.Collections;
+using TMPro;
 
 public class DialogueController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static DialogueController Instance;
+
+    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] GameObject dialogueBox;
+
+    public static event Action OnDialogueStarted;
+    public static event Action OnDialogueEnded;
+    bool skipLineTriggered;
+
+    private void Awake()
     {
-        
+        if (Instance == null) 
+        {
+            Instance = this;
+        }
+        else 
+        {
+            Destroy(this);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartDialogue(string[] dialogue, int startPosition, string name)
     {
-        
+        nameText.text = name;
+        dialogueBox.gameObject.SetActive(true);
+        StopAllCoroutines();
+        StartCoroutine(RunDialogue(dialogue, startPosition));
     }
-    
-    
+
+    IEnumerator RunDialogue(string[] dialogue, int startPosition)
+    {
+        skipLineTriggered = false;
+        OnDialogueStarted?.Invoke();
+
+        for(int i = startPosition; i < dialogue.Length; i++)
+        {
+            dialogueText.text = dialogue[i];
+            while (skipLineTriggered == false)
+            {
+                // Wait for the current line to be skipped
+                yield return null;
+            }
+            skipLineTriggered = false;
+        }
+
+        OnDialogueEnded?.Invoke();
+        dialogueBox.gameObject.SetActive(false);
+    }
+
+    public void SkipLine()
+    {
+        skipLineTriggered = true;
+    }
 }

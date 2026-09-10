@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3574220305515365301}
   - component: {fileID: 7911095540547503724}
+  - component: {fileID: 4183525075391057706}
   m_Layer: 0
   m_Name: LevelDebug
   m_TagString: Untagged
@@ -44,3 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4346e4a9f6bb88641854e7c1ad06405c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelDebug
+--- !u!114 &4183525075391057706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204000760806897711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95290b3d091cae0499140298876f1461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager

@@ -46,22 +46,11 @@ public class Timer : MonoBehaviour
             timeRemaning -= Time.deltaTime;
         else
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            UI_Manager.Instance.GameOverScreen();
             Time.timeScale = 0;
             timeRemaning = 0;
-            gameHud.SetActive(false);
-            gameOverPanel.SetActive(true);
             PauseMenu.gameIsPaused = true;
         }
-    }
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene(0);
     }
 
     private void ContUpTime()

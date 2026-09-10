@@ -43,10 +43,17 @@ public class PlayerInteract : MonoBehaviour
     private void OnEnable()
     {
         inputSystem.Enable();
+
+        DialogueController.OnDialogueStarted += JoinConversation;
+        DialogueController.OnDialogueEnded += LeaveConversation;
     }
+
     private void OnDisable()
     {
         inputSystem.Disable();
+        
+        DialogueController.OnDialogueStarted -= JoinConversation;
+        DialogueController.OnDialogueEnded -= LeaveConversation;
     }
 
     void Update()
@@ -78,7 +85,7 @@ public class PlayerInteract : MonoBehaviour
     private void Interact() // Checks if the player is talking to an NPC or not
     {
         if (GameManager.Instance.inConversation)
-            UI_Manager.Instance.EndDialogue();
+            DialogueController.Instance.SkipLine();
         else if (!GameManager.Instance.levelCleared && !PauseMenu.gameIsPaused)
             ItemInteraction();
     }
@@ -192,6 +199,18 @@ public class PlayerInteract : MonoBehaviour
             UI_Manager.Instance.ChangeItemIndicatorState(1, Color.blue);
             UI_Manager.Instance.ChangeItemIndicatorState(0, Color.white);
         }
+    }
+
+    private void JoinConversation()
+    {
+        GameManager.Instance.inConversation = true;
+        Time.timeScale = 0;
+    }
+
+    private void LeaveConversation()
+    {
+        GameManager.Instance.inConversation = false;
+        Time.timeScale = 1;
     }
     
     #endregion

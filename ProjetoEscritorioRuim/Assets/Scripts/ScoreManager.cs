@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
     void Awake()
     {
         if (Instance != null)
-            Destroy(gameObject);
+            Destroy(this);
         else
             Instance = this;
     }
