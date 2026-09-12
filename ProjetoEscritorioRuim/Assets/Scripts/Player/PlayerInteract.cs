@@ -22,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
     
     
     [SerializeField] private GameObject[] storedItems =  new GameObject[2];
-    [SerializeField] private GameObject[] itemIndicator  = new GameObject[2];
+    // [SerializeField] private GameObject[] itemIndicator  = new GameObject[2];
 
     [SerializeField] private int currentItem = 0;
     
@@ -35,8 +35,8 @@ public class PlayerInteract : MonoBehaviour
 
     private void Start()
     {
-        itemIndicator[0].SetActive(false);
-        itemIndicator[1].SetActive(false);
+        // itemIndicator[0].SetActive(false);
+        // itemIndicator[1].SetActive(false);
         Ray cameraRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
     }
 
@@ -154,7 +154,7 @@ public class PlayerInteract : MonoBehaviour
             i = 1;*/
         
         storedItems[i] = hit.transform.gameObject;
-        itemIndicator[i].SetActive(true);
+        UI_Manager.Instance.ToggleItemIndicator(i);
         storedItems[i].transform.position = new Vector3(0, 1000, 0);
         storedItems[i].transform.parent = transform;
         
@@ -170,7 +170,7 @@ public class PlayerInteract : MonoBehaviour
             
             if (!placeScript.hasItemOnTop)
             {
-                itemIndicator[i].SetActive(false);
+                UI_Manager.Instance.ToggleItemIndicator(i);
                 storedItems[i].transform.position = hit.transform.Find("Display").transform.position;
                 storedItems[i].transform.parent = hit.transform;
                 

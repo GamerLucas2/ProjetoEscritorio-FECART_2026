@@ -254,5 +254,5 @@ MonoBehaviour:
   currentSpeed: 0
   moveSpeed: 8
   damping: 7
-  rigidBody: {fileID: 0}
-  orientation: {fileID: 0}
+  rigidBody: {fileID: 1126337568088436051}
+  orientation: {fileID: 8523366069743597935}

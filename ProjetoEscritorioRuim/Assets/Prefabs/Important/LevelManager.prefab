@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3574220305515365301}
   - component: {fileID: 7911095540547503724}
   - component: {fileID: 4183525075391057706}
+  - component: {fileID: 5491253454844691520}
   m_Layer: 0
-  m_Name: LevelDebug
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,3 +58,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95290b3d091cae0499140298876f1461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  levelNumber: 0
+  isIntermission: 0
+--- !u!114 &5491253454844691520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204000760806897711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c4b7e91209c31408e2ba23d1446b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeToBlackAnimation
+  blackBox: {fileID: 0}
+  targetColor: {r: 0, g: 0, b: 0, a: 1}
+  isIntermission: 0

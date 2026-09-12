@@ -8,6 +8,8 @@ public class NPCscript : MonoBehaviour
     
     [Header("Bools")]
     public bool taskNPC;
+
+    public bool isIntermissionNPC;
     public bool hasDialogue;
     
     [Header("Used by DialogueController")]
@@ -41,12 +43,14 @@ public class NPCscript : MonoBehaviour
     {
         if (taskNPC && GameManager.Instance.levelCompletable)
             dialogueIndex = 1;
-        if (!taskNPC && TaskSystem.Instance.tasksActive)
+        if (!taskNPC && !isIntermissionNPC && TaskSystem.Instance.tasksActive)
             dialogueIndex = 1;
     }
 
     private void Start()
     {
         dialogueIndex = 0;
+        if (isIntermissionNPC && dialogueIndex < 2)
+            dialogueIndex = PlayerPrefs.GetInt("LevelID") - 1;
     }
 }

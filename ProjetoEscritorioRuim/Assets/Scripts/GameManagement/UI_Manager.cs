@@ -16,10 +16,10 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private Image[] hotbarSlots;
     [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[length];
     
-    [Header("-Dialogue Box-")]
+    /*[Header("-Dialogue Box-")]
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI nameText;
-    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject dialoguePanel;*/
     
     [Header("-EndScreen-")]
     [SerializeField] private GameObject gameOverScreen;
@@ -45,7 +45,9 @@ public class UI_Manager : MonoBehaviour
         gameHUD.SetActive(true);
         endScreen.SetActive(false);
         taskList.SetActive(false);
-        dialoguePanel.SetActive(false);
+        // dialoguePanel.SetActive(false);
+        hotbarSlots[0].gameObject.SetActive(false);
+        hotbarSlots[1].gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -115,6 +117,14 @@ public class UI_Manager : MonoBehaviour
     public void ChangeItemIndicatorState(int i, Color color)
     {
         hotbarSlots[i].color = color;
+    }
+
+    public void ToggleItemIndicator(int i)
+    {
+        if(hotbarSlots[i].IsActive())
+            hotbarSlots[i].gameObject.SetActive(false);
+        else
+            hotbarSlots[i].gameObject.SetActive(true);
     }
 
     public void UpdateTaskCounter(TextMeshProUGUI taskCounter, string tasksCompleted, string tasksToComplete)
