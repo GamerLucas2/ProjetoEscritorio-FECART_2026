@@ -1236,6 +1236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa2
       objectReference: {fileID: 0}
+    - target: {fileID: 5452619418066834610, guid: 0cc837b7ed3c24242810b7252971e4ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2460,6 +2464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2714,6 +2722,10 @@ PrefabInstance:
     - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
       propertyPath: m_Name
       value: Caixa3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3608,6 +3620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5452619418066834610, guid: 0cc837b7ed3c24242810b7252971e4ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3746,6 +3762,10 @@ PrefabInstance:
     - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_Name
       value: Caixa1
+      objectReference: {fileID: 0}
+    - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -4137,6 +4157,10 @@ PrefabInstance:
     - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_Name
       value: Caixa1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -4548,6 +4572,10 @@ PrefabInstance:
     - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
       propertyPath: m_Name
       value: Caixa3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5336,6 +5364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5409,6 +5441,10 @@ PrefabInstance:
     - target: {fileID: 5452619418066834610, guid: 0cc837b7ed3c24242810b7252971e4ae, type: 3}
       propertyPath: m_Name
       value: Caixa2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452619418066834610, guid: 0cc837b7ed3c24242810b7252971e4ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5687,6 +5723,10 @@ PrefabInstance:
     - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_Name
       value: Caixa1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalScale.x
@@ -6130,6 +6170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.666667
@@ -6451,6 +6495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.666667
@@ -6527,7 +6575,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1630013385
 Transform:
@@ -6625,6 +6673,10 @@ PrefabInstance:
     - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
       propertyPath: m_Name
       value: Caixa3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7313,6 +7365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8981574496603872459, guid: 5c8050f521a1cb9419a50a86cf4d016b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7409,6 +7465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.666667
@@ -7423,43 +7483,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 150.38
+      value: 149.88872
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.32
+      value: -19.164738
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.35
+      value: -1.1093361
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.017037282
+      value: -0.006868462
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12940933
+      value: 0.10669495
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9829632
+      value: 0.9938627
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.12940784
+      value: -0.028390672
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 14.477
+      value: 3.151
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -176.033
+      value: -178.869
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 15.504
+      value: 12.286
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7534,6 +7594,10 @@ PrefabInstance:
     - target: {fileID: 5452619418066834610, guid: 0cc837b7ed3c24242810b7252971e4ae, type: 3}
       propertyPath: m_Name
       value: Caixa2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452619418066834610, guid: 0cc837b7ed3c24242810b7252971e4ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7735,6 +7799,10 @@ PrefabInstance:
     - target: {fileID: 5452619418066834610, guid: 0cc837b7ed3c24242810b7252971e4ae, type: 3}
       propertyPath: m_Name
       value: Caixa2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452619418066834610, guid: 0cc837b7ed3c24242810b7252971e4ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8480,6 +8548,10 @@ PrefabInstance:
     - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_Name
       value: Caixa1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 96775565755306928, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
       propertyPath: m_LocalScale.x
