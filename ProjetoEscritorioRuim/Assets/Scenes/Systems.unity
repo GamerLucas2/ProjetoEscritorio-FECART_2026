@@ -1322,6 +1322,17 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1253979617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1539921672847592303, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 734047865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1265591294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3329673038139193079, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
@@ -2003,6 +2014,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5491253454844691520, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
+      propertyPath: blackBox
+      value: 
+      objectReference: {fileID: 1253979617}
     - target: {fileID: 9204000760806897711, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
       propertyPath: m_Name
       value: LevelDebug

@@ -3384,6 +3384,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: npcName
+      value: A Mulher
+      objectReference: {fileID: 0}
     - target: {fileID: 2353949900983458202, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: m_Size.x
       value: 2.26
