@@ -388,6 +388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas - Level
       objectReference: {fileID: 0}
+    - target: {fileID: 9199987878461525800, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9203341077713832279, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
       value: Guarde a pasta na estante
