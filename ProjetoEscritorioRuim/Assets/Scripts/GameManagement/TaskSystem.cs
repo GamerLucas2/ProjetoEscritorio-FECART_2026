@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -6,9 +7,10 @@ public class TaskSystem : MonoBehaviour
     public static TaskSystem Instance { get; private set; }
     
     public int completedTasks = 0;
-    public bool tasksActive = false;
     [SerializeField] public int tasksLeft;
     [SerializeField] private TextMeshProUGUI taskNumberText;
+    
+    public static event Action allTasksComplete;
     
     // [SerializeField] private GameObject endTaskObject;
 
@@ -23,6 +25,8 @@ public class TaskSystem : MonoBehaviour
     {
         // taskNumberText.text = string.Format("Tasks: {0}/{1}", completedTasks.ToString(), tasksLeft.ToString());
         UI_Manager.Instance.UpdateTaskCounter(taskNumberText, completedTasks.ToString(), tasksLeft.ToString());
+        if (completedTasks >= tasksLeft)
+            allTasksComplete?.Invoke();
     }
     public void CompleteTask() // Adds 1 to the task counter when the task is complete
     {

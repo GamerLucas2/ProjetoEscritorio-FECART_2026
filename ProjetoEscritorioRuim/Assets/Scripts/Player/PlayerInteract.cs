@@ -72,7 +72,7 @@ public class PlayerInteract : MonoBehaviour
             hasItem = false;
 
         // Checks if the player can pick up another item
-        if (storedItems[currentItem] != null || !TaskSystem.Instance.tasksActive)
+        if (storedItems[currentItem] != null || !GameManager.Instance.tasksActive)
         {
             canPickUp = false;
         }
@@ -139,7 +139,7 @@ public class PlayerInteract : MonoBehaviour
     {
         if (canPickUp) // Only pick up items if the level has been started and if can pick up
             PickUpItem();
-        else if (!TaskSystem.Instance.tasksActive)
+        else if (!GameManager.Instance.tasksActive)
             print("Start the level to interact with object");
         else if (storedItems[currentItem] != null)
             print("Slot Full");

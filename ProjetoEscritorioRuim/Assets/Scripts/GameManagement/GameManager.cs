@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool levelCompletable = false;
     public bool levelCleared = false;
     public bool inConversation;
+    public bool tasksActive = false;
 
     public int taskNumber;
 
@@ -39,13 +40,15 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        if(TaskSystem.Instance.completedTasks >= TaskSystem.Instance.tasksLeft)
-        {
-            TaskSystem.Instance.completedTasks = TaskSystem.Instance.tasksLeft;
-            levelCompletable = true;
-        }
+        if (TaskSystem.Instance != null)
+            TaskSystem.allTasksComplete += AllTasksComplete;
+    }
+
+    void OnDisable()
+    {
+        TaskSystem.allTasksComplete -= AllTasksComplete;
     }
     
     
@@ -60,9 +63,9 @@ public class GameManager : MonoBehaviour
         if (NPC.TryGetComponent(out NPCscript npc))
         {
             
-            if (npc.taskNPC && !TaskSystem.Instance.tasksActive)
+            if (npc.taskNPC && !tasksActive)
             {
-                TaskSystem.Instance.tasksActive = true;
+                tasksActive = true;
                 print ("Tasks Activated");
             }
             else if (npc.taskNPC && levelCompletable)
@@ -95,5 +98,10 @@ public class GameManager : MonoBehaviour
                 itemScript.hasBeenUsed = true;
             }
         }
+    }
+    
+    private void AllTasksComplete()
+    {
+        levelCompletable = true;
     }
 }

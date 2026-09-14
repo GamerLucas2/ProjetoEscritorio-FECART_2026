@@ -7,9 +7,9 @@ public class DialogueController : MonoBehaviour
 {
     public static DialogueController Instance;
 
-    [SerializeField] TextMeshProUGUI dialogueText;
-    [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] GameObject dialogueBox;
+    [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] TextMeshProUGUI dialogueText;
 
     public static event Action OnDialogueStarted;
     public static event Action OnDialogueEnded;

@@ -24,7 +24,7 @@ public class ComputerTask : MonoBehaviour
     }
     public void TaskWasinteracted(bool playerInteract)
     {
-        if (playerInteract && TaskSystem.Instance.tasksActive == true)
+        if (playerInteract && GameManager.Instance.tasksActive == true)
         {
             ComputerInitialized();
         }

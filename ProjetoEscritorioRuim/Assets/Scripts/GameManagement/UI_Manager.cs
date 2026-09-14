@@ -53,7 +53,7 @@ public class UI_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TaskSystem.Instance.tasksActive)
+        if (GameManager.Instance.tasksActive)
             taskList.SetActive(true);
     }
 

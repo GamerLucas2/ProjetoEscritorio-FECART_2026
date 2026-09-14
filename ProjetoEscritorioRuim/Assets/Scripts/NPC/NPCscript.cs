@@ -43,7 +43,7 @@ public class NPCscript : MonoBehaviour
     {
         if (taskNPC && GameManager.Instance.levelCompletable)
             dialogueIndex = 1;
-        if (!taskNPC && !isIntermissionNPC && TaskSystem.Instance.tasksActive)
+        if (!taskNPC && !isIntermissionNPC && GameManager.Instance.tasksActive)
             dialogueIndex = 1;
     }
 

@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
-        if (TaskSystem.Instance.tasksActive && !GameManager.Instance.levelCleared)
+        if (GameManager.Instance.tasksActive && !GameManager.Instance.levelCleared)
         {
             ContUpTime();
             ContDownTime();
