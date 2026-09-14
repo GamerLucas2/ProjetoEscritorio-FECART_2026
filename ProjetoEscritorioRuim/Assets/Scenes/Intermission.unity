@@ -470,6 +470,26 @@ PrefabInstance:
       propertyPath: isIntermissionNPC
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: dialogueAsset.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: 'dialogueAsset.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ba05fca517052e943b61f0ebbefa9d15, type: 2}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: 'dialogueAsset.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ba05fca517052e943b61f0ebbefa9d15, type: 2}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: 'dialogueAsset.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ba05fca517052e943b61f0ebbefa9d15, type: 2}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: 'dialogueAsset.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ba05fca517052e943b61f0ebbefa9d15, type: 2}
     - target: {fileID: 8049784318580890451, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -907,6 +927,7 @@ MonoBehaviour:
   levelCompletable: 0
   levelCleared: 0
   inConversation: 0
+  tasksActive: 0
   taskNumber: 0
 --- !u!4 &674668417
 Transform:
