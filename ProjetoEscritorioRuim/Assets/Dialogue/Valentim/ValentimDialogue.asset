@@ -10,6 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65a7e64a4fe560f4a870da789541e1d6, type: 3}
-  m_Name: LeoDialogue2
+  m_Name: ValentimDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
-  dialogue: []
+  dialogue:
+  - "Ah, voc\xEA t\xE1 aqui\u2026"
+  - "Ahaha, sabe, \xE0s vezes eu sinto que o tanto de trabalho que recebemos n\xE3o
+    \xE9 proporcional ao dinheiro que a gente ganha\u2026 J\xE1 faz bastante tempo
+    que n\xE3o saio pra me divertir, compro roupas, coisas assim\u2026"
+  - "Inclusive estou precisando de roupas novas, cada dia encontro um furo diferente\u2026"
