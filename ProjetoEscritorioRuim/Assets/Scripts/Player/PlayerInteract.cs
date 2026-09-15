@@ -19,6 +19,9 @@ public class PlayerInteract : MonoBehaviour
 
     private bool hasItem;
     private bool canPickUp = true;
+
+    [SerializeField] private Transform loadPoint;
+    [SerializeField] private Transform StoreTransform;
     
     
     [SerializeField] private GameObject[] storedItems =  new GameObject[2];
@@ -155,8 +158,9 @@ public class PlayerInteract : MonoBehaviour
         
         storedItems[i] = hit.transform.gameObject;
         UI_Manager.Instance.ToggleItemIndicator(i);
-        storedItems[i].transform.position = new Vector3(0, 1000, 0);
-        storedItems[i].transform.parent = transform;
+        storedItems[i].transform.position = loadPoint.position;
+        // storedItems[i].transform.position = new Vector3(1000, 0, 1000);
+        storedItems[i].transform.parent = StoreTransform;
         
         UI_Manager.Instance.ChangeItemIndicatorState(i, Color.blue);
     }

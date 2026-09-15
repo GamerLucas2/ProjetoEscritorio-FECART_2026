@@ -10,6 +10,7 @@ public class FadeToBlackAnimation : MonoBehaviour
     [SerializeField] Color targetColor = Color.black; 
     [SerializeField] private bool isIntermission;
     private bool movingToNextLevel;
+    [SerializeField] private bool isTitleScreen;
     
     private LevelManager levelManager;
 
@@ -33,10 +34,13 @@ public class FadeToBlackAnimation : MonoBehaviour
 
     private void Start()
     {
+        if(!isTitleScreen)
+        {
         blackBox.gameObject.SetActive(true);
         movingToNextLevel = false;
         blackBox.color = Color.black;
         StartCoroutine(FadeFromBlack(Color.clear, 1f));
+        }
     }
 
     // Update is called once per frame
