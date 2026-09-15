@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a7e64a4fe560f4a870da789541e1d6, type: 3}
+  m_Name: BiancaDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  dialogue:
+  - "Bom dia, posso falar com voc\xEA rapidinho?\r\n"
+  - "Ent\xE3o, recentemente est\xE1 havendo alguns cortes de gastos na empresa, j\xE1
+    que estamos enfrentando dificuldades no or\xE7amento dos \xFAltimos meses."
+  - "Para isso, foi necess\xE1rio tomar algumas decis\xF5es, dentre elas est\xE1
+    a mudan\xE7a no andar de trabalho de alguns de nossos funcion\xE1rios, incluindo
+    o senhor. Para o pr\xF3ximo dia, v\xE1 para o andar de baixo."
+  - "N\xE3o se preocupe com isso por agora, mudan\xE7as assim ser\xE3o comunicadas
+    via mensagem previamente."

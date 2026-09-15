@@ -10,12 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65a7e64a4fe560f4a870da789541e1d6, type: 3}
-  m_Name: BiancaDIalogue1
+  m_Name: LeoDialogue2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "\u2026"
-  - "Sim, preciso falar com o senhor. Acho que se lembra que ontem pedi que viesse
-    para esse andar, mas me enganei. Uma parcela dos funcion\xE1rios foi para o andar
-    abaixo deste, e voc\xEA deveria ter ido com eles. Foi um erro que cometi, desculpa."
-  - "Bem, s\xF3 n\xE3o esque\xE7a, amanh\xE3 v\xE1 direto para l\xE1, que \xE9 onde
-    estar\xE3o suas tarefas."
+  - "J\xE1 terminou? Eu n\xE3o to vendo tudo pronto!"

@@ -3442,6 +3442,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+--- !u!1 &594707112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1723158012916393242, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 619173486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &594707113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1789179268586154319, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 619173486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &600447156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3540,14 +3550,38 @@ PrefabInstance:
       propertyPath: task2Awnser
       value: slate@email.com
       objectReference: {fileID: 0}
+    - target: {fileID: 1723158012916393242, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_Name
+      value: TypeTask
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789179268586154319, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_Name
+      value: ButtonTask
+      objectReference: {fileID: 0}
     - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: taskID
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: computer
+      value: 
+      objectReference: {fileID: 13877889}
+    - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: isTypeTask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: task2Awnser
       value: slate@email.com
       objectReference: {fileID: 0}
+    - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: typeTaskPanel
+      value: 
+      objectReference: {fileID: 594707112}
+    - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: buttonTaskPanel
+      value: 
+      objectReference: {fileID: 594707113}
     - target: {fileID: 3054193134022917378, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_Color.a
       value: 0.29803923
@@ -3563,6 +3597,10 @@ PrefabInstance:
     - target: {fileID: 3139544931506248144, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329673038139193079, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3512743986871427412, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: pauseMenuUI
@@ -3666,7 +3704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9199987878461525800, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8752,6 +8790,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3076187728059005117, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
   m_PrefabInstance: {fileID: 619173486}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1533793927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 619173486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713ad39befc0577408069f698b4f5e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ComputerTask
 --- !u!1001 &1547046635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8900,6 +8949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3839171694439319578, guid: 6b127a15b5182ff48b441213bc0b8963, type: 3}
+      propertyPath: computerTask
+      value: 
+      objectReference: {fileID: 1533793927}
     - target: {fileID: 3839171694439319578, guid: 6b127a15b5182ff48b441213bc0b8963, type: 3}
       propertyPath: itemIndicator
       value: 

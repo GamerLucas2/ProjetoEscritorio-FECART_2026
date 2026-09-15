@@ -347,8 +347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475.57, y: -216}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 4.639, y: -312.0418}
+  m_SizeDelta: {x: 1160.4181, y: 242.0835}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224912584
 MonoBehaviour:
@@ -467,21 +467,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
+      propertyPath: dialogueIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: isIntermissionNPC
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: dialogueAsset.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: 'dialogueAsset.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: ba05fca517052e943b61f0ebbefa9d15, type: 2}
+      objectReference: {fileID: 11400000, guid: f42c357f786689b4690adf72c04eec79, type: 2}
     - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: 'dialogueAsset.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: ba05fca517052e943b61f0ebbefa9d15, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: 'dialogueAsset.Array.data[2]'
       value: 
