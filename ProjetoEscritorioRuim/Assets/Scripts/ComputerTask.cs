@@ -39,25 +39,26 @@ public class ComputerTask : MonoBehaviour
         computerUI.SetActive(true);
         if (isButtonTask)
         {
-            InitiateTask1();
+            InitiateButtonTask();
         }
         else if (isTypeTask)
         {
-            InitiateTask2();
+            InitiateTypeTask();
         }
     }
     private void QuitComputer()
     {
+        buttonTaskPanel.SetActive(false);
         computerUI.SetActive(false);
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    void InitiateTask1()
+    void InitiateButtonTask()
     {
         buttonTaskPanel.SetActive(true);
     }
-    void InitiateTask2()
+    void InitiateTypeTask()
     {
         typeTaskPanel.SetActive(true);
         string playerTxt = WriteSpace.text;
