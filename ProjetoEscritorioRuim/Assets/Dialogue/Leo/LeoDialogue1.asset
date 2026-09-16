@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a7e64a4fe560f4a870da789541e1d6, type: 3}
   m_Name: LeoDialogue1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
-  dialogue: []
+  dialogue:
+  - "\xC0s vezes me pergunto por que o expediente come\xE7a t\xE3o cedo\u2026 N\xE3o
+    que seja um problema, mas sinto que a produtividade seria muito maior se fosse
+    adiado em umas horinhas\u2026"
+  - "Sabe, bem que voc\xEA podia me ajudar nessas tarefinhas aqui. Sabe como \xE9,
+    n\xE9? Voc\xEA faz um favorzinho pra mim e eu o recompenso depois. Podemos tomar
+    um caf\xE9 juntos, se for de seu interesse!"

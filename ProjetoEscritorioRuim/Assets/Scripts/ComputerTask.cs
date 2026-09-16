@@ -6,14 +6,15 @@ using UnityEngine.InputSystem;
 
 public class ComputerTask : MonoBehaviour
 {
-    public bool computertaskComplete = false;
+    public bool computerTaskComplete = false;
     public bool inRange;
     InputSystem_Actions inputSystemActions;
     InputAction interact;
     [SerializeField] private string taskID;
+    [SerializeField] private GameObject computer;
     [SerializeField] private GameObject computerUI;
-    [SerializeField] private GameObject task1Panel, task2Panel;
-    [SerializeField] private bool isTask1, isTask2;
+    [SerializeField] private GameObject buttonTaskPanel, typeTaskPanel;
+    [SerializeField] private bool isButtonTask, isTypeTask;
     [SerializeField] private TMP_InputField WriteSpace;
     [SerializeField] private string task2Awnser;
     private void Awake()
@@ -36,41 +37,43 @@ public class ComputerTask : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         computerUI.SetActive(true);
-        if (isTask1)
+        if (isButtonTask)
         {
-            InitiateTask1();
+            InitiateButtonTask();
         }
-        else if (isTask2)
+        else if (isTypeTask)
         {
-            InitiateTask2();
+            InitiateTypeTask();
         }
     }
     private void QuitComputer()
     {
-        Time.timeScale = 1f;
+        buttonTaskPanel.SetActive(false);
         computerUI.SetActive(false);
+        Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    void InitiateTask1()
+    void InitiateButtonTask()
     {
-        task1Panel.SetActive(true);
+        buttonTaskPanel.SetActive(true);
     }
-    void InitiateTask2()
+    void InitiateTypeTask()
     {
-        task2Panel.SetActive(true);
+        typeTaskPanel.SetActive(true);
         string playerTxt = WriteSpace.text;
         if (playerTxt == task2Awnser)
         {
             CompleteComputer();
-            computertaskComplete = true;
+            computerTaskComplete = true;
         }
     }
     public void CompleteComputer()
     {
-        CompleteTaskOnTheThing();
-        computertaskComplete = true;
         QuitComputer();
+        CompleteTaskOnTheThing();
+        computerTaskComplete = true;
+        computer.layer = LayerMask.NameToLayer("Default");
     }
 
     public void CompleteTaskOnTheThing()

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a7e64a4fe560f4a870da789541e1d6, type: 3}
   m_Name: LeoDialogue2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
-  dialogue: []
+  dialogue:
+  - "J\xE1 terminou? Eu n\xE3o to vendo tudo pronto!"
