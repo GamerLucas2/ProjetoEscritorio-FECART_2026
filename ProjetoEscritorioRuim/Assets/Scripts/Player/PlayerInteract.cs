@@ -159,6 +159,7 @@ public class PlayerInteract : MonoBehaviour
         storedItems[i] = hit.transform.gameObject;
         UI_Manager.Instance.ToggleItemIndicator(i);
         storedItems[i].transform.position = loadPoint.position;
+
         // storedItems[i].transform.position = new Vector3(1000, 0, 1000);
         storedItems[i].transform.parent = StoreTransform;
         
@@ -171,11 +172,12 @@ public class PlayerInteract : MonoBehaviour
         if (storedItems[i] != null)
         {
             hit.transform.TryGetComponent(out PlaceScript placeScript);
+            storedItems[i].TryGetComponent(out ItemScript itemScript);
             
             if (!placeScript.hasItemOnTop)
             {
                 UI_Manager.Instance.ToggleItemIndicator(i);
-                storedItems[i].transform.position = hit.transform.Find("Display").transform.position;
+                storedItems[i].transform.position = hit.transform.Find("Display").transform.position + new Vector3(0, itemScript.displayPos, 0);
                 storedItems[i].transform.parent = hit.transform;
                 
                 if (placeScript.hasTask)
@@ -193,13 +195,27 @@ public class PlayerInteract : MonoBehaviour
     {
         if (currentItem == 1)
         {
+            if (storedItems[currentItem] != null)
+                storedItems[currentItem].SetActive(false);
+            
             currentItem = 0;
+            
+            if (storedItems[currentItem] != null)
+                storedItems[currentItem].SetActive(true);
+            
             UI_Manager.Instance.ChangeItemIndicatorState(0, Color.blue);
             UI_Manager.Instance.ChangeItemIndicatorState(1, Color.white);
         }
         else if (currentItem == 0)
         {
+            if (storedItems[currentItem] != null)
+                storedItems[currentItem].SetActive(false);
+            
             currentItem = 1;
+            
+            if (storedItems[currentItem] != null)
+                storedItems[currentItem].SetActive(true);
+            
             UI_Manager.Instance.ChangeItemIndicatorState(1, Color.blue);
             UI_Manager.Instance.ChangeItemIndicatorState(0, Color.white);
         }
