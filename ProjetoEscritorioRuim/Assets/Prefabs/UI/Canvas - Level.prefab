@@ -2218,7 +2218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4010371237495129213
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4093,14 +4093,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713ad39befc0577408069f698b4f5e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ComputerTask
-  computertaskComplete: 0
+  computerTaskComplete: 0
   inRange: 0
   taskID: 4
+  computer: {fileID: 0}
   computerUI: {fileID: 6468308848943199826}
-  task1Panel: {fileID: 1789179268586154319}
-  task2Panel: {fileID: 1723158012916393242}
-  isTask1: 0
-  isTask2: 1
+  buttonTaskPanel: {fileID: 0}
+  typeTaskPanel: {fileID: 0}
+  isButtonTask: 0
+  isTypeTask: 0
   WriteSpace: {fileID: 862802384928263300}
   task2Awnser: teste
 --- !u!1001 &3415755603815708159
@@ -4365,16 +4366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
---- !u!1 &1723158012916393242 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2670254009261948849, guid: 943c986504b3f2a439bb869337102134, type: 3}
-  m_PrefabInstance: {fileID: 3667978258967763627}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1789179268586154319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3040835584025375716, guid: 943c986504b3f2a439bb869337102134, type: 3}
-  m_PrefabInstance: {fileID: 3667978258967763627}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6335638285734121251 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7281181224090801544, guid: 943c986504b3f2a439bb869337102134, type: 3}

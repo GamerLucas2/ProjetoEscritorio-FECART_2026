@@ -167,14 +167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fcbe8c379a59c45a45f936267f3b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
+  computerTask: {fileID: 0}
   interactMask:
     serializedVersion: 2
     m_Bits: 64
-  maxDistance: 10
+  maxDistance: 3.3
+  loadPoint: {fileID: 0}
+  StoreTransform: {fileID: 0}
   storedItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  itemIndicator:
   - {fileID: 0}
   - {fileID: 0}
   currentItem: 0
