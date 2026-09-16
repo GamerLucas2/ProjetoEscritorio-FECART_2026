@@ -13,8 +13,8 @@ public class ComputerTask : MonoBehaviour
     [SerializeField] private string taskID;
     [SerializeField] private GameObject computer;
     [SerializeField] private GameObject computerUI;
-    [SerializeField] private GameObject buttonTaskPanel, typeTaskPanel;
-    [SerializeField] private bool isButtonTask, isTypeTask;
+    [SerializeField] private GameObject typeTaskPanel;
+    [SerializeField] private bool isTypeTask;
     [SerializeField] private TMP_InputField WriteSpace;
     [SerializeField] private string task2Awnser;
     private void Awake()
@@ -37,26 +37,17 @@ public class ComputerTask : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         computerUI.SetActive(true);
-        if (isButtonTask)
-        {
-            InitiateButtonTask();
-        }
-        else if (isTypeTask)
+        if (isTypeTask)
         {
             InitiateTypeTask();
         }
     }
     private void QuitComputer()
     {
-        buttonTaskPanel.SetActive(false);
         computerUI.SetActive(false);
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-    }
-    void InitiateButtonTask()
-    {
-        buttonTaskPanel.SetActive(true);
     }
     void InitiateTypeTask()
     {
