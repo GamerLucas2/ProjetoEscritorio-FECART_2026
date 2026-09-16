@@ -5,11 +5,14 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private int levelNumber;
     [SerializeField] private bool isIntermission;
+    [SerializeField] private bool isEndScene;
 
     private void Start()
     {
         if(isIntermission)
             levelNumber = PlayerPrefs.GetInt("LevelID");
+        else if(isEndScene)
+            levelNumber = SceneManager.GetActiveScene().buildIndex;
         else
         {
             levelNumber = SceneManager.GetActiveScene().buildIndex;

@@ -11,6 +11,7 @@ TagManager:
   - Task 1
   - Obstacle
   - Computer
+  - EndScreen
   layers:
   - Default
   - TransparentFX

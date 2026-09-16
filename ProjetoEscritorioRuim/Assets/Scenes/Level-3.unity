@@ -2082,6 +2082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 1
   hasBeenUsed: 0
+  displayPos: 0
 --- !u!135 &306093509
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3396,6 +3397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 0
   hasBeenUsed: 0
+  displayPos: 0
 --- !u!135 &521693597
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3721,7 +3723,7 @@ PrefabInstance:
       objectReference: {fileID: 1531025745}
     - target: {fileID: 5463261597261644932, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5608369617802960900, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -7549,6 +7551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 2
   hasBeenUsed: 0
+  displayPos: 0
 --- !u!4 &1326569167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9002216870943630467, guid: 4570ea2e33e3e53488b283af598b61ca, type: 3}
@@ -8695,6 +8698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 6
   hasBeenUsed: 0
+  displayPos: 0
 --- !u!135 &1445044161
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12135,6 +12139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 4
   hasBeenUsed: 0
+  displayPos: 0
 --- !u!135 &1903550851
 SphereCollider:
   m_ObjectHideFlags: 0

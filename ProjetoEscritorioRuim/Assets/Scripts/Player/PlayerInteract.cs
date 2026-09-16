@@ -62,7 +62,10 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         if (interact.WasPressedThisFrame())
+        {
+            print("buttom Pressed");
             Interact();
+        }
         
         if (swapItem.WasPressedThisFrame())
             SwapHeldItem();
@@ -87,6 +90,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Interact() // Checks if the player is talking to an NPC or not
     {
+        print("Interacting");
         if (GameManager.Instance.inConversation)
             DialogueController.Instance.SkipLine();
         else if (!GameManager.Instance.levelCleared && !PauseMenu.gameIsPaused)

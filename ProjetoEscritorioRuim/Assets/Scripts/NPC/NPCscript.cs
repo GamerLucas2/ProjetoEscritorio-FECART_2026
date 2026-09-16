@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NPCscript : MonoBehaviour
@@ -8,8 +9,8 @@ public class NPCscript : MonoBehaviour
     
     [Header("Bools")]
     public bool taskNPC;
-
     public bool isIntermissionNPC;
+    public bool isFinalNPC;
     public bool hasDialogue;
     
     [Header("Used by DialogueController")]
@@ -45,12 +46,21 @@ public class NPCscript : MonoBehaviour
             dialogueIndex = 1;
         if (!taskNPC && !isIntermissionNPC && GameManager.Instance.tasksActive)
             dialogueIndex = 1;
+        if (isFinalNPC && !firstInteraction)
+            dialogueIndex = 1;
     }
 
     private void Start()
     {
         dialogueIndex = 0;
+        
+        if (isFinalNPC)
+            dialogueIndex = 0;
         if (isIntermissionNPC && dialogueIndex < 2)
             dialogueIndex = PlayerPrefs.GetInt("LevelID") - 1;
+        if (isIntermissionNPC && dialogueIndex >= 2)
+            dialogueIndex = 1;
+        if(isIntermissionNPC && dialogueIndex < 0)
+            dialogueIndex = 1;
     }
 }

@@ -17,14 +17,10 @@ public class DialogueController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) 
-        {
-            Instance = this;
-        }
-        else 
-        {
+        if (Instance != null) 
             Destroy(this);
-        }
+        else 
+            Instance = this;
     }
 
     public void StartDialogue(string[] dialogue, int startPosition, string name)

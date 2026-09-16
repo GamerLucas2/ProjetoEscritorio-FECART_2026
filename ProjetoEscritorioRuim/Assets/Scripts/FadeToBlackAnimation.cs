@@ -6,13 +6,17 @@ using UnityEngine.UI;
 
 public class FadeToBlackAnimation : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private Image blackBox;
-    [SerializeField] Color targetColor = Color.black; 
-    [SerializeField] private string levelType;
-    private bool movingToNextLevel;
+    [SerializeField] Color targetColor = Color.black;
+    [SerializeField] private GameObject endSceneTextThing;
+    
+    [Header("Booleans")]
     [SerializeField] private bool isTitleScreen;
     [SerializeField] private bool isIntermission;
+    [SerializeField] private bool isEndScene;
     
+    private bool movingToNextLevel;
     private LevelManager levelManager;
 
     private void Awake()
@@ -22,15 +26,8 @@ public class FadeToBlackAnimation : MonoBehaviour
 
     private void OnEnable()
     {
-        if (levelType == "Intermission" || levelType == "EndScene")
-        {
+        if (isIntermission || isEndScene)
             DialogueController.OnDialogueEnded += LevelTransition;
-        }
-
-        if (isIntermission)
-        {
-            DialogueController.OnDialogueEnded += LevelTransition;
-        }
     }
 
     private void OnDisable()
@@ -40,6 +37,9 @@ public class FadeToBlackAnimation : MonoBehaviour
 
     private void Start()
     {
+        if (endSceneTextThing != null)
+            endSceneTextThing.SetActive(false);
+        
         if(!isTitleScreen)
         {
             blackBox.gameObject.SetActive(true);
@@ -54,11 +54,17 @@ public class FadeToBlackAnimation : MonoBehaviour
     {
         if (blackBox.color == targetColor && movingToNextLevel)
         {
-            if (levelType == "Intermission")
+            if (isIntermission)
                 levelManager.MoveToNextLevel(PlayerPrefs.GetInt("LevelID") + 1);
-            else if (levelType == "EndScene")
-                DialogueController.Instance.StartDialogue(GameEndScript.Instance.motivationalText[0].dialogue, 0, "God");
+            else if (isEndScene)
+            {
+                Time.timeScale = 0;
+                DialogueController.OnDialogueEnded += GameEndScript.Instance.EndGame;
+                endSceneTextThing.SetActive(true);
+            }
         }
+        if(GameManager.Instance.inConversation)
+            endSceneTextThing.SetActive(false);
     }
     
     public void LevelTransition()

@@ -22,9 +22,14 @@ public class LevelDebug : MonoBehaviour
         
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.hKey.wasPressedThisFrame)
             ScoreManager.Instance.ResetHighScore();
-        
+
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.nKey.wasPressedThisFrame)
-            levelManager.MoveToNextLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 3)
+                SceneManager.LoadScene(5); 
+            else 
+                levelManager.MoveToNextLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.mKey.wasPressedThisFrame)
             SceneManager.LoadScene("Intermission");
