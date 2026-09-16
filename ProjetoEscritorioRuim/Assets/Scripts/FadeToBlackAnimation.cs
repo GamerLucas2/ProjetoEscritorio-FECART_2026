@@ -8,9 +8,10 @@ public class FadeToBlackAnimation : MonoBehaviour
 {
     [SerializeField] private Image blackBox;
     [SerializeField] Color targetColor = Color.black; 
-    [SerializeField] private bool isIntermission;
+    [SerializeField] private string levelType;
     private bool movingToNextLevel;
     [SerializeField] private bool isTitleScreen;
+    [SerializeField] private bool isIntermission;
     
     private LevelManager levelManager;
 
@@ -21,6 +22,11 @@ public class FadeToBlackAnimation : MonoBehaviour
 
     private void OnEnable()
     {
+        if (levelType == "Intermission" || levelType == "EndScene")
+        {
+            DialogueController.OnDialogueEnded += LevelTransition;
+        }
+
         if (isIntermission)
         {
             DialogueController.OnDialogueEnded += LevelTransition;
@@ -36,10 +42,10 @@ public class FadeToBlackAnimation : MonoBehaviour
     {
         if(!isTitleScreen)
         {
-        blackBox.gameObject.SetActive(true);
-        movingToNextLevel = false;
-        blackBox.color = Color.black;
-        StartCoroutine(FadeFromBlack(Color.clear, 1f));
+            blackBox.gameObject.SetActive(true);
+            movingToNextLevel = false;
+            blackBox.color = Color.black;
+            StartCoroutine(FadeFromBlack(Color.clear, 1f));
         }
     }
 
@@ -48,7 +54,10 @@ public class FadeToBlackAnimation : MonoBehaviour
     {
         if (blackBox.color == targetColor && movingToNextLevel)
         {
-            levelManager.MoveToNextLevel(PlayerPrefs.GetInt("LevelID") + 1);
+            if (levelType == "Intermission")
+                levelManager.MoveToNextLevel(PlayerPrefs.GetInt("LevelID") + 1);
+            else if (levelType == "EndScene")
+                DialogueController.Instance.StartDialogue(GameEndScript.Instance.motivationalText[0].dialogue, 0, "God");
         }
     }
     
@@ -59,6 +68,7 @@ public class FadeToBlackAnimation : MonoBehaviour
         movingToNextLevel = true;
         StartCoroutine(FadeToBlack(Color.black, 1f));
     }
+    
     
     IEnumerator FadeToBlack(Color endValue, float duration)
     {
@@ -72,6 +82,7 @@ public class FadeToBlackAnimation : MonoBehaviour
             yield return null;
         }
         blackBox.color = endValue;
+        StopCoroutine(FadeFromBlack(endValue, duration));
     }
 
     IEnumerator FadeFromBlack(Color endValue, float duration)

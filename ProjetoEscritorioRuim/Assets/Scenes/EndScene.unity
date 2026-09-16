@@ -669,6 +669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674668417}
   - component: {fileID: 674668416}
+  - component: {fileID: 674668418}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -708,6 +709,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &674668418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674668415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f99ff178a8a9f448a5a0f92bfd3d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEndScript
+  motivationalText:
+  - {fileID: 11400000, guid: c9fee734ddd56744693a0b5a13d94751, type: 2}
 --- !u!1001 &1412532557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -758,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4183525075391057706, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
       propertyPath: isIntermission
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5491253454844691520, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
       propertyPath: blackBox
@@ -766,11 +781,11 @@ PrefabInstance:
       objectReference: {fileID: 1415777455}
     - target: {fileID: 5491253454844691520, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
       propertyPath: levelType
-      value: t
+      value: EndScene
       objectReference: {fileID: 0}
     - target: {fileID: 5491253454844691520, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
       propertyPath: isIntermission
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9204000760806897711, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
       propertyPath: m_Name
