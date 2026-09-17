@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WOOOWOWOO 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - not god
+  - not god, you know
   - i am your gay father
   - bitch

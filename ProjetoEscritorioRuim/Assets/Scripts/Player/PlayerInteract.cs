@@ -28,6 +28,8 @@ public class PlayerInteract : MonoBehaviour
     // [SerializeField] private GameObject[] itemIndicator  = new GameObject[2];
 
     [SerializeField] private int currentItem = 0;
+
+    [SerializeField] private bool cantSwap;
     
     void Awake()
     {
@@ -67,7 +69,7 @@ public class PlayerInteract : MonoBehaviour
             Interact();
         }
         
-        if (swapItem.WasPressedThisFrame())
+        if (swapItem.WasPressedThisFrame() && !cantSwap)
             SwapHeldItem();
     }
 
