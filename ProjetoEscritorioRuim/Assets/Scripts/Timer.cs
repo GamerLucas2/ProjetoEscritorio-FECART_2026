@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI timerText;
 
     [Header("Timer")] 
-    [SerializeField] float timeRemaning = 90f;
+    public float timeRemaning = 90f;
     [SerializeField] private float elapsedTime = 0f;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject gameHud;

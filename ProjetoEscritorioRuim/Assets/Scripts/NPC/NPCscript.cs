@@ -33,10 +33,8 @@ public class NPCscript : MonoBehaviour
                 firstInteraction = false;
                 return 0;
             }
-            else
-            {
-                return repeatStartPosition;
-            }
+
+            return repeatStartPosition;
         }
     }
 

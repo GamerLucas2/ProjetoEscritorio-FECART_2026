@@ -8,10 +8,15 @@ public class PauseMenu : MonoBehaviour
     //Pause button is "Esc" or "Start" in gamepad
     InputSystem_Actions inputUI;
     InputAction pauseGame;
+
+    private Timer timerScript;
+    
     #region Pause Variables
     public static bool gameIsPaused = false;
     public bool canPause;
-    [SerializeField]GameObject pauseMenuUI;
+    [SerializeField] GameObject pauseMenuUI;
+    [SerializeField] GameObject gameHUD;
+    [SerializeField] TMPro.TextMeshProUGUI timer;
     #endregion
     #region Event Functions
     private void OnEnable()
@@ -27,6 +32,8 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         inputUI = new InputSystem_Actions();
+        timerScript = GetComponent<Timer>();
+        
         pauseGame = inputUI.UI.Pause;
         pauseGame.Enable();
         Time.timeScale = 1.0f;
@@ -52,6 +59,7 @@ public class PauseMenu : MonoBehaviour
             else
                 Pause();
         }
+        DisplayTimeOnPause(timerScript.timeRemaning);
     }
     #endregion
     #region Pause Menu Methods
@@ -60,6 +68,7 @@ public class PauseMenu : MonoBehaviour
         if (canPause)
         {
             pauseMenuUI.SetActive(true);
+            gameHUD.SetActive(false);
             Time.timeScale = 0f;
             gameIsPaused = true;
             Cursor.lockState = CursorLockMode.None;
@@ -70,6 +79,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()//Continues the level you're on
     {
         pauseMenuUI.SetActive(false);
+        gameHUD.SetActive(true);
         Time.timeScale = 1f;
         gameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -83,6 +93,20 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         //Probably Main Menu
+    }
+    private void DisplayTimeOnPause(float displayTime)
+    {
+        if (GameManager.Instance.tasksActive)
+        {
+            displayTime += 1f;
+        
+            float minutes = Mathf.FloorToInt(displayTime / 60);
+            float seconds = Mathf.FloorToInt(displayTime % 60);
+        
+            timer.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
+        }
+        else
+            timer.text = "Time: None";
     }
     #endregion
 }

@@ -71,8 +71,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCscript
   firstInteraction: 1
-  repeatStartPosition: 2
+  repeatStartPosition: 1
   taskNPC: 1
+  isIntermissionNPC: 0
+  isFinalNPC: 0
   hasDialogue: 1
   npcName: Bianca
   dialogueIndex: 0

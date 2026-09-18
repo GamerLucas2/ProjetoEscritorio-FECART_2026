@@ -2130,7 +2130,7 @@ GameObject:
   - component: {fileID: 4287195071146351899}
   - component: {fileID: 864907963875207621}
   m_Layer: 5
-  m_Name: Canvas-Intermission
+  m_Name: Canvas-End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

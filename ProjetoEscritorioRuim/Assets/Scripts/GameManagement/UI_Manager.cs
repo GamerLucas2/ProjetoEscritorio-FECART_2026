@@ -61,10 +61,19 @@ public class UI_Manager : MonoBehaviour
     {
         Time.timeScale = 0f;
         endScreen.SetActive(true);
-        finalTimeText.text = "Clear Time: " + ScoreManager.Instance.time.ToString("F2");
-        bestTimeText.text = "Best Time: " + ScoreManager.Instance.bestTime.ToString("F2");
+        gameHUD.SetActive(false);
+        finalTimeText.text = "Clear Time: " + FormatEndTimer(ScoreManager.Instance.time, finalTimeText);
+        bestTimeText.text = "Best Time: " + FormatEndTimer(ScoreManager.Instance.bestTime, bestTimeText); 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    private string FormatEndTimer(float displayTime, TextMeshProUGUI timerText)
+    {
+        float minutes = Mathf.FloorToInt(displayTime / 60);
+        float seconds = Mathf.FloorToInt(displayTime % 60);
+        
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     public void GameOverScreen()
@@ -79,40 +88,6 @@ public class UI_Manager : MonoBehaviour
     {
         taskNameText[taskNumber].text = "Completo";
     }
-
-
-    // public void ShowDialogue(string[] dialogue, string name, bool activatesTasks)
-    // {
-    //     if (GameManager.Instance.levelCompletable && activatesTasks)
-    //     {
-    //         dialoguePanel.SetActive(true);
-    //         Time.timeScale = 0f;
-    //         nameText.text = name;
-    //         dialogueText.text = dialogue[1];
-    //         GameManager.Instance.inConversation =  true;
-    //     }
-    //     else
-    //     {
-    //         dialoguePanel.SetActive(true);
-    //         Time.timeScale = 0f;
-    //         nameText.text = name;
-    //         dialogueText.text = dialogue[0];
-    //         GameManager.Instance.inConversation =  true;
-    //     }
-    // }
-    
-    // public void EndDialogue()
-    // {
-    //     nameText.text = null;
-    //     dialogueText.text = null;
-    //     dialoguePanel.SetActive(false);
-    //     GameManager.Instance.inConversation = false;
-    //     
-    //     if (GameManager.Instance.levelCleared)
-    //         EndLevelScreen();
-    //     else
-    //         Time.timeScale = 1f;
-    // }
 
     public void ChangeItemIndicatorState(int i, Color color)
     {

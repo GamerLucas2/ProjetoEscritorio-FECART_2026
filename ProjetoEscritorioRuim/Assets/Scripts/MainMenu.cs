@@ -80,12 +80,23 @@ public class MainMenu : MonoBehaviour
 
     private void TimesText()
     {
-        bestTimeText[0].text = "Level 1 Time: " + PlayerPrefs.GetFloat("Time-Level-1").ToString("F2");
-        bestTimeText[1].text = "Level 2 Time: " + PlayerPrefs.GetFloat("Time-Level-2").ToString("F2");
-        bestTimeText[2].text = "Level 3 Time: " + PlayerPrefs.GetFloat("Time-Level-3").ToString("F2");
-
-        float bestTime = PlayerPrefs.GetFloat("Time-Level-1") + PlayerPrefs.GetFloat("Time-Level-2") + PlayerPrefs.GetFloat("Time-Level-3");
+        float level1Time = PlayerPrefs.GetFloat("Time-Level-1");
+        float level2Time = PlayerPrefs.GetFloat("Time-Level-2");
+        float level3Time = PlayerPrefs.GetFloat("Time-Level-3");
         
-        bestTimeText[3].text = "Total Time: " + bestTime.ToString("F2");
+        float bestTime = level1Time + level2Time + level3Time;
+        
+        bestTimeText[0].text = "Level 1 Time: " + FormatTimer(level1Time, bestTimeText[0]);
+        bestTimeText[1].text = "Level 2 Time: " + FormatTimer(level2Time, bestTimeText[1]);
+        bestTimeText[2].text = "Level 3 Time: " + FormatTimer(level3Time, bestTimeText[2]);
+
+        bestTimeText[3].text = "Total Time: " + FormatTimer(bestTime, bestTimeText[3]);
+    }
+    private string FormatTimer(float displayTime, TextMeshProUGUI timerText)
+    {
+        float minutes = Mathf.FloorToInt(displayTime / 60);
+        float seconds = Mathf.FloorToInt(displayTime % 60);
+        
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
