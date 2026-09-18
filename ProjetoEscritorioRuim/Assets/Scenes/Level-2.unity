@@ -5295,7 +5295,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Escrivaninha1normals
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2610426608157174012, guid: b321fe97e3dd0c149a3e783f945a8e3f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
