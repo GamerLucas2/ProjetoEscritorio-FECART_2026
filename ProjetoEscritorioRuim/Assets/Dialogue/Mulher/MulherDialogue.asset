@@ -13,8 +13,4 @@ MonoBehaviour:
   m_Name: MulherDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "Nossa, j\xE1 terminou? Voc\xEA \xE9 bom nisso.\r\n"
-  - "N\xE3o acredito que o Leonardo est\xE1 desviando das tarefas dele de novo! Se
-    isso se repetir, pode vir falar comigo. Ele vive fazendo isso, seria mais f\xE1cil
-    se ele ficasse em casa, j\xE1 que n\xE3o ajuda em nada no trabalho!"
-  - "Enfim, sua parte est\xE1 certinha. Voc\xEA est\xE1 liberado."
+  - :p
