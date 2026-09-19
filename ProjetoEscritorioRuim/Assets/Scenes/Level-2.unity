@@ -944,9 +944,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 123.18
       objectReference: {fileID: 0}
+    - target: {fileID: 6871950985459521486, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -217
+      objectReference: {fileID: 0}
     - target: {fileID: 7012344836622645818, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
-      value: Passe o X para Fulano
+      value: Leve X da para sala de fora
       objectReference: {fileID: 0}
     - target: {fileID: 7024475911698828049, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_SizeDelta.x
@@ -966,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7564530544450753017, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
-      value: Leve algo para tal lugar
+      value: "Leve X para a cabine de tr\xE1s"
       objectReference: {fileID: 0}
     - target: {fileID: 8935066494109967119, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_SizeDelta.x
@@ -12796,7 +12800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 590194830361865293, guid: 09d7b4b2137291e429e94bc7034f6c9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -262.87622
+      value: -262.861
       objectReference: {fileID: 0}
     - target: {fileID: 590194830361865293, guid: 09d7b4b2137291e429e94bc7034f6c9e, type: 3}
       propertyPath: m_LocalPosition.z
