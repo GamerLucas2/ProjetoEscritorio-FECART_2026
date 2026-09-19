@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Windows;
 
 public class PauseMenu : MonoBehaviour
@@ -10,6 +12,9 @@ public class PauseMenu : MonoBehaviour
     InputAction pauseGame;
 
     private Timer timerScript;
+    
+    [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private Selectable button;
     
     #region Pause Variables
     public static bool gameIsPaused = false;
@@ -73,6 +78,7 @@ public class PauseMenu : MonoBehaviour
             gameIsPaused = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            eventSystem.SetSelectedGameObject(button.gameObject);
         }
     }
 
