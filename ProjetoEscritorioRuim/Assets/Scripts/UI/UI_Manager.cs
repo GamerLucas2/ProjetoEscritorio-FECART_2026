@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 // using UnityEngine.UIElements;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class UI_Manager : MonoBehaviour
 {
     public static UI_Manager Instance { get; private set; }
 
+    [SerializeField] private EventSystem eventSystem;
 
     [Header("-HUD-")]
     [SerializeField] private GameObject gameHUD;
@@ -26,6 +28,7 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private GameObject endScreen;
     [SerializeField] private TextMeshProUGUI finalTimeText;
     [SerializeField] private TextMeshProUGUI bestTimeText;
+    [SerializeField] private Selectable[] buttonToSelect;
     
 
     private static int length;
@@ -66,6 +69,7 @@ public class UI_Manager : MonoBehaviour
         bestTimeText.text = "Best Time: " + FormatEndTimer(ScoreManager.Instance.bestTime, bestTimeText); 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        eventSystem.SetSelectedGameObject(buttonToSelect[0].gameObject);
     }
 
     private string FormatEndTimer(float displayTime, TextMeshProUGUI timerText)
@@ -82,6 +86,7 @@ public class UI_Manager : MonoBehaviour
         Cursor.visible = true;
         gameHUD.SetActive(false);
         gameOverScreen.SetActive(true);
+        eventSystem.SetSelectedGameObject(buttonToSelect[1].gameObject);
     }
 
     public void CheckTaskInList(int taskNumber)

@@ -26,7 +26,7 @@ public class SelectButtonAfterInteraction : MonoBehaviour
         Gizmos.DrawLine(gameObject.transform.position, buttonToSelect.transform.position);
     }
 
-    private void Reset() // Calls this method when the script is atached to a GameObject
+    private void Reset() // Calls this method when the script is atached to a GameObject, or by clicking "Reset" on the context menu
     {
         eventSystem = FindAnyObjectByType<EventSystem>();
         

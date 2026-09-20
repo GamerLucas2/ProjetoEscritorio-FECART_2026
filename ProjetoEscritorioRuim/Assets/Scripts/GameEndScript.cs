@@ -1,10 +1,15 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameEndScript : MonoBehaviour
 {
     public static GameEndScript Instance  { get; private set; }
     
+    [SerializeField] EventSystem eventSystem;
+    [SerializeField] private Selectable button;
     [SerializeField] private GameObject endScreen;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,7 +22,6 @@ public class GameEndScript : MonoBehaviour
         
         // endScreen =  GameObject.FindGameObjectWithTag("EndScreen");
     }
-
     // Update is called once per frame
     public void EndGame()
     {
@@ -26,6 +30,8 @@ public class GameEndScript : MonoBehaviour
         GameManager.Instance.levelCleared =  true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        
+        eventSystem.SetSelectedGameObject(button.gameObject);
     }
 
     void OnDisable()

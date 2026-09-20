@@ -58,6 +58,7 @@ public class FadeToBlackAnimation : MonoBehaviour
                 levelManager.MoveToNextLevel(PlayerPrefs.GetInt("LevelID") + 1);
             else if (isEndScene)
             {
+                Time.timeScale = 0;
                 DialogueController.OnDialogueEnded += GameEndScript.Instance.EndGame;
                 endSceneTextThing.SetActive(true);
             }

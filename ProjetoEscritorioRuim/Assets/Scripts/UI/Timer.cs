@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject gameHud;
     PauseMenu pauseMenu;
+    
+    private bool hasShownGameOver = false;
 
     private void Awake()
     {
@@ -46,7 +48,11 @@ public class Timer : MonoBehaviour
             timeRemaning -= Time.deltaTime;
         else
         {
-            UI_Manager.Instance.GameOverScreen();
+            if (!hasShownGameOver)
+            {
+                hasShownGameOver = true;
+                UI_Manager.Instance.GameOverScreen();
+            }
             Time.timeScale = 0;
             timeRemaning = 0;
             PauseMenu.gameIsPaused = true;
