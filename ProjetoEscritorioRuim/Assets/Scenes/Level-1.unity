@@ -651,46 +651,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3130758009500226904, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 574.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130758009500226904, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 139.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130758009500226904, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -223
-      objectReference: {fileID: 0}
-    - target: {fileID: 3261107691029566736, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: timeRemaning
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329673038139193079, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5608369617802960900, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_text
-      value: "Deixe o caf\xE9 no balc\xE3o"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6341058850184318103, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6344618702037193929, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 574.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 6344618702037193929, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 139.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6344618702037193929, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -331
-      objectReference: {fileID: 0}
+    - target: {fileID: 3512743986871427412, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 820025137}
     - target: {fileID: 6627010884901382413, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -771,53 +735,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6754123932136801357, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_text
-      value: passe o lapis para a mesa ao lado
+    - target: {fileID: 7603919249653012876, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_Pivot.x
+      value: -34.901962
       objectReference: {fileID: 0}
-    - target: {fileID: 6871950985459521486, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 574.53
+    - target: {fileID: 7603919249653012876, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 13.662948
       objectReference: {fileID: 0}
-    - target: {fileID: 6871950985459521486, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+    - target: {fileID: 7603919249653012876, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 139.75
+      value: -5151
       objectReference: {fileID: 0}
-    - target: {fileID: 6871950985459521486, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+    - target: {fileID: 7603919249653012876, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -274
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012344836622645818, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_text
-      value: Jogue o X no lixo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7024475911698828049, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 574.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 7024475911698828049, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 139.75006
-      objectReference: {fileID: 0}
-    - target: {fileID: 7564530544450753017, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_text
-      value: "Deixe o relat\xF3rio na mesa de Ana"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8935066494109967119, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 574.526
-      objectReference: {fileID: 0}
-    - target: {fileID: 8935066494109967119, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 139.75
+      value: 1266.3
       objectReference: {fileID: 0}
     - target: {fileID: 9199987878461525800, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_Name
       value: Canvas - Level
-      objectReference: {fileID: 0}
-    - target: {fileID: 9203341077713832279, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-      propertyPath: m_text
-      value: Guarde o livro na estante
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5820,6 +5756,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4693141700464050200, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
   m_PrefabInstance: {fileID: 149275441}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1451013523 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2164084514866266542, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 149275441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1460095099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6826,6 +6773,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8875104820802110791, guid: 9782f4346d6425a46a1f13fc4ea37817, type: 3}
   m_PrefabInstance: {fileID: 1571608418}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1573585864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6457313250886979416, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 149275441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1589192375
 GameObject:
   m_ObjectHideFlags: 0
@@ -6867,6 +6819,17 @@ Transform:
   - {fileID: 2002887595}
   m_Father: {fileID: 1639386693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594757584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5463261597261644932, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 149275441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!4 &1605857634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8049784318580890451, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
@@ -7864,6 +7827,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 369701574}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 820025137}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: bestTimeText
       value: 
       objectReference: {fileID: 725345822}
@@ -7886,6 +7853,10 @@ PrefabInstance:
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: taskNameText.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: buttonToSelect.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: 'hotbarSlots.Array.data[0]'
@@ -7919,6 +7890,14 @@ PrefabInstance:
       propertyPath: 'taskNameText.Array.data[5]'
       value: 
       objectReference: {fileID: 149275442}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'buttonToSelect.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1594757584}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'buttonToSelect.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1451013523}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8305,7 +8284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa8b83b144d63941a52f13f817d5d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  TaskID: 4
+  TaskID: 3
   hasBeenUsed: 0
   displayPos: 0
 --- !u!135 &1829029847
@@ -9936,6 +9915,10 @@ PrefabInstance:
       propertyPath: blackBox
       value: 
       objectReference: {fileID: 497119079}
+    - target: {fileID: 5491253454844691520, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
+      propertyPath: endSceneTextThing
+      value: 
+      objectReference: {fileID: 1573585864}
     - target: {fileID: 9204000760806897711, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
       propertyPath: m_Name
       value: LevelDebug
@@ -10492,6 +10475,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1844641785}
     m_Modifications:
+    - target: {fileID: 147979590297130907, guid: a546d6b3d7ebf2a40b18b52fc9d90e69, type: 3}
+      propertyPath: TaskID
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 669731958694050514, guid: a546d6b3d7ebf2a40b18b52fc9d90e69, type: 3}
       propertyPath: m_Radius
       value: 0.47213113

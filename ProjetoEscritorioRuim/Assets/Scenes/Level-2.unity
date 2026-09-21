@@ -1225,6 +1225,10 @@ PrefabInstance:
       propertyPath: timeRemaning
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 3512743986871427412, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 206697390}
     - target: {fileID: 5608369617802960900, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
       value: Confirme o envio no computador
@@ -1361,6 +1365,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "Leve X para a cabine de tr\xE1s"
       objectReference: {fileID: 0}
+    - target: {fileID: 7603919249653012876, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1242
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603919249653012876, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 182
+      objectReference: {fileID: 0}
     - target: {fileID: 8935066494109967119, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 738.8
@@ -1412,6 +1424,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1789179268586154319, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
   m_PrefabInstance: {fileID: 93030260}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &93030264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5463261597261644932, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &93030265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2164084514866266542, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &94113916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2748,6 +2782,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 545125402}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 206697390}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: bestTimeText
       value: 
       objectReference: {fileID: 69203375}
@@ -2770,6 +2808,10 @@ PrefabInstance:
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: taskNameText.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: buttonToSelect.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: 'hotbarSlots.Array.data[0]'
@@ -2807,6 +2849,14 @@ PrefabInstance:
       propertyPath: 'taskNameText.Array.data[6]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'buttonToSelect.Array.data[0]'
+      value: 
+      objectReference: {fileID: 93030264}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'buttonToSelect.Array.data[1]'
+      value: 
+      objectReference: {fileID: 93030265}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3231,6 +3281,10 @@ PrefabInstance:
       propertyPath: blackBox
       value: 
       objectReference: {fileID: 1530187559}
+    - target: {fileID: 5491253454844691520, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
+      propertyPath: endSceneTextThing
+      value: 
+      objectReference: {fileID: 1677376046}
     - target: {fileID: 9204000760806897711, guid: ea31face90cbee146ae0156d1c69f8d1, type: 3}
       propertyPath: m_Name
       value: LevelManager
@@ -11234,6 +11288,11 @@ Transform:
 --- !u!1 &1660612497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8654200938538786730, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1677376046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6457313250886979416, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
   m_PrefabInstance: {fileID: 93030260}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1679509923
