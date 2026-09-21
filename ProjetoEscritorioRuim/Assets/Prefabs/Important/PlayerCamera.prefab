@@ -171,10 +171,11 @@ MonoBehaviour:
   interactMask:
     serializedVersion: 2
     m_Bits: 64
-  maxDistance: 3.3
+  maxDistance: 3.6
   loadPoint: {fileID: 0}
   StoreTransform: {fileID: 0}
   storedItems:
   - {fileID: 0}
   - {fileID: 0}
   currentItem: 0
+  cantSwap: 0

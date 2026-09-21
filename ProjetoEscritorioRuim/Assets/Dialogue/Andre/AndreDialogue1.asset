@@ -10,12 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65a7e64a4fe560f4a870da789541e1d6, type: 3}
-  m_Name: AndreDialogue
+  m_Name: AndreDialogue1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - Oi, bom dia!
-  - "N\xE3o liga muito pra sujeira e bagun\xE7a desse andar, \xE9 algo que se aprende
-    a lidar, tamb\xE9m n\xE3o \xE9 como se fosse poss\xEDvel evitar haha"
-  - "N\xE3o \xE9 como se eu gostasse tamb\xE9m, mas \xE9 um sacrif\xEDcio a se fazer,
-    meus irm\xE3os dependem disso."
-  - "Bem, vou pegar os produtos, bom trabalho pra voc\xEA."
+  - PlaceHolder
