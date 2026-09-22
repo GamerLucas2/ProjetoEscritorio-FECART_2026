@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
@@ -29,6 +30,11 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI finalTimeText;
     [SerializeField] private TextMeshProUGUI bestTimeText;
     [SerializeField] private Selectable[] buttonToSelect;
+
+    [Header("-Other-")] 
+    [SerializeField] TextMeshProUGUI fadeIntext;
+    [SerializeField] private float fadeDuration;
+    
     
 
     private static int length;
@@ -51,6 +57,7 @@ public class UI_Manager : MonoBehaviour
         // dialoguePanel.SetActive(false);
         hotbarSlots[0].gameObject.SetActive(false);
         hotbarSlots[1].gameObject.SetActive(false);
+        fadeIntext.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -112,8 +119,70 @@ public class UI_Manager : MonoBehaviour
         taskCounter.text = string.Format("Tasks: {0}/{1}", tasksCompleted, tasksToComplete);
     }
 
+    public void ShowTextOnShiftStart()
+    {
+        DialogueController.OnDialogueEnded -= ShowTextOnShiftStart;
+        
+        fadeIntext.text = "Tasks Start";
+        fadeIntext.gameObject.SetActive(true);
+        fadeIntext.color = Color.clear;
+        StartCoroutine(FadeTextIn(Color.white, fadeDuration));
+    }
+
+    public void ShowTasksOnShiftEnd()
+    {
+        // Some Code goes here
+        
+        fadeIntext.text = "Task to Fulano";
+        fadeIntext.gameObject.SetActive(true);
+        fadeIntext.color = Color.clear;
+        StartCoroutine(FadeTextIn(Color.white, fadeDuration));
+    }
+
+    IEnumerator FadeTextIn(Color endValue, float duration)
+    {
+        float time = 0;
+        Color startValue = fadeIntext.color;
+
+        while (time < duration)
+        {
+            fadeIntext.color = Color.Lerp(startValue, endValue, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        fadeIntext.color = endValue;
+        StartCoroutine(WaitForFadeOut(new WaitForSeconds(0.6f)));
+        StopCoroutine(FadeTextIn(endValue, duration));
+    }
+
+    IEnumerator FadeTextOut(Color endValue, float duration)
+    {
+        float time = 0;
+        Color startValue = fadeIntext.color;
+
+        while (time < duration)
+        {
+            fadeIntext.color = Color.Lerp(startValue, endValue, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        fadeIntext.color = endValue;
+        fadeIntext.gameObject.SetActive(false);
+        StopCoroutine(FadeTextIn(endValue, duration));
+    }
+
+    IEnumerator WaitForFadeOut(WaitForSeconds wait)
+    {
+        for (int i = 0; i < 2; i++)
+            yield return wait;
+        
+        StartCoroutine(FadeTextOut(Color.clear, fadeDuration));
+        StopCoroutine(WaitForFadeOut(new WaitForSeconds(0)));
+    }
+
     private void OnDisable()
     {
         DialogueController.OnDialogueEnded -= EndLevelScreen;
     }
+    
 }
