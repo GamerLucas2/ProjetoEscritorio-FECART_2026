@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: MulherDialogue 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "N\xE3o acredito que o Leonardo est\xE1 desviando das tarefas dele de novo!"
-  - "Se isso se repetir, pode vir falar comigo. Ele vive fazendo isso, seria mais
-    f\xE1cil se ele ficasse em casa, j\xE1 que n\xE3o ajuda em nada no trabalho!\r\n"
   - "Se voc\xEA ver alguns papeis voc\xEA pode deixa-los na minha mesa?"
