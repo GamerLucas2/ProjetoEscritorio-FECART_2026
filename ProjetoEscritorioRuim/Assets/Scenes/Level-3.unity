@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa8b83b144d63941a52f13f817d5d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  TaskID: 1
+  TaskID: 2
   hasBeenUsed: 0
   displayPos: 0.25
 --- !u!1001 &208209129
@@ -4147,7 +4147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa8b83b144d63941a52f13f817d5d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  TaskID: 
+  TaskID: 0
   hasBeenUsed: 0
   displayPos: 0
 --- !u!4 &424568223 stripped
@@ -12460,7 +12460,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5520381, y: 1, z: 1}
+  m_Size: {x: 1.3, y: 1.3, z: 1.3}
   m_Center: {x: 0.050602138, y: 0, z: 0}
 --- !u!1001 &1318735118
 PrefabInstance:
@@ -12834,6 +12834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Task  1
       objectReference: {fileID: 0}
+    - target: {fileID: 5463261597261644932, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5608369617802960900, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
       value: 5- Envie o email no computador da cabine 3
@@ -12984,7 +12988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7564530544450753017, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
-      value: 4- Leve o detergente para a mesa do fundo
+      value: 4- Leve o detergente para a pilha certa
       objectReference: {fileID: 0}
     - target: {fileID: 7603919249653012876, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -21121,7 +21125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22dbc78805caf744683ab2e202a0fd5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceScript
-  TaskID: 1
+  TaskID: 2
   hasTask: 1
   hasItemOnTop: 0
 --- !u!1 &2000426197
