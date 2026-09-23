@@ -256,7 +256,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 271.21, y: 123.6387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144459568
 MonoBehaviour:
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Mouse to Continue
+  m_text: "Aperte Bot\xE3o Direito/A"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -312,8 +312,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -1089,6 +1089,8 @@ MonoBehaviour:
   eventSystem: {fileID: 490730098}
   button: {fileID: 928228777468420217}
   endScreen: {fileID: 695460272269369799}
+  dialogue: {fileID: 583637978220816859}
+  box: {fileID: 2124167665483301475}
 --- !u!1 &682474377
 GameObject:
   m_ObjectHideFlags: 0

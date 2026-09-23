@@ -86,7 +86,8 @@ public class GameManager : MonoBehaviour
                 int index = npc.dialogueIndex;
                 DialogueController.Instance.StartDialogue(npc.dialogueAsset[index].dialogue, npc.StartPosition, npc.npcName);
             }
-            if(npc.isFinalNPC)
+
+            if (npc.isFinalNPC && GameEndScript.Instance != null)
                 DisableMovement?.Invoke();
         }
     }
