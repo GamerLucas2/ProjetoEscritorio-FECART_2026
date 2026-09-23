@@ -103,7 +103,7 @@ public class UI_Manager : MonoBehaviour
 
     public void CheckTaskInList(int taskNumber)
     {
-        taskNameText[taskNumber].text = "Completo";
+        taskNameText[taskNumber].text = "- Completo";
     }
 
     public void ChangeItemIndicatorState(int i, Color color)

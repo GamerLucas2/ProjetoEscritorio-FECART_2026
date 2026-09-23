@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MulherDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - :p
+  - "Perdi meu rel\xE1torio! N\xE3o lembro onde deixei"
