@@ -220,6 +220,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: fadeTextName
+      value: "o Andr\xE9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: preStartText
+      value: 
+      objectReference: {fileID: 1189260026}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 0}
@@ -8413,6 +8421,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 90646477120961387, guid: b498e6f00b327aa4584d0765180308d8, type: 3}
   m_PrefabInstance: {fileID: 1188295686}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1189260026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8070092977903736845, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 1330431550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196610181
 GameObject:
   m_ObjectHideFlags: 0
@@ -9594,6 +9607,10 @@ PrefabInstance:
     - target: {fileID: 5608369617802960900, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
       value: Envie no computador
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144862574408115664, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_text
+      value: "- Fale com o Andr\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 6341058850184318103, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_IsActive

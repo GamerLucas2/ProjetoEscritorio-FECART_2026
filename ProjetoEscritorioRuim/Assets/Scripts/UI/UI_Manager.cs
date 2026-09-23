@@ -16,6 +16,7 @@ public class UI_Manager : MonoBehaviour
     [Header("-HUD-")]
     [SerializeField] private GameObject gameHUD;
     [SerializeField] private GameObject taskList;
+    [SerializeField] private GameObject preStartText;
     [SerializeField] private Image[] hotbarSlots;
     [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[length];
     
@@ -34,6 +35,7 @@ public class UI_Manager : MonoBehaviour
     [Header("-Other-")] 
     [SerializeField] TextMeshProUGUI fadeIntext;
     [SerializeField] private float fadeDuration;
+    [SerializeField] private string fadeTextName;
     
     
 
@@ -54,7 +56,7 @@ public class UI_Manager : MonoBehaviour
         gameHUD.SetActive(true);
         endScreen.SetActive(false);
         taskList.SetActive(false);
-        // dialoguePanel.SetActive(false);
+        preStartText.SetActive(true);
         hotbarSlots[0].gameObject.SetActive(false);
         hotbarSlots[1].gameObject.SetActive(false);
         fadeIntext.gameObject.SetActive(false);
@@ -64,7 +66,10 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         if (GameManager.Instance.tasksActive)
+        {
+            preStartText.SetActive(false);
             taskList.SetActive(true);
+        }
     }
 
     public void EndLevelScreen()
@@ -121,22 +126,27 @@ public class UI_Manager : MonoBehaviour
 
     public void ShowTextOnShiftStart()
     {
-        DialogueController.OnDialogueEnded -= ShowTextOnShiftStart;
-        
-        fadeIntext.text = "Tasks Start";
-        fadeIntext.gameObject.SetActive(true);
-        fadeIntext.color = Color.clear;
-        StartCoroutine(FadeTextIn(Color.white, fadeDuration));
+        if (fadeIntext != null)
+        {
+            DialogueController.OnDialogueEnded -= ShowTextOnShiftStart;
+            fadeIntext.text = "Tasks Start";
+            fadeIntext.gameObject.SetActive(true);
+            fadeIntext.color = Color.clear;
+            StartCoroutine(FadeTextIn(Color.white, fadeDuration));
+        }
     }
 
-    public void ShowTasksOnShiftEnd()
+    public void ShowTextOnShiftEnd()
     {
-        // Some Code goes here
-        
-        fadeIntext.text = "Task to Fulano";
-        fadeIntext.gameObject.SetActive(true);
-        fadeIntext.color = Color.clear;
-        StartCoroutine(FadeTextIn(Color.white, fadeDuration));
+        TaskSystem.AllTasksComplete -= ShowTextOnShiftEnd;
+
+        if (fadeIntext != null)
+        {
+            fadeIntext.text = "Fale com " + fadeTextName;
+            fadeIntext.gameObject.SetActive(true);
+            fadeIntext.color = Color.clear;
+            StartCoroutine(FadeTextIn(Color.white, fadeDuration));
+        }
     }
 
     IEnumerator FadeTextIn(Color endValue, float duration)
@@ -180,9 +190,18 @@ public class UI_Manager : MonoBehaviour
         StopCoroutine(WaitForFadeOut(new WaitForSeconds(0)));
     }
 
+    private void OnEnable()
+    {
+        if (GameEndScript.Instance ==null)
+            TaskSystem.AllTasksComplete += ShowTextOnShiftEnd;
+    }
     private void OnDisable()
     {
-        DialogueController.OnDialogueEnded -= EndLevelScreen;
+        if (GameEndScript.Instance ==null)
+            DialogueController.OnDialogueEnded -= EndLevelScreen;
+        
+        DialogueController.OnDialogueEnded -= ShowTextOnShiftEnd;
+        DialogueController.OnDialogueEnded -= ShowTextOnShiftStart;
     }
     
 }

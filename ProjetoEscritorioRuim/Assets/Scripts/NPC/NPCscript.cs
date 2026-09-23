@@ -47,7 +47,7 @@ public class NPCscript : MonoBehaviour
         if (isFinalNPC && !firstInteraction)
             dialogueIndex = 1;
         
-        if (taskNPC && firstInteraction && UI_Manager.Instance != null)
+        if (taskNPC && firstInteraction && !GameEndScript.Instance )
         {
             DialogueController.OnDialogueEnded += UI_Manager.Instance.ShowTextOnShiftStart;
         }

@@ -43,12 +43,12 @@ public class GameManager : MonoBehaviour
     void OnEnable()
     {
         if (TaskSystem.Instance != null)
-            TaskSystem.allTasksComplete += AllTasksComplete;
+            TaskSystem.AllTasksComplete += AllTasksComplete;
     }
 
     void OnDisable()
     {
-        TaskSystem.allTasksComplete -= AllTasksComplete;
+        TaskSystem.AllTasksComplete -= AllTasksComplete; 
     }
     
     

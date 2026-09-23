@@ -16,10 +16,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] LayerMask interactMask;
     [SerializeField] float maxDistance;
     RaycastHit hit;
-
-    private bool hasItem;
-    private bool canPickUp = true;
-
+    
     [SerializeField] private Transform loadPoint;
     [SerializeField] private Transform StoreTransform;
     
@@ -71,21 +68,6 @@ public class PlayerInteract : MonoBehaviour
         
         if (swapItem.WasPressedThisFrame() && !cantSwap)
             SwapHeldItem();
-    }
-
-    private void FixedUpdate()
-    {
-        // Checks if the player has an item
-        if (storedItems[0] == null &&  storedItems[1] == null)
-            hasItem = false;
-
-        // Checks if the player can pick up another item
-        if (storedItems[currentItem] != null || !GameManager.Instance.tasksActive)
-        {
-            canPickUp = false;
-        }
-        else
-            canPickUp = true;
     }
 
     #region Interaction Methods
@@ -146,27 +128,22 @@ public class PlayerInteract : MonoBehaviour
 
     private void CheckIfCanPickUp()
     {
-        if (canPickUp) // Only pick up items if the level has been started and if can pick up
-            PickUpItem();
-        else if (!GameManager.Instance.tasksActive)
+        if (!GameManager.Instance.tasksActive) // Only pick up items if the level has been started and if can pick up
             print("Start the level to interact with object");
         else if (storedItems[currentItem] != null)
             print("Slot Full");
+        else
+            PickUpItem();
     }
 
     private void PickUpItem()
     {
-        hasItem = true;
         int i = currentItem;
-        
-        /*if (storedItems[0] != null) // Makes so the items are sent to slot 1 if slot 0 is full
-            i = 1;*/
         
         storedItems[i] = hit.transform.gameObject;
         UI_Manager.Instance.ToggleItemIndicator(i);
         storedItems[i].transform.position = loadPoint.position;
-
-        // storedItems[i].transform.position = new Vector3(1000, 0, 1000);
+        
         storedItems[i].transform.parent = StoreTransform;
         
         UI_Manager.Instance.ChangeItemIndicatorState(i, Color.blue);

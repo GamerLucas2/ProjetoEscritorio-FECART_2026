@@ -11,6 +11,7 @@ public class GameEndScript : MonoBehaviour
     [SerializeField] EventSystem eventSystem;
     [SerializeField] private Selectable button;
     [SerializeField] private GameObject endScreen;
+    private GameObject canvas;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -20,18 +21,28 @@ public class GameEndScript : MonoBehaviour
         else
             Instance = this;
         
-        // endScreen =  GameObject.FindGameObjectWithTag("EndScreen");
+        if (endScreen == null)
+            print("No end screen found");
     }
+
+    private void Start()
+    {
+        endScreen.SetActive(false);
+    }
+
     // Update is called once per frame
     public void EndGame()
     {
-        endScreen.SetActive(true);
-        Time.timeScale = 0;
-        GameManager.Instance.levelCleared =  true;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        if (endScreen != null)
+        {
+            endScreen.SetActive(true);
+            Time.timeScale = 0;
+            GameManager.Instance.levelCleared =  true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         
-        eventSystem.SetSelectedGameObject(button.gameObject);
+            eventSystem.SetSelectedGameObject(button.gameObject);
+        }
     }
 
     void OnDisable()

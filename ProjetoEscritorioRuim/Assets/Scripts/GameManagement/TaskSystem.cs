@@ -10,7 +10,7 @@ public class TaskSystem : MonoBehaviour
     [SerializeField] public int tasksLeft;
     [SerializeField] private TextMeshProUGUI taskNumberText;
     
-    public static event Action allTasksComplete;
+    public static event Action AllTasksComplete;
     
     // [SerializeField] private GameObject endTaskObject;
 
@@ -26,7 +26,7 @@ public class TaskSystem : MonoBehaviour
         // taskNumberText.text = string.Format("Tasks: {0}/{1}", completedTasks.ToString(), tasksLeft.ToString());
         UI_Manager.Instance.UpdateTaskCounter(taskNumberText, completedTasks.ToString(), tasksLeft.ToString());
         if (completedTasks >= tasksLeft)
-            allTasksComplete?.Invoke();
+            AllTasksComplete?.Invoke();
     }
     public void CompleteTask() // Adds 1 to the task counter when the task is complete
     {

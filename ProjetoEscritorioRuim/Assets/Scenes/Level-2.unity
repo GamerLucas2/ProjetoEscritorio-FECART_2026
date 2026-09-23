@@ -1196,7 +1196,7 @@ PrefabInstance:
     - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: computer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1008019131}
     - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: isTypeTask
       value: 1
@@ -1232,6 +1232,10 @@ PrefabInstance:
     - target: {fileID: 5608369617802960900, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
       value: Confirme o envio no computador
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144862574408115664, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_text
+      value: '- Fale com a Laura'
       objectReference: {fileID: 0}
     - target: {fileID: 6341058850184318103, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_IsActive
@@ -2801,6 +2805,14 @@ PrefabInstance:
       propertyPath: fadeDuration
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: fadeTextName
+      value: a Laura
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: preStartText
+      value: 
+      objectReference: {fileID: 1937492189}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: dialoguePanel
       value: 
@@ -13447,6 +13459,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1937492189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8070092977903736845, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1951375367
 PrefabInstance:
   m_ObjectHideFlags: 0
