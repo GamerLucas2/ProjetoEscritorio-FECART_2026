@@ -61,6 +61,7 @@ public class FadeToBlackAnimation : MonoBehaviour
                 Time.timeScale = 0;
                 DialogueController.OnDialogueEnded += GameEndScript.Instance.EndGame;
                 endSceneTextThing.SetActive(true);
+                GameEndScript.Instance.ChangeDialogueBox();
             }
         }
         if(GameManager.Instance.inConversation)

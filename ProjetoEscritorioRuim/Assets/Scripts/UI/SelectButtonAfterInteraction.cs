@@ -34,8 +34,7 @@ public class SelectButtonAfterInteraction : MonoBehaviour
             print("EventSystem not found in scene");
     }
 
-    public void JumpToElement()
-    {
+    public void JumpToElement() {
         if (eventSystem == null)
             print("No EventSystem referenced");
 

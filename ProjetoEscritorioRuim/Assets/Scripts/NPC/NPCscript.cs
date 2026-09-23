@@ -51,7 +51,6 @@ public class NPCscript : MonoBehaviour
         {
             DialogueController.OnDialogueEnded += UI_Manager.Instance.ShowTextOnShiftStart;
         }
-            
     }
 
     private void Start()

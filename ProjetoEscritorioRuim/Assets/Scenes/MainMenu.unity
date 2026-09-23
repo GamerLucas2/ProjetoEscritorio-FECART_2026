@@ -6036,6 +6036,7 @@ GameObject:
   - component: {fileID: 8911731072322233201}
   - component: {fileID: 4705813702732477050}
   - component: {fileID: 8911731072322233202}
+  - component: {fileID: 8911731072322233203}
   m_Layer: 5
   m_Name: Canvas-MainMenu
   m_TagString: Untagged
@@ -7759,6 +7760,21 @@ MonoBehaviour:
   buttonToSelect: {fileID: 3266206902258604160}
   showVisualization: 0
   debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
+--- !u!114 &8911731072322233203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800512919998830566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d44b4841427ef4a86cc4342ac93ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseMenuHandler
+  camera: {fileID: 589298958}
+  mask:
+    m_Bits: 0
 --- !u!224 &9082491020219881751
 RectTransform:
   m_ObjectHideFlags: 0
