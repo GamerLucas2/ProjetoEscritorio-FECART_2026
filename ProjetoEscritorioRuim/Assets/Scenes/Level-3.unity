@@ -200,6 +200,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1330431568}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: fadeIntext
+      value: 
+      objectReference: {fileID: 553621162}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 1493188486}
@@ -211,6 +215,18 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: fadeDuration
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: fadeTextName
+      value: "o Andr\xE9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: preStartText
+      value: 
+      objectReference: {fileID: 827399145}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: dialoguePanel
       value: 
@@ -1323,8 +1339,10 @@ Transform:
   - {fileID: 1060058221}
   - {fileID: 543450653350568188}
   - {fileID: 1998025555}
+  - {fileID: 636846810932460243}
   - {fileID: 1720913863}
   - {fileID: 348265757}
+  - {fileID: 8399791268117824412}
   - {fileID: 1185600497}
   - {fileID: 1250290487}
   - {fileID: 1621903724}
@@ -4998,6 +5016,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 081fe4da2a394ef4f8c7febb0897c5de, type: 3}
+--- !u!114 &553621162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6634669015648683452, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 1330431550}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &559639020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7152,6 +7181,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 783685093840820852, guid: 3f513ec0eacea8540bced67176d6c954, type: 3}
   m_PrefabInstance: {fileID: 822535329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &827399145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8070092977903736845, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 1330431550}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &841257435
 GameObject:
@@ -19777,11 +19811,11 @@ Transform:
   m_GameObject: {fileID: 260461524932911209}
   serializedVersion: 2
   m_LocalRotation: {x: -4.3297806e-17, y: 0.7071068, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 25.424, y: 1.42, z: 21.509}
+  m_LocalPosition: {x: 19.39791, y: 1.42, z: 19.710361}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 189891337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &711162841492896119
 PrefabInstance:
@@ -20312,11 +20346,11 @@ Transform:
   m_GameObject: {fileID: 9212637552499431718}
   serializedVersion: 2
   m_LocalRotation: {x: 0.19050553, y: 0.68096083, z: 0.68096083, w: -0.1905055}
-  m_LocalPosition: {x: 13.894, y: 0.999, z: 7.457}
+  m_LocalPosition: {x: 7.86791, y: 0.999, z: 5.6583595}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 189891337}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -148.741}
 --- !u!1 &9212637552499431718
 GameObject:
@@ -20389,6 +20423,4 @@ SceneRoots:
   - {fileID: 1639386693}
   - {fileID: 189891337}
   - {fileID: 1700893124}
-  - {fileID: 8399791268117824412}
-  - {fileID: 636846810932460243}
   - {fileID: 589254777}

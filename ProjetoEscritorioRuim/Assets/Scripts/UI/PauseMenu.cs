@@ -91,7 +91,7 @@ public class PauseMenu : MonoBehaviour
         if (!ComputerTask.isOnComputer)
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false; 
+            Cursor.visible = false;
         }
     }
     public void RestartLevel()//Reloads the current scene restarting the level

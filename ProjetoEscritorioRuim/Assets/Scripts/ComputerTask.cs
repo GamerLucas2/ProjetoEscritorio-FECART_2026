@@ -25,14 +25,6 @@ public class ComputerTask : MonoBehaviour
         interact = inputSystemActions.Player.Interact;
         computerUI.SetActive(false);
     }
-
-    private void Update()
-    {
-        if (isOnComputer && computerTaskComplete && Keyboard.current.enterKey.wasPressedThisFrame)
-        {
-            QuitComputer();
-        }
-    }
     public void TaskWasinteracted(bool playerInteract)
     {
         if (playerInteract && GameManager.Instance.tasksActive == true)
