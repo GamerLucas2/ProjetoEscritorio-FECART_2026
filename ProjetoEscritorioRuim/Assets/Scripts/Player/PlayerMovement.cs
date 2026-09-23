@@ -65,10 +65,16 @@ public class PlayerMovement: MonoBehaviour
     private void OnEnable()
     {
         inputSystem.Enable();
+        
+        GameManager.EnableMovement += TurnOnMovement;
+        GameManager.DisableMovement += TurnOffMovement;
     }
     private void OnDisable()
     {
         inputSystem.Disable();
+        
+        GameManager.EnableMovement -= TurnOnMovement;
+        GameManager.DisableMovement -= TurnOffMovement;
     }
     
     
@@ -118,6 +124,18 @@ public class PlayerMovement: MonoBehaviour
             Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
             rigidBody.linearVelocity = new  Vector3(limitedVelocity.x, rigidBody.linearVelocity.y, limitedVelocity.z);
         }
+    }
+    
+    private void TurnOnMovement()
+    {
+        print("Movement Turn On");
+        move.Enable();
+    }
+
+    private void TurnOffMovement()
+    {
+        print("Movement Turn Off");
+        move.Disable();
     }
     #endregion
 }

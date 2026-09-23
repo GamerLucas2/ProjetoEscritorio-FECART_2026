@@ -59,15 +59,33 @@ public class PlayerCamera : MonoBehaviour
     private void OnEnable()
     {
         inputSystem.Enable();
+        
+        GameManager.EnableMovement += TurnOnCamera;
+        GameManager.DisableMovement += TurnOffCamera;
     }
     private void OnDisable()
     {
         inputSystem.Disable();
+        
+        GameManager.EnableMovement -= TurnOnCamera;
+        GameManager.DisableMovement -= TurnOffCamera;
     }
 
     private void MoveCamera()
     {
         transform.position = cameraPosition.position;
+    }
+    
+    private void TurnOnCamera()
+    {
+        print("Camera Turn On");
+        look.Enable();
+    }
+
+    private void TurnOffCamera()
+    {
+        print("Camera Turn Off");
+        look.Disable();
     }
     
     

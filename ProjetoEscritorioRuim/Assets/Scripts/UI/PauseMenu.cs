@@ -88,8 +88,11 @@ public class PauseMenu : MonoBehaviour
         gameHUD.SetActive(true);
         Time.timeScale = 1f;
         gameIsPaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if (!ComputerTask.isOnComputer)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false; 
+        }
     }
     public void RestartLevel()//Reloads the current scene restarting the level
     {

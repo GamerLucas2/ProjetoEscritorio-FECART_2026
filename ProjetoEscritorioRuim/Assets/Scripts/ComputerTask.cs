@@ -17,11 +17,21 @@ public class ComputerTask : MonoBehaviour
     [SerializeField] private bool isTypeTask;
     [SerializeField] private TMP_InputField WriteSpace;
     [SerializeField] private string task2Awnser;
+    public static bool isOnComputer { get; private set; }
+    
     private void Awake()
     {
         inputSystemActions = new InputSystem_Actions();
         interact = inputSystemActions.Player.Interact;
         computerUI.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (isOnComputer && computerTaskComplete && Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            QuitComputer();
+        }
     }
     public void TaskWasinteracted(bool playerInteract)
     {
@@ -33,10 +43,11 @@ public class ComputerTask : MonoBehaviour
     void ComputerInitialized()
     {
         Debug.Log("Computer Task Started");
-        Time.timeScale = 0f;
-        Cursor.lockState = CursorLockMode.None;
+        GameManager.DisableMovement?.Invoke();
+        Cursor.lockState = CursorLockMode.None; 
         Cursor.visible = true;
         computerUI.SetActive(true);
+        isOnComputer = true;
         if (isTypeTask)
         {
             InitiateTypeTask();
@@ -45,9 +56,10 @@ public class ComputerTask : MonoBehaviour
     private void QuitComputer()
     {
         computerUI.SetActive(false);
-        Time.timeScale = 1f;
+        GameManager.EnableMovement?.Invoke();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        isOnComputer = false;
     }
     void InitiateTypeTask()
     {

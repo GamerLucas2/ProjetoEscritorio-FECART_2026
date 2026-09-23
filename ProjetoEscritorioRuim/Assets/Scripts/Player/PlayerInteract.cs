@@ -9,24 +9,26 @@ using UnityEngine.UI;
 public class PlayerInteract : MonoBehaviour
 {
     private InputSystem_Actions inputSystem;
-    public ComputerTask computerTask;
     InputAction interact;
     InputAction swapItem;
 
+    [Header("Raycast")]
     [SerializeField] LayerMask interactMask;
     [SerializeField] float maxDistance;
     RaycastHit hit;
     
+    [Header("LoadPoint")]
     [SerializeField] private Transform loadPoint;
     [SerializeField] private Transform StoreTransform;
-    
-    
     [SerializeField] private GameObject[] storedItems =  new GameObject[2];
-    // [SerializeField] private GameObject[] itemIndicator  = new GameObject[2];
-
     [SerializeField] private int currentItem = 0;
-
+    
+    
+    [Header("Other")]
     [SerializeField] private bool cantSwap;
+    public ComputerTask computerTask;
+
+
     
     void Awake()
     {
@@ -37,8 +39,6 @@ public class PlayerInteract : MonoBehaviour
 
     private void Start()
     {
-        // itemIndicator[0].SetActive(false);
-        // itemIndicator[1].SetActive(false);
         Ray cameraRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
     }
 
@@ -55,7 +55,7 @@ public class PlayerInteract : MonoBehaviour
         inputSystem.Disable();
         
         DialogueController.OnDialogueStarted -= JoinConversation;
-        DialogueController.OnDialogueEnded -= LeaveConversation;
+        DialogueController.OnDialogueEnded -= LeaveConversation; ;
     }
 
     void Update()
@@ -216,5 +216,5 @@ public class PlayerInteract : MonoBehaviour
         Time.timeScale = 1;
     }
     
-    #endregion
 }
+    #endregion

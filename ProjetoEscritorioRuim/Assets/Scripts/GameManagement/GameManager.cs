@@ -16,8 +16,11 @@ public class GameManager : MonoBehaviour
 
     public int taskNumber;
 
-    // public delegate void OnTimerEnded();
-    // public static OnTimerEnded onTimerEnded;
+    public delegate void OnEnableMovement();
+    public static OnEnableMovement EnableMovement;
+    
+    public delegate void OnDisableMovement();
+    public static OnDisableMovement DisableMovement;
     
     
     
