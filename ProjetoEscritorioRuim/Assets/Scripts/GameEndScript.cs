@@ -36,7 +36,6 @@ public class GameEndScript : MonoBehaviour
         if (endScreen != null)
         {
             endScreen.SetActive(true);
-            Time.timeScale = 0;
             GameManager.Instance.levelCleared =  true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

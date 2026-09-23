@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
     {
         if (TaskSystem.Instance != null)
             TaskSystem.AllTasksComplete += AllTasksComplete;
+        
+        EnableMovement?.Invoke();
     }
 
     void OnDisable()
@@ -84,7 +86,8 @@ public class GameManager : MonoBehaviour
                 int index = npc.dialogueIndex;
                 DialogueController.Instance.StartDialogue(npc.dialogueAsset[index].dialogue, npc.StartPosition, npc.npcName);
             }
-
+            if(npc.isFinalNPC)
+                DisableMovement?.Invoke();
         }
     }
 

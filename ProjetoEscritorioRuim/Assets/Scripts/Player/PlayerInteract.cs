@@ -168,7 +168,7 @@ public class PlayerInteract : MonoBehaviour
             
                 storedItems[i] = null;
             }
-            else 
+            else
                 print("Spot occupied");
         } 
     }
