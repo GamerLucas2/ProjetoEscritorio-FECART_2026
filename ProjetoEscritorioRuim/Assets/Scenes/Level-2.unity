@@ -17277,6 +17277,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: ea947fc561556c3499b4a73de91bc689, type: 2}
+    - target: {fileID: 2774356204683416714, guid: 9752d0d55e4461a4b872fa2154ea76b2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3509512626656358867, guid: 9752d0d55e4461a4b872fa2154ea76b2, type: 3}
       propertyPath: m_text
       value: Sala de pesquisa
@@ -17289,9 +17293,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.06
       objectReference: {fileID: 0}
+    - target: {fileID: 6526360992421879935, guid: 9752d0d55e4461a4b872fa2154ea76b2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6779784763505092970, guid: 9752d0d55e4461a4b872fa2154ea76b2, type: 3}
       propertyPath: m_Name
       value: NomeDaSala
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779784763505092970, guid: 9752d0d55e4461a4b872fa2154ea76b2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7555017776390040305, guid: 9752d0d55e4461a4b872fa2154ea76b2, type: 3}
       propertyPath: m_LocalScale.x
