@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: ValentimDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "As vezes eu sinto que o tanto de trabalho que recebemos n\xE3o \xE9 proporcional
-    ao dinheiro que a gente ganha\u2026 J\xE1 faz bastante tempo que n\xE3o saio
-    pra me divertir, compro roupas, coisas assim\u2026"
+  - "Ah, voc\xEA t\xE1 aqui\u2026\r\n"
+  - "Ahaha, sabe, as vezes eu sinto que o tanto de trabalho que recebemos n\xE3o
+    \xE9 proporcional ao dinheiro que a gente ganha\u2026 J\xE1 faz bastante tempo
+    que n\xE3o saio pra me divertir, compro roupas, coisas assim\u2026"
+  - "Inclusive estou precisando de roupas novas, cada dia encontro um furo diferente\u2026\r"
