@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 111
+  itemName: "Relat\xF3rio"
   hasBeenUsed: 0
   displayPos: 0.01
 --- !u!65 &1064777943585348758

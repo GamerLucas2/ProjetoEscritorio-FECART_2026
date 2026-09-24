@@ -141,12 +141,10 @@ public class PlayerInteract : MonoBehaviour
         int i = currentItem;
         
         storedItems[i] = hit.transform.gameObject;
-        UI_Manager.Instance.ToggleItemIndicator(i);
+        storedItems[i].TryGetComponent(out ItemScript item);
+        UI_Manager.Instance.ToggleItemIndicator(i, item.itemName);
         storedItems[i].transform.position = loadPoint.position;
-        
         storedItems[i].transform.parent = StoreTransform;
-        
-        UI_Manager.Instance.ChangeItemIndicatorState(i, Color.blue);
     }
 
     private void PutItemDown()
@@ -159,7 +157,7 @@ public class PlayerInteract : MonoBehaviour
             
             if (!placeScript.hasItemOnTop)
             {
-                UI_Manager.Instance.ToggleItemIndicator(i);
+                UI_Manager.Instance.ToggleItemIndicator(i,itemScript.itemName);
                 storedItems[i].transform.position = hit.transform.Find("Display").transform.position + new Vector3(0, itemScript.displayPos, 0);
                 storedItems[i].transform.parent = hit.transform;
                 
@@ -186,8 +184,8 @@ public class PlayerInteract : MonoBehaviour
             if (storedItems[currentItem] != null)
                 storedItems[currentItem].SetActive(true);
             
-            UI_Manager.Instance.ChangeItemIndicatorState(0, Color.blue);
-            UI_Manager.Instance.ChangeItemIndicatorState(1, Color.white);
+            UI_Manager.Instance.ChangeItemIndicatorState(0);
+            UI_Manager.Instance.ChangeItemIndicatorState(1);
         }
         else if (currentItem == 0)
         {
@@ -199,8 +197,8 @@ public class PlayerInteract : MonoBehaviour
             if (storedItems[currentItem] != null)
                 storedItems[currentItem].SetActive(true);
             
-            UI_Manager.Instance.ChangeItemIndicatorState(1, Color.blue);
-            UI_Manager.Instance.ChangeItemIndicatorState(0, Color.white);
+            UI_Manager.Instance.ChangeItemIndicatorState(1);
+            UI_Manager.Instance.ChangeItemIndicatorState(0);
         }
     }
 

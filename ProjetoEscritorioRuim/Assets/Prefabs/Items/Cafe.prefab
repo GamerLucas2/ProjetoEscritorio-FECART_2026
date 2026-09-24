@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 111
+  itemName: "Caf\xE9"
   hasBeenUsed: 0
   displayPos: 0.14
 --- !u!1 &8447951313987125077

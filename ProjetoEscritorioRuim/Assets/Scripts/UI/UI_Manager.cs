@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 // using UnityEngine.UIElements;
 using UnityEngine.UI;
 
@@ -17,7 +18,10 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private GameObject gameHUD;
     [SerializeField] private GameObject taskList;
     [SerializeField] private GameObject preStartText;
-    [SerializeField] private Image[] hotbarSlots;
+    
+    [FormerlySerializedAs("hotbarSlots")] [SerializeField] private GameObject[] hotbarSlotFiled;
+    [FormerlySerializedAs("hotbarSlotImage")] [SerializeField] private Image[] hotbarSlotSelect;
+    [SerializeField] private TextMeshProUGUI[] hotbarItemName;
     [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[length];
     
     /*[Header("-Dialogue Box-")]
@@ -57,8 +61,12 @@ public class UI_Manager : MonoBehaviour
         endScreen.SetActive(false);
         taskList.SetActive(false);
         preStartText.SetActive(true);
-        hotbarSlots[0].gameObject.SetActive(false);
-        hotbarSlots[1].gameObject.SetActive(false);
+        
+        hotbarSlotFiled[0].gameObject.SetActive(false);
+        hotbarSlotFiled[1].gameObject.SetActive(false);
+        hotbarSlotSelect[0].gameObject.SetActive(true);
+        hotbarSlotSelect[1].gameObject.SetActive(false);
+        
         fadeIntext.gameObject.SetActive(false);
     }
 
@@ -106,17 +114,23 @@ public class UI_Manager : MonoBehaviour
         taskNameText[taskNumber].text = "- Completo";
     }
 
-    public void ChangeItemIndicatorState(int i, Color color)
+    public void ChangeItemIndicatorState(int i)
     {
-        hotbarSlots[i].color = color;
+        if (hotbarSlotSelect[i].gameObject.activeSelf)
+            hotbarSlotSelect[i].gameObject.SetActive(false);
+        else if (!hotbarSlotSelect[i].gameObject.activeSelf)
+            hotbarSlotSelect[i].gameObject.SetActive(true);
     }
 
-    public void ToggleItemIndicator(int i)
+    public void ToggleItemIndicator(int i, string name)
     {
-        if(hotbarSlots[i].IsActive())
-            hotbarSlots[i].gameObject.SetActive(false);
-        else
-            hotbarSlots[i].gameObject.SetActive(true);
+        if(hotbarSlotFiled[i].gameObject.activeSelf)
+            hotbarSlotFiled[i].SetActive(false);
+        else if (!hotbarSlotFiled[i].gameObject.activeSelf)
+        {
+            hotbarSlotFiled[i].SetActive(true);
+            hotbarItemName[i].text = name;
+        }
     }
 
     public void UpdateTaskCounter(TextMeshProUGUI taskCounter, string tasksCompleted, string tasksToComplete)

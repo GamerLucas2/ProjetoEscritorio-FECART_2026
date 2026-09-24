@@ -1165,9 +1165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 862802384928263300, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_Text
-      value: 'Resposta
-
-'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 862802384928263300, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_SelectionColor.b
@@ -1283,7 +1281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571012620178023240, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
-      value: "Resposta\n\u200B"
+      value: "\u200B"
       objectReference: {fileID: 0}
     - target: {fileID: 4571012620178023240, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_fontColor.a
@@ -1334,8 +1332,16 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5270687617386323428, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_text
+      value: Resposta...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5270687617386323428, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5270687617386323428, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_fontStyle
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5608369617802960900, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
@@ -1611,6 +1617,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1723158012916393242, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
   m_PrefabInstance: {fileID: 93030260}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &93030263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5331418882213493891, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!114 &93030264 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5463261597261644932, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
@@ -1633,6 +1650,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &93030266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5167191722894360818, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &93030267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 966802943675171501, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &93030269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1297537099751720744, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &93030270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1243978795875691147, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &94113916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3269,6 +3324,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: hotbarItemName.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: 'hotbarSlots.Array.data[0]'
       value: 
       objectReference: {fileID: 2048256105}
@@ -3305,6 +3364,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: hotbarSlotSelect.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: 'buttonToSelect.Array.data[0]'
       value: 
       objectReference: {fileID: 93030264}
@@ -3312,6 +3375,30 @@ PrefabInstance:
       propertyPath: 'buttonToSelect.Array.data[1]'
       value: 
       objectReference: {fileID: 93030265}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'hotbarItemName.Array.data[0]'
+      value: 
+      objectReference: {fileID: 93030269}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'hotbarItemName.Array.data[1]'
+      value: 
+      objectReference: {fileID: 93030263}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'hotbarSlotFiled.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1052184340}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'hotbarSlotFiled.Array.data[1]'
+      value: 
+      objectReference: {fileID: 93030266}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'hotbarSlotSelect.Array.data[0]'
+      value: 
+      objectReference: {fileID: 93030270}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: 'hotbarSlotSelect.Array.data[1]'
+      value: 
+      objectReference: {fileID: 93030267}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7489,6 +7576,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 4864508399039706175, guid: 46f9c57c633855740919d1d015803f16, type: 3}
   m_PrefabInstance: {fileID: 358030035}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1052184340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2015700036755896144, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 93030260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1054840022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8958,6 +9050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 2
+  itemName: 
   hasBeenUsed: 0
   displayPos: 0.28
 --- !u!65 &1165325784
@@ -11041,6 +11134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 5
+  itemName: 
   hasBeenUsed: 0
   displayPos: 0.365
 --- !u!4 &1408833306 stripped
@@ -11385,6 +11479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 0
+  itemName: 
   hasBeenUsed: 0
   displayPos: 0
 --- !u!1001 &1439685462

@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 111
+  itemName: Livro
   hasBeenUsed: 0
   displayPos: 0.06
 --- !u!65 &5958223449009191497
