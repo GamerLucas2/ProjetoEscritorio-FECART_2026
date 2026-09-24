@@ -3349,7 +3349,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Inserir o texto aqui
+  m_text: "Game Design - Felipe Vieira \"DopaminaPonto\n\nPrograma\xE7\xE3o - Lucas
+    Oncken \"SeiLaBMXfullHD\"\n\nModelagem 3D e Artes 2D - Sofia Cury \"Lysleep\"\n\nArtes
+    2D - Uriel \"Beefritin\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7777ed2ee17b6b24fabb22002246e6f4, type: 2}
   m_sharedMaterial: {fileID: 3755168895224785388, guid: 7777ed2ee17b6b24fabb22002246e6f4, type: 2}
@@ -3415,7 +3417,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -30.415955, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7772,9 +7774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d44b4841427ef4a86cc4342ac93ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseMenuHandler
-  camera: {fileID: 589298958}
-  mask:
-    m_Bits: 0
 --- !u!224 &9082491020219881751
 RectTransform:
   m_ObjectHideFlags: 0
