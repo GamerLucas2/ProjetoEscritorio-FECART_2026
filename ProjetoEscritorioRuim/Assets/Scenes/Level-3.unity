@@ -13021,6 +13021,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Task  4
       objectReference: {fileID: 0}
+    - target: {fileID: 2479928077308593406, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 605.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479928077308593406, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125.97
+      objectReference: {fileID: 0}
     - target: {fileID: 2707134543636428817, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: computer
       value: 

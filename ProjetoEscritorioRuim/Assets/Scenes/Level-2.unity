@@ -1203,6 +1203,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2479928077308593406, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 712.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479928077308593406, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 179.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2585163609274190639, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1235,6 +1243,10 @@ PrefabInstance:
       propertyPath: buttonTaskPanel
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2928791174114828159, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 875cf9acfbf02194d85efdf9f80f1492, type: 3}
     - target: {fileID: 3076187728059005117, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1258,6 +1270,10 @@ PrefabInstance:
     - target: {fileID: 3261107691029566736, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: timeRemaning
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329673038139193079, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3482073697203661167, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_Name
