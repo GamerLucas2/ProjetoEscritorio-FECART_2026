@@ -1345,6 +1345,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1620187777}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &234799533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2518884017196968701, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 149275441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &250202998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1727,11 +1732,6 @@ Transform:
 --- !u!1 &335042768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6341058850184318103, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
-  m_PrefabInstance: {fileID: 149275441}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &335042769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8654200938538786730, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
   m_PrefabInstance: {fileID: 149275441}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &335042770 stripped
@@ -8566,7 +8566,7 @@ PrefabInstance:
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: taskList
       value: 
-      objectReference: {fileID: 335042769}
+      objectReference: {fileID: 234799533}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: endScreen
       value: 
