@@ -1,11 +1,9 @@
-using System;
+
 using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
-// using UnityEngine.UIElements;
 using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour

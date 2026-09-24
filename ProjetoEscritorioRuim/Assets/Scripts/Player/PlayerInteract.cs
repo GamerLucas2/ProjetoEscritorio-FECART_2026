@@ -1,10 +1,6 @@
-using System;
-using System.IO.Pipes;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
