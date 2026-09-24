@@ -17,15 +17,15 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private GameObject taskList;
     [SerializeField] private GameObject preStartText;
     
+    [Header("Hotbar")]
     [FormerlySerializedAs("hotbarSlots")] [SerializeField] private GameObject[] hotbarSlotFiled;
     [FormerlySerializedAs("hotbarSlotImage")] [SerializeField] private Image[] hotbarSlotSelect;
     [SerializeField] private TextMeshProUGUI[] hotbarItemName;
-    [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[length];
     
-    /*[Header("-Dialogue Box-")]
-    [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private TextMeshProUGUI nameText;
-    [SerializeField] private GameObject dialoguePanel;*/
+    [Header("TaskList")]
+    [SerializeField] private TextMeshProUGUI[] taskNameText = new TextMeshProUGUI[length];
+    [SerializeField] private Image[] taskListImage = new Image[length];
+    [SerializeField] private Sprite taskCheckedImage;
     
     [Header("-EndScreen-")]
     [SerializeField] private GameObject gameOverScreen;
@@ -109,7 +109,8 @@ public class UI_Manager : MonoBehaviour
 
     public void CheckTaskInList(int taskNumber)
     {
-        taskNameText[taskNumber].text = "- Completo";
+        taskNameText[taskNumber].color = Color.gray;
+        taskListImage[taskNumber].sprite = taskCheckedImage;
     }
 
     public void ChangeItemIndicatorState(int i)
