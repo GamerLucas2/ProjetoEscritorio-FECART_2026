@@ -1,4 +1,6 @@
 
+using System;
+using TMPro;
 using UnityEngine;
 
 public class NPCscript : MonoBehaviour
@@ -69,4 +71,6 @@ public class NPCscript : MonoBehaviour
             DialogueController.OnDialogueEnded += UI_Manager.Instance.ShowTextOnShiftStart;
         }
     }
+
+    
 }

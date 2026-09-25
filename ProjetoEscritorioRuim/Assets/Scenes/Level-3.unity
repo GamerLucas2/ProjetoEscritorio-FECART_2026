@@ -18431,6 +18431,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 2571653096654386222, guid: 6b127a15b5182ff48b441213bc0b8963, type: 3}
+      propertyPath: xSensitivity
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571653096654386222, guid: 6b127a15b5182ff48b441213bc0b8963, type: 3}
+      propertyPath: ySensitivity
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3731006372856789720, guid: 6b127a15b5182ff48b441213bc0b8963, type: 3}
       propertyPath: m_Cameras.Array.size
       value: 1

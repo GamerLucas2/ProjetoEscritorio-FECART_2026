@@ -12,6 +12,7 @@ TagManager:
   - Obstacle
   - Computer
   - EndScreen
+  - Indicator
   layers:
   - Default
   - TransparentFX
