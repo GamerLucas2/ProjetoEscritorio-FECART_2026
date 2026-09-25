@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
   - "Esse l\xE9o vive desviando as pr\xF3prias tarefas! "
-  - "Bom isso n\xE3o importa, voc\xEA t\xE1 indo bem"
+  - "Bom isso n\xE3o importa, voc\xEA est\xE1 indo bem!"

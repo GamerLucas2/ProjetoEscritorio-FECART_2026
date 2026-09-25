@@ -12035,6 +12035,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1700893124}
     m_Modifications:
     - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: npcName
+      value: Zelador
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: hasDialogue
       value: 0
       objectReference: {fileID: 0}
@@ -12087,7 +12091,8 @@ PrefabInstance:
       value: NPC-Zelador
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7997757948890047139, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
@@ -13105,7 +13110,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: npcName
-      value: Andre
+      value: "Andr\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: taskNPC

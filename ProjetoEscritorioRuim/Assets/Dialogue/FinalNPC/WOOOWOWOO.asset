@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: WOOOWOWOO
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - Ei
-  - "Ent\xE3o, a empresa est\xE1 sofrendo grandes mudan\xE7as e voc\xEA n\xE3o faz
-    parte delas"
+  - Ei!
+  - "Ent\xE3o, a empresa est\xE1 sofrendo grandes mudan\xE7as e voc\xEA definitivamente
+    n\xE3o faz parte delas."
   - Logo...
-  - "Parab\xE9ns! vc\xEA ser\xE1 promovido a cliente!"
+  - "Parab\xE9ns! Voc\xEA foi promovido a cliente!"

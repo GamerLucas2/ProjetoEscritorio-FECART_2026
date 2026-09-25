@@ -2468,7 +2468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Clear Time:'
+  m_text: 'Tempo: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5166,7 +5166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Best Time:'
+  m_text: 'Melhor Tempo:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5935,7 +5935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level Complete
+  m_text: Fase Completa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6359,7 +6359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timerText: {fileID: 4758686169666153634}
-  timeRemaning: 210
+  timeRemaning: 180
   elapsedTime: 0
   gameOverPanel: {fileID: 4693141700464050200}
   gameHud: {fileID: 6341058850184318103}
@@ -6395,6 +6395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ComputerTask
   computerTaskComplete: 0
   inRange: 0
+  eventSystem: {fileID: 0}
   taskID: 4
   computer: {fileID: 0}
   computerUI: {fileID: 6468308848943199826}
@@ -6402,6 +6403,9 @@ MonoBehaviour:
   isTypeTask: 0
   WriteSpace: {fileID: 862802384928263300}
   task2Awnser: teste
+  buttonSelect: {fileID: 0}
+  wrongAnwser: {fileID: 0}
+  correctAnwser: {fileID: 0}
 --- !u!1001 &3415755603815708159
 PrefabInstance:
   m_ObjectHideFlags: 0

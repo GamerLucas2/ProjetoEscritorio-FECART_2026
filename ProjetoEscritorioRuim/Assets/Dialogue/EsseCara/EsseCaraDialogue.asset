@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EsseCaraDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "Parab\xE9ns por ser \"promovido\" no seu segundo dia"
-  - "Amanh\xE3 vai ser a minha"
+  - "Parab\xE9ns por ser \"promovido\" logo no seu segundo dia."
+  - "Amanh\xE3 vai ser a minha!"

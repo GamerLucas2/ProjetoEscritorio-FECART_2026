@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
   - "Realmente amam dificultar meu trabalho, n\xE3o \xE9? Deviam ter me avisado sobre
-    as obras para eu me preparar para receber os ratinhos de alto escal\xE3o no meu
+    as obras para eu me preparar para receber os ratinhos do alto escal\xE3o no meu
     andar\u2026"
-  - "N\xE3o liga para o que eu disse. Enfim. Finge que contei uma piada muito engra\xE7ada
-    aqui. Precisa que eu pegue na m\xE3ozinha e ajude a come\xE7ar o trabalho de
-    hoje ou voc\xEA j\xE1 \xE9 grandinho o suficiente para saber como come\xE7ar?"
+  - "N\xE3o liga para o que eu disse. Enfim, tsc, finge que contei uma piada muito
+    engra\xE7ada aqui. Precisa que eu pegue na m\xE3ozinha e ajude a come\xE7ar o
+    trabalho de hoje ou voc\xEA j\xE1 \xE9 grandinho o suficiente para saber como
+    come\xE7ar?"

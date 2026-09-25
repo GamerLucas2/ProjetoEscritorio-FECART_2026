@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ElisaDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "Voc\xEA prescisa de ajuda pra organizar suas tarefas tamb\xE9m? "
-  - Olhar a lista com calma sempre me ajuda
-  - "\xC9 bem \xFAtil pra mim, acho que pode te ajudar t\xE1mbem"
+  - "Voc\xEA prescisa de ajuda para organizar suas tarefas tamb\xE9m? "
+  - Olhar a lista com calma sempre me ajuda!
+  - "\xC9 bem \xFAtil pra mim, acho que pode ser para voc\xEA t\xE1mbem."

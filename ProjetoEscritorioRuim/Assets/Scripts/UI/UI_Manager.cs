@@ -83,8 +83,8 @@ public class UI_Manager : MonoBehaviour
         Time.timeScale = 0f;
         endScreen.SetActive(true);
         gameHUD.SetActive(false);
-        finalTimeText.text = "Clear Time: " + FormatEndTimer(ScoreManager.Instance.time, finalTimeText);
-        bestTimeText.text = "Best Time: " + FormatEndTimer(ScoreManager.Instance.bestTime, bestTimeText); 
+        finalTimeText.text = "Tempo: " + FormatEndTimer(ScoreManager.Instance.time, finalTimeText);
+        bestTimeText.text = "Melhor Tempo: " + FormatEndTimer(ScoreManager.Instance.bestTime, bestTimeText); 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         eventSystem.SetSelectedGameObject(buttonToSelect[0].gameObject);

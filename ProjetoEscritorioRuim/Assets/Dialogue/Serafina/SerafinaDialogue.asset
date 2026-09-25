@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SerafinaDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "n\xF3s limpamos todos os dias e tudo continua sujo. A ventila\xE7\xE3o daqui
-    \xE9 p\xE9ssima e os problemas no sistema de \xE1gua do pr\xE9dio fazem aqui
-    ser do jeito que \xE9"
-  - "devem pensar que n\xE3o trabalhamos direito, o que n\xE3o \xE9 verdade."
+  - "N\xF3s limpamos aqui todos os dias e tudo continua sujo. A ventila\xE7\xE3o
+    daqui \xE9 p\xE9ssima e os problemas no sistema de \xE1gua do pr\xE9dio fazem
+    aqui ser do jeito que \xE9."
+  - "Devem pensar que n\xE3o trabalhamos direito, o que n\xE3o \xE9 verdade."

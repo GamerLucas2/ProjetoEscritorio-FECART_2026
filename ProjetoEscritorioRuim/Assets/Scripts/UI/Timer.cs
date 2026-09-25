@@ -79,5 +79,10 @@ public class Timer : MonoBehaviour
             timerText.color = Color.red;
         else if (timeRemaning < 60f)
             timerText.color = Color.yellow;
+        
+        if (Time.timeScale == 0)
+            timerText.color = Color.deepSkyBlue;
+        else if (Time.timeScale == 1)
+            timerText.color = Color.white;
     }
 }
