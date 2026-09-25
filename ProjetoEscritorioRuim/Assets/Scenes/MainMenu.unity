@@ -657,6 +657,7 @@ GameObject:
   - component: {fileID: 207443192}
   - component: {fileID: 207443195}
   - component: {fileID: 207443193}
+  - component: {fileID: 207443196}
   m_Layer: 5
   m_Name: '[Button]-Credits'
   m_TagString: Untagged
@@ -742,6 +743,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 207443196}
+        m_TargetAssemblyTypeName: SelectButtonAfterInteraction, Assembly-CSharp
+        m_MethodName: JumpToElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &207443195
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -750,6 +763,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207443191}
   m_CullTransparentMesh: 1
+--- !u!114 &207443196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207443191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184623a161d2505478cbff2197c7686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButtonAfterInteraction
+  eventSystem: {fileID: 305427877}
+  buttonToSelect: {fileID: 521752748}
+  showVisualization: 0
+  debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
 --- !u!1 &305427875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1170,7 @@ GameObject:
   - component: {fileID: 521752750}
   - component: {fileID: 521752749}
   - component: {fileID: 521752748}
+  - component: {fileID: 521752751}
   m_Layer: 5
   m_Name: '[Button]-Quit'
   m_TagString: Untagged
@@ -1223,6 +1253,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 521752751}
+        m_TargetAssemblyTypeName: SelectButtonAfterInteraction, Assembly-CSharp
+        m_MethodName: JumpToElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &521752749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,6 +1303,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521752746}
   m_CullTransparentMesh: 1
+--- !u!114 &521752751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521752746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184623a161d2505478cbff2197c7686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButtonAfterInteraction
+  eventSystem: {fileID: 305427877}
+  buttonToSelect: {fileID: 207443193}
+  showVisualization: 0
+  debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
 --- !u!1 &564816917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1542,7 @@ GameObject:
   - component: {fileID: 595114271}
   - component: {fileID: 595114274}
   - component: {fileID: 595114272}
+  - component: {fileID: 595114275}
   m_Layer: 5
   m_Name: '[Button]-Credits-Taskbar'
   m_TagString: Untagged
@@ -1568,6 +1627,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 595114275}
+        m_TargetAssemblyTypeName: SelectButtonAfterInteraction, Assembly-CSharp
+        m_MethodName: JumpToElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &595114274
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1576,6 +1647,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595114270}
   m_CullTransparentMesh: 1
+--- !u!114 &595114275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595114270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184623a161d2505478cbff2197c7686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButtonAfterInteraction
+  eventSystem: {fileID: 305427877}
+  buttonToSelect: {fileID: 521752748}
+  showVisualization: 0
+  debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
 --- !u!1 &652387870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2932,6 +3019,7 @@ GameObject:
   - component: {fileID: 1066532387}
   - component: {fileID: 1066532389}
   - component: {fileID: 1066532388}
+  - component: {fileID: 1066532390}
   m_Layer: 5
   m_Name: '[Button]-LevelSelect-Taskbar'
   m_TagString: Untagged
@@ -3016,6 +3104,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1066532390}
+        m_TargetAssemblyTypeName: SelectButtonAfterInteraction, Assembly-CSharp
+        m_MethodName: JumpToElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1066532389
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3024,6 +3124,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066532386}
   m_CullTransparentMesh: 1
+--- !u!114 &1066532390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066532386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184623a161d2505478cbff2197c7686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButtonAfterInteraction
+  eventSystem: {fileID: 305427877}
+  buttonToSelect: {fileID: 3533348244639668318}
+  showVisualization: 0
+  debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
 --- !u!1 &1085553973
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,6 +4191,7 @@ GameObject:
   - component: {fileID: 1220610625}
   - component: {fileID: 1220610627}
   - component: {fileID: 1220610626}
+  - component: {fileID: 1220610628}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -4139,6 +4256,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220610624}
   m_CullTransparentMesh: 1
+--- !u!114 &1220610628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220610624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184623a161d2505478cbff2197c7686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButtonAfterInteraction
+  eventSystem: {fileID: 305427877}
+  buttonToSelect: {fileID: 0}
+  showVisualization: 0
+  debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
 --- !u!1 &1278334093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,6 +5561,7 @@ GameObject:
   - component: {fileID: 1817188255}
   - component: {fileID: 1817188254}
   - component: {fileID: 1817188253}
+  - component: {fileID: 1817188256}
   m_Layer: 5
   m_Name: '[Button]-Quit'
   m_TagString: Untagged
@@ -5510,6 +5644,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1817188256}
+        m_TargetAssemblyTypeName: SelectButtonAfterInteraction, Assembly-CSharp
+        m_MethodName: JumpToElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1817188254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5548,6 +5694,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817188251}
   m_CullTransparentMesh: 1
+--- !u!114 &1817188256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817188251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184623a161d2505478cbff2197c7686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButtonAfterInteraction
+  eventSystem: {fileID: 305427877}
+  buttonToSelect: {fileID: 5397858348930631765}
+  showVisualization: 0
+  debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
 --- !u!1 &1832857319
 GameObject:
   m_ObjectHideFlags: 0
@@ -6327,6 +6489,7 @@ GameObject:
   - component: {fileID: 8185454046017284447}
   - component: {fileID: 4183541152936481732}
   - component: {fileID: 3914537204580180717}
+  - component: {fileID: 8185454046017284448}
   m_Layer: 5
   m_Name: '[Button]-Records-Taskbar'
   m_TagString: Untagged
@@ -6382,6 +6545,7 @@ GameObject:
   - component: {fileID: 5586949239747469016}
   - component: {fileID: 5401180396769736598}
   - component: {fileID: 5397858348930631765}
+  - component: {fileID: 5586949239747469017}
   m_Layer: 5
   m_Name: '[Button]-Records'
   m_TagString: Untagged
@@ -6814,6 +6978,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8185454046017284448}
+        m_TargetAssemblyTypeName: SelectButtonAfterInteraction, Assembly-CSharp
+        m_MethodName: JumpToElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3951045267351930426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7170,6 +7346,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5586949239747469017}
+        m_TargetAssemblyTypeName: SelectButtonAfterInteraction, Assembly-CSharp
+        m_MethodName: JumpToElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &5401180396769736598
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7219,6 +7407,22 @@ RectTransform:
   m_AnchoredPosition: {x: -265, y: -10.4147}
   m_SizeDelta: {x: 160, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5586949239747469017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978381061062580300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184623a161d2505478cbff2197c7686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButtonAfterInteraction
+  eventSystem: {fileID: 305427877}
+  buttonToSelect: {fileID: 1817188253}
+  showVisualization: 0
+  debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
 --- !u!1 &5930837595375608039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7549,6 +7753,22 @@ RectTransform:
   m_AnchoredPosition: {x: 496.6, y: 55.863}
   m_SizeDelta: {x: 92, y: 92}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8185454046017284448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625475473547581329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184623a161d2505478cbff2197c7686f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectButtonAfterInteraction
+  eventSystem: {fileID: 305427877}
+  buttonToSelect: {fileID: 1817188253}
+  showVisualization: 0
+  debugColor: {r: 0.372549, g: 0.6196079, b: 0.627451, a: 1}
 --- !u!114 &8326433345029341166
 MonoBehaviour:
   m_ObjectHideFlags: 0

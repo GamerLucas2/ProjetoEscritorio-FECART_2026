@@ -13123,6 +13123,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 86625d97d0d45d34c8a6e40e6b0d6fae, type: 3}
+    - target: {fileID: 3284604018505031851, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: m_Size.z
+      value: 2.4682999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284604018505031851, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
+      propertyPath: m_Center.z
+      value: 0.68414974
+      objectReference: {fileID: 0}
     - target: {fileID: 3877136938206746477, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.63
