@@ -86,11 +86,23 @@ public class MainMenu : MonoBehaviour
         
         float bestTime = level1Time + level2Time + level3Time;
         
-        bestTimeText[0].text = FormatTimer(level1Time, bestTimeText[0]);
-        bestTimeText[1].text = FormatTimer(level2Time, bestTimeText[1]);
-        bestTimeText[2].text = FormatTimer(level3Time, bestTimeText[2]);
-
-        bestTimeText[3].text = FormatTimer(bestTime, bestTimeText[3]);
+        if (level1Time < 2000)
+            bestTimeText[0].text = FormatTimer(level1Time, bestTimeText[0]);
+        else
+            bestTimeText[0].text = "Nada";
+        if (level2Time < 2000)
+            bestTimeText[1].text = FormatTimer(level2Time, bestTimeText[1]);
+        else
+            bestTimeText[1].text = "Nada";
+        if (level3Time < 2000)
+            bestTimeText[2].text = FormatTimer(level3Time, bestTimeText[2]);
+        else
+            bestTimeText[2].text = "Nada";
+        
+        if (bestTime < 6000)
+            bestTimeText[3].text = FormatTimer(bestTime, bestTimeText[3]);
+        else
+            bestTimeText[3].text = "Nada";
     }
     private string FormatTimer(float displayTime, TextMeshProUGUI timerText)
     {
