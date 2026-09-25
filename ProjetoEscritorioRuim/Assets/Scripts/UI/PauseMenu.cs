@@ -111,10 +111,10 @@ public class PauseMenu : MonoBehaviour
             float minutes = Mathf.FloorToInt(displayTime / 60);
             float seconds = Mathf.FloorToInt(displayTime % 60);
         
-            timer.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
+            timer.text = string.Format("Tempo: {0:00}:{1:00}", minutes, seconds);
         }
         else
-            timer.text = "Time: None";
+            timer.text = "Tempo: Nada";
     }
     #endregion
 }

@@ -1645,6 +1645,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 182
       objectReference: {fileID: 0}
+    - target: {fileID: 8094735677351801964, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -47.198
+      objectReference: {fileID: 0}
     - target: {fileID: 8542190689681188339, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_text
       value: "Enviar relat\xF3rio?"

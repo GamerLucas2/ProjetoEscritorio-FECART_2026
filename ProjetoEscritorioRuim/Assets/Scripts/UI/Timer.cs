@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour
             ContUpTime();
             ContDownTime();
             DisplayTime(timeRemaning);
+            ChangeTimeColor();
         }
         
         if (GameManager.Instance.levelCleared)
@@ -38,7 +39,7 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(displayTime / 60);
         float seconds = Mathf.FloorToInt(displayTime % 60);
         
-        timerText.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
+        timerText.text = string.Format("Tempo: {0:00}:{1:00}", minutes, seconds);
     }
 
     private void ContDownTime()
@@ -56,6 +57,7 @@ public class Timer : MonoBehaviour
             timeRemaning = 0;
             PauseMenu.gameIsPaused = true;
         }
+
     }
 
     private void ContUpTime()
@@ -69,5 +71,13 @@ public class Timer : MonoBehaviour
         print(finalTime);
         
         ScoreManager.Instance.SaveLevelTime(finalTime);
+    }
+
+    private void ChangeTimeColor()
+    {
+        if (timeRemaning < 30f)
+            timerText.color = Color.red;
+        else if (timeRemaning < 60f)
+            timerText.color = Color.yellow;
     }
 }
