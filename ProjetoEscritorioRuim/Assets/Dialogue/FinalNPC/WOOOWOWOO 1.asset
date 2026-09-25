@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WOOOWOWOO 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "Este jogo foi inspirado por: \u201Ccomo enlouquecer seu chefe\u201D."
+  - "Este jogo foi inspirado no filme: \u201CComo Enlouquecer seu Chefe\u201D."
   - "Apesar das inspira\xE7\xF5es advindas da m\xEDdia fict\xEDcia, tudo aqui representado
     \xE9 uma grande ironia baseada nas p\xE9ssimas condi\xE7\xF5es de trabalho que
     muitos passam na realidade, envolvendo desde corrup\xE7\xE3o, degrada\xE7\xE3o,
