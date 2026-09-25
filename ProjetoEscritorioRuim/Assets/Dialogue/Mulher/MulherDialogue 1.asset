@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MulherDialogue 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "Voc\xEA \xE9 bom nisso!"
+  - "Esse l\xE9o vive desviando as pr\xF3prias tarefas! "
+  - "Bom isso n\xE3o importa, voc\xEA t\xE1 indo bem"

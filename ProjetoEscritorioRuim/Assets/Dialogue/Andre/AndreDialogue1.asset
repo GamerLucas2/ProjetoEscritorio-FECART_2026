@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AndreDialogue1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - PlaceHolder
+  - "Obrigado pelo esfor\xE7o! Espero te ver amanh\xE3!"
