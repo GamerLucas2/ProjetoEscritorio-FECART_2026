@@ -134,7 +134,7 @@ public class UI_Manager : MonoBehaviour
 
     public void UpdateTaskCounter(TextMeshProUGUI taskCounter, string tasksCompleted, string tasksToComplete)
     {
-        taskCounter.text = string.Format("Tasks: {0}/{1}", tasksCompleted, tasksToComplete);
+        taskCounter.text = string.Format("Tarefas: {0}/{1}", tasksCompleted, tasksToComplete);
     }
 
     public void ShowTextOnShiftStart()

@@ -3970,7 +3970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: npcName
-      value: Leo
+      value: "L\xE9o"
       objectReference: {fileID: 0}
     - target: {fileID: 5061165233749741229, guid: 0c26b73614ca13e4797f503eedd59324, type: 3}
       propertyPath: dialogueAsset.Array.size
@@ -8911,7 +8911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: fadeTextName
-      value: O Leo
+      value: "o L\xE9o"
       objectReference: {fileID: 0}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: preStartText
@@ -12121,7 +12121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 3
-  itemName: 
+  itemName: Caneca Quebrada
   hasBeenUsed: 0
   displayPos: 0
 --- !u!4 &8867816977886282169 stripped
