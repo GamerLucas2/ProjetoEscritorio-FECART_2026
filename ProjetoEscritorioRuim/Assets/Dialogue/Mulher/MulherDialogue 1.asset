@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MulherDialogue 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "Se voc\xEA ver alguns papeis voc\xEA pode deixa-los na minha mesa?"
+  - "Voc\xEA \xE9 bom nisso!"
