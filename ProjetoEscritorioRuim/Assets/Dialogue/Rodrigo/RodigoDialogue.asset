@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a7e64a4fe560f4a870da789541e1d6, type: 3}
+  m_Name: RodigoDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  dialogue:
+  - "O chefe me mandou pra c\xE1, porque ele \u201Cn\xE3o me acha engra\xE7ado\u201D"
+  - "Como eu n\xE3o sou engra\xE7ado? Tipo, o que h\xE1 de t\xE3o sem gra\xE7a em
+    mim, hein?"
+  - "Talvez eu s\xF3 esteja um pouco \r\ndesvairado, porque isso n\xE3o faz sentido
+    pra mim\r\n"
+  - "Porque ningu\xE9m me falou que eu vim pro escrit\xF3rio para faz\xEA-lo \r\nrir?!
+    EU QUERO O EMPREGO PRO QUAL EU ME APLIQUEI DE VOLTA!!!!..."

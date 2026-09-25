@@ -162,6 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 111
-  itemName: Lapis
+  itemName: "L\xE1pis"
   hasBeenUsed: 0
   displayPos: 0.02

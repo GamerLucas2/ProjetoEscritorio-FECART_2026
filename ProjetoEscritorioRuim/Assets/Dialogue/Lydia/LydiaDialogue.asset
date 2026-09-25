@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
   - "Quem \xE9 o animal que mandou imprimir isso daqui?"
-  - " Como se n\xE3o bastasse a ortografia porca, isso daqui \xE9 uma foto da tela
+  - "Como se n\xE3o bastasse a ortografia porca, isso daqui \xE9 uma foto da tela
     do computador de algu\xE9m!"
   - "Era t\xE3o dif\xEDcil mandar o arquivo direto pra impressora?"
