@@ -3757,7 +3757,7 @@ PrefabInstance:
     - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: 'dialogueAsset.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 117921f8fdb8c26438767cb9f20862b6, type: 2}
+      objectReference: {fileID: 11400000, guid: 10ced3e5232cb1b409661debf26fe61c, type: 2}
     - target: {fileID: 2353949900983458202, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: m_Size.x
       value: 2.26
@@ -12095,7 +12095,7 @@ PrefabInstance:
     - target: {fileID: 2169928544201120478, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: 'dialogueAsset.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: e2503f8bb1815e74ab23018c818fafde, type: 2}
+      objectReference: {fileID: 11400000, guid: 54600831c753a434db3413191e683ae7, type: 2}
     - target: {fileID: 2353949900983458202, guid: adca4bfb4f1f2be4c8572a003b2d4d75, type: 3}
       propertyPath: m_Sprite
       value: 
