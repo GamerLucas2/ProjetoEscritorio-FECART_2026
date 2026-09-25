@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ValentimDIalogue 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - Eu mandei imprimir um arquivo espe
+  - "Ah cara, eu mandei imprimir um arquivo e a Lydia t\xE1 vendo ele agora "
+  - 'Tomara que esteja tudo certinho '

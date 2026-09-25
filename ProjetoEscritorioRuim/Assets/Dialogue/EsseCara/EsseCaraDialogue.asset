@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
   - "Parab\xE9ns por ser \"promovido\" no seu segundo dia"
+  - "Amanh\xE3 vai ser a minha"

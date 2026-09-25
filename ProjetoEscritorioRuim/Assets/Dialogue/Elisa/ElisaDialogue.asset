@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ElisaDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - "Ah, que \xF3timo! S\xF3 um instante, vou marcar na minha lista\u2026\r\n"
-  - "Prontinho. Muito obrigada pelo trabalho de hoje, est\xE1 dispensado!"
+  - "Voc\xEA prescisa de ajuda pra organizar suas tarefas tamb\xE9m? "
+  - Olhar a lista com calma sempre me ajuda
+  - "\xC9 bem \xFAtil pra mim, acho que pode te ajudar t\xE1mbem"
