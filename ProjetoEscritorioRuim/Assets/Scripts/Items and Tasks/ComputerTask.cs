@@ -1,12 +1,15 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ComputerTask : MonoBehaviour
 {
     public bool computerTaskComplete = false;
     public bool inRange;
+    [SerializeField] EventSystem eventSystem;
     InputSystem_Actions inputSystemActions;
     InputAction interact;
     [SerializeField] private string taskID;
@@ -16,10 +19,14 @@ public class ComputerTask : MonoBehaviour
     [SerializeField] private bool isTypeTask;
     [SerializeField] private TMP_InputField WriteSpace;
     [SerializeField] private string task2Awnser;
+    [SerializeField] private Selectable buttonSelect;
+    [SerializeField] private GameObject wrongAnwser, correctAnwser;
+
     public static bool isOnComputer { get; private set; }
     
     private void Awake()
     {
+        
         inputSystemActions = new InputSystem_Actions();
         interact = inputSystemActions.Player.Interact;
         computerUI.SetActive(false);
@@ -56,18 +63,28 @@ public class ComputerTask : MonoBehaviour
     {
         typeTaskPanel.SetActive(true);
         string playerTxt = WriteSpace.text;
+
         if (playerTxt == task2Awnser)
         {
+            correctAnwser.SetActive(true);
+            wrongAnwser.SetActive(false);
             CompleteComputer();
             computerTaskComplete = true;
+        }
+        else
+        {
+            wrongAnwser.SetActive(true);
         }
     }
     public void CompleteComputer()
     {
-        QuitComputer();
-        CompleteTaskOnTheThing();
-        computerTaskComplete = true;
-        computer.layer = LayerMask.NameToLayer("Default");
+        if (computerTaskComplete == true)
+        {
+            QuitComputer();
+            CompleteTaskOnTheThing();
+            computerTaskComplete = true;
+            computer.layer = LayerMask.NameToLayer("Default");
+        }
     }
 
     public void CompleteTaskOnTheThing()

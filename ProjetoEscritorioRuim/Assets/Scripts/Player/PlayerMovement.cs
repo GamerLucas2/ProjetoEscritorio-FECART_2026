@@ -89,7 +89,7 @@ public class PlayerMovement: MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            slowDown = 0.4f;
+            slowDown = 0.2f;
             rigidBody.linearVelocity *= 0.5f;
         }
     }
