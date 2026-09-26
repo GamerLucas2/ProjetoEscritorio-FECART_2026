@@ -127,6 +127,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Controller"",
+                    ""type"": ""Button"",
+                    ""id"": ""819758c6-4ac3-49f3-8ad9-2f932f837ca9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -270,6 +279,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SwapItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a574b014-261b-4362-9cad-9e5609b4184e"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Controller"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""00c94191-4e10-43ab-8577-2ca696c2be11"",
+                    ""path"": ""<Keyboard>/rightAlt"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Controller"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1366,6 +1397,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_SwapItem = m_Player.FindAction("SwapItem", throwIfNotFound: true);
+        m_Player_Controller = m_Player.FindAction("Controller", throwIfNotFound: true);
         // Player(OLD)
         m_PlayerOLD = asset.FindActionMap("Player(OLD)", throwIfNotFound: true);
         m_PlayerOLD_Move = m_PlayerOLD.FindAction("Move", throwIfNotFound: true);
@@ -1476,6 +1508,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_SwapItem;
+    private readonly InputAction m_Player_Controller;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1503,6 +1536,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/SwapItem".
         /// </summary>
         public InputAction @SwapItem => m_Wrapper.m_Player_SwapItem;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Controller".
+        /// </summary>
+        public InputAction @Controller => m_Wrapper.m_Player_Controller;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1541,6 +1578,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @SwapItem.started += instance.OnSwapItem;
             @SwapItem.performed += instance.OnSwapItem;
             @SwapItem.canceled += instance.OnSwapItem;
+            @Controller.started += instance.OnController;
+            @Controller.performed += instance.OnController;
+            @Controller.canceled += instance.OnController;
         }
 
         /// <summary>
@@ -1564,6 +1604,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @SwapItem.started -= instance.OnSwapItem;
             @SwapItem.performed -= instance.OnSwapItem;
             @SwapItem.canceled -= instance.OnSwapItem;
+            @Controller.started -= instance.OnController;
+            @Controller.performed -= instance.OnController;
+            @Controller.canceled -= instance.OnController;
         }
 
         /// <summary>
@@ -2087,6 +2130,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwapItem(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Controller" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnController(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player(OLD)" which allows adding and removing callbacks.

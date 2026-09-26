@@ -778,10 +778,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1723158012916393242, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789179268586154319, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3512743986871427412, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 820025137}
+    - target: {fileID: 6468308848943199826, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6627010884901382413, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8655,10 +8667,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 575427370540950154, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
-      propertyPath: tasksLeft
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 575427370540950154, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
       propertyPath: taskNumberText
       value: 
       objectReference: {fileID: 1731744368}
@@ -8702,37 +8710,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5654208179296398703, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
-      propertyPath: taskNumber
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5744720050634256761, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 9215939131248306121, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
-      propertyPath: gameHUD
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9215939131248306121, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
-      propertyPath: taskList
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9215939131248306121, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
-      propertyPath: endScreen
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9215939131248306121, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
-      propertyPath: 'taskNameText.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9215939131248306121, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
-      propertyPath: 'taskNameText.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9215939131248306121, guid: 4564b400c2de11b42ab23519a9fc6d98, type: 3}
-      propertyPath: 'taskNameText.Array.data[2]'
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9093,6 +9073,14 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1449894356}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: gamepadControls
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
+      propertyPath: keyboardControls
+      value: 
+      objectReference: {fileID: 1908263404}
     - target: {fileID: 8837572847021922047, guid: 4b8a4d86fabe7f74786226bda9affa62, type: 3}
       propertyPath: taskNameText.Array.size
       value: 5
@@ -10312,6 +10300,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5231867732500671777, guid: 7ccdf125ab310404abb6b6cefeb45e47, type: 3}
   m_PrefabInstance: {fileID: 1905293796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1908263404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1283154156623281610, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+  m_PrefabInstance: {fileID: 149275441}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1921342062 stripped
 Transform:
@@ -12334,10 +12327,10 @@ SceneRoots:
   - {fileID: 1714991131}
   - {fileID: 1685264121}
   - {fileID: 2098613435}
-  - {fileID: 149275441}
   - {fileID: 1555341748}
   - {fileID: 1526344995}
   - {fileID: 1014614392}
+  - {fileID: 149275441}
   - {fileID: 820025138}
   - {fileID: 1639386693}
   - {fileID: 1844641785}

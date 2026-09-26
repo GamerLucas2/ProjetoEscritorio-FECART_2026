@@ -13,6 +13,8 @@ TagManager:
   - Computer
   - EndScreen
   - Indicator
+  - KeyboardMap
+  - GamepadMap
   layers:
   - Default
   - TransparentFX

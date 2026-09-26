@@ -20,7 +20,7 @@ public class LevelDebug : MonoBehaviour
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.rKey.wasPressedThisFrame)
             levelManager.BackToMainMenu();
         
-        if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.hKey.wasPressedThisFrame)
+        if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.hKey.wasPressedThisFrame)
             ScoreManager.Instance.ResetHighScore();
 
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.nKey.wasPressedThisFrame)
@@ -32,7 +32,7 @@ public class LevelDebug : MonoBehaviour
         }
         
         if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.altKey.isPressed && Keyboard.current.mKey.wasPressedThisFrame)
-            SceneManager.LoadScene("Intermission");
+            SceneManager.LoadScene(4);
     }
     
     
