@@ -34,12 +34,14 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI bestTimeText;
     [SerializeField] private Selectable[] buttonToSelect;
 
+    [Header("ControllerUI")]
+    [SerializeField] private GameObject keyboardControls;
+    [SerializeField] private GameObject gamepadControls;
+    
     [Header("-Other-")] 
     [SerializeField] TextMeshProUGUI fadeIntext;
     [SerializeField] private float fadeDuration;
     [SerializeField] private string fadeTextName;
-    
-    
 
     private static int length;
     
@@ -51,6 +53,9 @@ public class UI_Manager : MonoBehaviour
         else
             Instance = this;
         // taskNameText = GameObject.FindGameObjectsWithTag("taskName");
+        
+        keyboardControls = GameObject.FindWithTag("KeyboardMap");
+        gamepadControls = GameObject.FindWithTag("GamepadMap");
     }
 
     private void Start()
@@ -66,6 +71,35 @@ public class UI_Manager : MonoBehaviour
         hotbarSlotSelect[1].gameObject.SetActive(false);
         
         fadeIntext.gameObject.SetActive(false);
+        
+        keyboardControls.SetActive(true);
+        gamepadControls.SetActive(false);
+
+        string currentController = PlayerPrefs.GetString("ControllerName");
+        if (currentController != "Keyboard")
+        {
+            keyboardControls.SetActive(false);
+            gamepadControls.SetActive(true);
+        }
+    }
+    
+    private void OnEnable()
+    {
+        if (GameEndScript.Instance ==null)
+            TaskSystem.AllTasksComplete += ShowTextOnShiftEnd;
+
+        ControllerDetection.OnControllerChange += ChangeControlsUI;
+    }
+    private void OnDisable()
+    {
+        if (GameEndScript.Instance ==null)
+            DialogueController.OnDialogueEnded -= EndLevelScreen;
+        
+        DialogueController.OnDialogueEnded -= ShowTextOnShiftEnd;
+        DialogueController.OnDialogueEnded -= ShowTextOnShiftStart;
+        
+        ControllerDetection.OnControllerChange -= ChangeControlsUI;
+
     }
 
     // Update is called once per frame
@@ -203,18 +237,18 @@ public class UI_Manager : MonoBehaviour
         StopCoroutine(WaitForFadeOut(new WaitForSeconds(0)));
     }
 
-    private void OnEnable()
+    private void ChangeControlsUI()
     {
-        if (GameEndScript.Instance ==null)
-            TaskSystem.AllTasksComplete += ShowTextOnShiftEnd;
-    }
-    private void OnDisable()
-    {
-        if (GameEndScript.Instance ==null)
-            DialogueController.OnDialogueEnded -= EndLevelScreen;
-        
-        DialogueController.OnDialogueEnded -= ShowTextOnShiftEnd;
-        DialogueController.OnDialogueEnded -= ShowTextOnShiftStart;
+        if (keyboardControls.activeSelf)
+        {
+            keyboardControls.SetActive(false);
+            gamepadControls.SetActive(true);
+        }
+        else
+        {
+            keyboardControls.SetActive(true);
+            gamepadControls.SetActive(false);
+        }
     }
     
 }
