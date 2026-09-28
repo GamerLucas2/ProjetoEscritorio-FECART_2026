@@ -790,6 +790,58 @@ PrefabInstance:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 820025137}
+    - target: {fileID: 4113863469572695007, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 48.173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113863469572695007, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50.222
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113863469572695007, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -256.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113863469572695007, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 95.7399
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431903440667631089, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843701079273620244, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06b917d4f4d559f4fb21b5374026fd64, type: 3}
+    - target: {fileID: 5933357671789977275, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 246012ee31150544c987c831e654491d, type: 3}
+    - target: {fileID: 6041345978382952596, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 91.8619
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144862574408115664, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_text
+      value: "- Fale com o L\xE9o"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6205559344462736713, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 87.369
+      objectReference: {fileID: 0}
+    - target: {fileID: 6205559344462736713, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 47.951
+      objectReference: {fileID: 0}
+    - target: {fileID: 6205559344462736713, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -276.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6205559344462736713, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 16.358898
+      objectReference: {fileID: 0}
     - target: {fileID: 6468308848943199826, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -873,6 +925,10 @@ PrefabInstance:
     - target: {fileID: 6627010884901382413, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6754123932136801357, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
+      propertyPath: m_text
+      value: "1- Passe o l\xE1pis para a mesa ao lado"
       objectReference: {fileID: 0}
     - target: {fileID: 9199987878461525800, guid: 645c5373fe2fd3048b561b926959e16c, type: 3}
       propertyPath: m_Name
@@ -1989,11 +2045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2610426608157174012, guid: b321fe97e3dd0c149a3e783f945a8e3f, type: 3}
       propertyPath: TaskID
-      value: 
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2610426608157174012, guid: b321fe97e3dd0c149a3e783f945a8e3f, type: 3}
       propertyPath: hasTask
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4973859471864843783, guid: b321fe97e3dd0c149a3e783f945a8e3f, type: 3}
       propertyPath: m_Name

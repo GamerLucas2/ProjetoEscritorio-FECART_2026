@@ -75,14 +75,13 @@ public class Timer : MonoBehaviour
 
     private void ChangeTimeColor()
     {
-        if (timeRemaning < 30f)
+        if (GameManager.Instance.inConversation)
+            timerText.color = Color.deepSkyBlue;
+        else if (timeRemaning < 30f)
             timerText.color = Color.red;
         else if (timeRemaning < 60f)
             timerText.color = Color.yellow;
-        
-        if (Time.timeScale == 0)
-            timerText.color = Color.deepSkyBlue;
-        else if (Time.timeScale == 1)
+        else
             timerText.color = Color.white;
     }
 }

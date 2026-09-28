@@ -6284,7 +6284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "7- Descarte a l\xE2mpada quebrada no fundo"
+  m_text: "7- Descarte a lumin\xE1ria quebrada no fundo"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9461,7 +9461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   TaskID: 6
-  itemName: "L\xE2mpada Quebrada"
+  itemName: "Lumin\xE1ria Quebrada"
   hasBeenUsed: 0
   displayPos: 0.3
 --- !u!1 &796008260

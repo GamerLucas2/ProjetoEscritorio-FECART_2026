@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -66,20 +67,24 @@ public class ComputerTask : MonoBehaviour
 
         if (playerTxt == task2Awnser)
         {
+            print("certo");
             correctAnwser.SetActive(true);
             wrongAnwser.SetActive(false);
-            CompleteComputer();
             computerTaskComplete = true;
+            //StartCoroutine(CorotinaCompleteComputer());
+            CompleteComputer();
         }
-        else
-        {
-            wrongAnwser.SetActive(true);
-        }
+    }
+    IEnumerator CorotinaCompleteComputer()
+    {
+        yield return new WaitForSeconds(1);
+        CompleteComputer();
     }
     public void CompleteComputer()
     {
         if (computerTaskComplete == true)
         {
+            correctAnwser.SetActive(true);
             QuitComputer();
             CompleteTaskOnTheThing();
             computerTaskComplete = true;
